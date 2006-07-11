@@ -43,7 +43,7 @@
 #import <WYAppFramework/WYPreferenceWindow.h>
 
 #import <WYAppFramework/AIGradient.h>
-#import <WYAppFramework/AIGradientImageCell.h>
+//#import <WYAppFramework/AIGradientImageCell.h>
 #import <WYAppFramework/AIBezierPathAdditions.h>
 #import <WYAppFramework/AIScaledImageCell.h>
 #import <WYAppFramework/AIGradientCell.h>

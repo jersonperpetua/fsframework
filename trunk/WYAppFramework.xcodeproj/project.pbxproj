@@ -26,8 +26,6 @@
 		8B73DA840A49F2AF00484717 /* AIGenericViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5E0A49F2AF00484717 /* AIGenericViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DA850A49F2AF00484717 /* AIGradientCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5F0A49F2AF00484717 /* AIGradientCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DA860A49F2AF00484717 /* AIGradientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA600A49F2AF00484717 /* AIGradientCell.m */; };
-		8B73DA870A49F2AF00484717 /* AIGradientImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA610A49F2AF00484717 /* AIGradientImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B73DA880A49F2AF00484717 /* AIGradientImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA620A49F2AF00484717 /* AIGradientImageCell.m */; };
 		8B73DA890A49F2AF00484717 /* AIFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA630A49F2AF00484717 /* AIFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DA8A0A49F2AF00484717 /* AIFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA640A49F2AF00484717 /* AIFunctions.m */; };
 		8B73DA8B0A49F2AF00484717 /* AIFontManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA650A49F2AF00484717 /* AIFontManagerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -490,7 +488,6 @@
 				8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */,
 				8B73DA840A49F2AF00484717 /* AIGenericViewCell.h in Headers */,
 				8B73DA850A49F2AF00484717 /* AIGradientCell.h in Headers */,
-				8B73DA870A49F2AF00484717 /* AIGradientImageCell.h in Headers */,
 				8B73DA890A49F2AF00484717 /* AIFunctions.h in Headers */,
 				8B73DA8B0A49F2AF00484717 /* AIFontManagerAdditions.h in Headers */,
 				8B73DA8D0A49F2AF00484717 /* AIApplicationAdditions.h in Headers */,
@@ -607,7 +604,6 @@
 				8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */,
 				8B73DA830A49F2AF00484717 /* AIGenericViewCell.m in Sources */,
 				8B73DA860A49F2AF00484717 /* AIGradientCell.m in Sources */,
-				8B73DA880A49F2AF00484717 /* AIGradientImageCell.m in Sources */,
 				8B73DA8A0A49F2AF00484717 /* AIFunctions.m in Sources */,
 				8B73DA8C0A49F2AF00484717 /* AIFontManagerAdditions.m in Sources */,
 				8B73DA8E0A49F2AF00484717 /* AIApplicationAdditions.m in Sources */,
