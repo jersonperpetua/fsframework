@@ -14,7 +14,7 @@
 #import <WYAppFramework/KFSplitView.h>
 #import <WYAppFramework/WYTableView.h>
 
-#import <WYAppFramework/WYOutlineViewExtensions.h>
+//#import <WYAppFramework/WYOutlineViewExtensions.h>
 
 //#import <WYAppFramework/WYBackgroundView.h>
 //#import <WYAppFramework/WYImageTextCell.h>
