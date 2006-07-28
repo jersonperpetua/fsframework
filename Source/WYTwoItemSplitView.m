@@ -246,18 +246,18 @@
 }
 
 - (void)setFirstViewMin:(int)min max:(int)max {
- 	firstViewMin = min;
- 	firstViewMax = max;
+	firstViewMin = min;
+	firstViewMax = max;
 	
- 	secondViewMin = -1;
- 	secondViewMax = -1;
+	secondViewMin = -1;
+	secondViewMax = -1;
 }
 - (void)setSecondViewMin:(int)min max:(int)max {
- 	secondViewMin = min;
- 	secondViewMax = max;
+	secondViewMin = min;
+	secondViewMax = max;
 	
- 	firstViewMin = -1;
- 	firstViewMax = -1;
+	firstViewMin = -1;
+	firstViewMax = -1;
 }
 
 - (float)splitView:(NSSplitView *)sender constrainMinCoordinate:(float)proposedCoord ofSubviewAt:(int)offset {

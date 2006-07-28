@@ -11,20 +11,20 @@
 
 @implementation NSArray (WYArrayExtensions)
 - (NSArray *)arrayByPerformingSelectorOnObjects:(SEL)selector {
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
-    unsigned int i;
-    for (i = 0; i < [self count]; i++) {
-        [array addObject:[[self objectAtIndex:i] performSelector:selector]];
-    }
-    return array;
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
+	unsigned int i;
+	for (i = 0; i < [self count]; i++) {
+		[array addObject:[[self objectAtIndex:i] performSelector:selector]];
+	}
+	return array;
 }
 
 - (NSArray *)arrayByPerformingSelectorWithObjects:(SEL)selector onTarget:(id)target {
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
-    unsigned int i;
-    for (i = 0; i < [self count]; i++) {
-        [array addObject:[target performSelector:selector withObject:[self objectAtIndex:i]]];
-    }
-    return array;    
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
+	unsigned int i;
+	for (i = 0; i < [self count]; i++) {
+		[array addObject:[target performSelector:selector withObject:[self objectAtIndex:i]]];
+	}
+	return array;	
 }
 @end

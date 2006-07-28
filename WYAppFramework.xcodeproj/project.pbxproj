@@ -60,6 +60,8 @@
 		8B9891A60A5EAAC500F73045 /* WYPreferenceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9891A40A5EAAC500F73045 /* WYPreferenceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B9892270A5EAFC500F73045 /* WYArrayExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9892250A5EAFC500F73045 /* WYArrayExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B9892280A5EAFC500F73045 /* WYArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9892260A5EAFC500F73045 /* WYArrayExtensions.m */; };
+		8BAAF5EB0A658D93003AEFD7 /* WYAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAAF5E90A658D93003AEFD7 /* WYAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BAAF5EC0A658D93003AEFD7 /* WYAboutWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAF5EA0A658D93003AEFD7 /* WYAboutWindow.m */; };
 		8BD6239A08B96CB7002E8C79 /* WYAppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237008B96CB7002E8C79 /* WYAppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BD623A808B96CB7002E8C79 /* WYOvalActionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237E08B96CB7002E8C79 /* WYOvalActionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BD623A908B96CB7002E8C79 /* WYOvalTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237F08B96CB7002E8C79 /* WYOvalTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -175,6 +177,8 @@
 		8B9891A40A5EAAC500F73045 /* WYPreferenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYPreferenceView.h; path = Source/WYPreferenceView.h; sourceTree = "<group>"; };
 		8B9892250A5EAFC500F73045 /* WYArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYArrayExtensions.h; path = Source/WYArrayExtensions.h; sourceTree = "<group>"; };
 		8B9892260A5EAFC500F73045 /* WYArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYArrayExtensions.m; path = Source/WYArrayExtensions.m; sourceTree = "<group>"; };
+		8BAAF5E90A658D93003AEFD7 /* WYAboutWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAboutWindow.h; sourceTree = "<group>"; };
+		8BAAF5EA0A658D93003AEFD7 /* WYAboutWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAboutWindow.m; sourceTree = "<group>"; };
 		8BCEA2220A4B76F300C333B6 /* WYCalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYCalendarDayCell.h; sourceTree = "<group>"; };
 		8BCEA2230A4B76F300C333B6 /* WYCalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYCalendarDayCell.m; sourceTree = "<group>"; };
 		8BD6237008B96CB7002E8C79 /* WYAppFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = WYAppFramework.h; path = Source/WYAppFramework.h; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 				8BD6239908B96CB7002E8C79 /* WYOvalTextFieldCell.m */,
 				8B42376108BA723E00DC78F2 /* WYTableView.h */,
 				8B42375F08BA723500DC78F2 /* WYTableView.m */,
+				8BAAF5E90A658D93003AEFD7 /* WYAboutWindow.h */,
+				8BAAF5EA0A658D93003AEFD7 /* WYAboutWindow.m */,
 				8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */,
 				8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */,
 				8B42404508BFD0C700DC78F2 /* AboutBox.nib */,
@@ -502,6 +508,7 @@
 				8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */,
 				8B9891A60A5EAAC500F73045 /* WYPreferenceView.h in Headers */,
 				8B9892270A5EAFC500F73045 /* WYArrayExtensions.h in Headers */,
+				8BAAF5EB0A658D93003AEFD7 /* WYAboutWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +622,7 @@
 				8B73DAA20A49F2AF00484717 /* AIBezierPathAdditions.m in Sources */,
 				8B73DAA40A49F2AF00484717 /* AIAttributedStringAdditions.m in Sources */,
 				8B9892280A5EAFC500F73045 /* WYArrayExtensions.m in Sources */,
+				8BAAF5EC0A658D93003AEFD7 /* WYAboutWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

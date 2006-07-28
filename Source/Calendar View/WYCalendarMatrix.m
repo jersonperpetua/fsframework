@@ -211,7 +211,7 @@
 	{
 		[[self selectedCell] setOvalColor:[NSColor colorWithCalibratedWhite:0.9 alpha:1]];
 		[super mouseDown:theEvent];
-  //  	[(WYCalendarView *)[self superview] setDay:[[self selectedCell] tag]];
+//  	[(WYCalendarView *)[self superview] setDay:[[self selectedCell] tag]];
 		[[self selectedCell] setOvalColor:[NSColor colorWithCalibratedRed:.5781 green:.6367 blue:9257 alpha:1]];
 //		[[self superview] setNeedsDisplay:YES];
 		

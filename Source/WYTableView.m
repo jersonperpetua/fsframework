@@ -37,16 +37,16 @@ NSString *WYDescendingOrder = @"Descending Order";
 @implementation WYTableView
 
 - (id)init {
-    return [self initWithFrame:NSMakeRect(0, 0, 200, 200)];
+	return [self initWithFrame:NSMakeRect(0, 0, 200, 200)];
 }
 
 - (id)initWithFrame:(NSRect)frame {
-    if (self = [super initWithFrame:frame])
+	if (self = [super initWithFrame:frame])
 	{
 		hidden = [[NSMutableArray alloc] init];
 		select_string = [[NSMutableString alloc] init];
 	}
-    return self;
+	return self;
 }
 
 - (void)dealloc {
@@ -155,7 +155,7 @@ NSString *WYDescendingOrder = @"Descending Order";
 
 - (void)updateToSavedTableColumnsWithAutosaveName:(NSString *)name {
 	// make all calls in here to super, so that columns don't try to save when we're adding and removing them
-    int counter;
+	int counter;
 	for (counter = 0; counter < [hidden count]; counter++)
 	{
 		[self addTableColumn:[hidden objectAtIndex:counter]];

@@ -16,19 +16,19 @@
 
 @interface KFSplitView:NSSplitView
 {
-    // retained
-    NSMutableSet *kfCollapsedSubviews;
-    NSMutableArray *kfDividerRects;
-    NSString *kfPositionAutosaveName;
-    NSCursor *kfIsVerticalResizeCursor;
-    NSCursor *kfNotIsVerticalResizeCursor;
-    
-    // not retained
-    NSCursor *kfCurrentResizeCursor;
-    NSUserDefaults *kfDefaults;
-    NSNotificationCenter *kfNotificationCenter;
-    BOOL kfIsVertical;
-    id kfDelegate;
+	// retained
+	NSMutableSet *kfCollapsedSubviews;
+	NSMutableArray *kfDividerRects;
+	NSString *kfPositionAutosaveName;
+	NSCursor *kfIsVerticalResizeCursor;
+	NSCursor *kfNotIsVerticalResizeCursor;
+	
+	// not retained
+	NSCursor *kfCurrentResizeCursor;
+	NSUserDefaults *kfDefaults;
+	NSNotificationCenter *kfNotificationCenter;
+	BOOL kfIsVertical;
+	id kfDelegate;
 }
 
 // allow other things (buttons) to use the mouse down and pretend to be on a divider
@@ -38,17 +38,17 @@
 // a good space saver
 - (void)mouseDown:(NSEvent *)theEvent asIfOnDivider:(int)divider;
 
-    // sets the collapse-state of a subview, which is completely independent
-    // of that subview's frame (as in NSSplitView).  (Sometime) after calling this
-    // you'll need to tell the splitview to resize its subviews.
-    // Normally, that would be this call:
-    //    [kfSplitView resizeSubviewsWithOldSize:[kfSplitView bounds].size];
+	// sets the collapse-state of a subview, which is completely independent
+	// of that subview's frame (as in NSSplitView).  (Sometime) after calling this
+	// you'll need to tell the splitview to resize its subviews.
+	// Normally, that would be this call:
+	//	[kfSplitView resizeSubviewsWithOldSize:[kfSplitView bounds].size];
 - (void)setSubview:(NSView *)subview isCollapsed:(BOOL)flag;
 
-    // To find documentation for these methods refer to Apple's NSWindow
-    // documentation for the corresponding methods (e.g. -setFrameAutosaveName:).
-    // To use an autosave name, call -setPositionAutosaveName: from the -awakeFromNib
-    // method of a controller.
+	// To find documentation for these methods refer to Apple's NSWindow
+	// documentation for the corresponding methods (e.g. -setFrameAutosaveName:).
+	// To use an autosave name, call -setPositionAutosaveName: from the -awakeFromNib
+	// method of a controller.
 + (void)removePositionUsingName:(NSString *)name;
 - (void)savePositionUsingName:(NSString *)name;
 - (BOOL)setPositionUsingName:(NSString *)name;
