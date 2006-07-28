@@ -39,7 +39,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 - (void)setTitle:(NSString *)new_title;
 - (NSTimeInterval)animationResizeTime:(NSRect)newFrame;
 - (void)setAutosaveName:(NSString *)name; // saves window frame and selected toolbar item identifier, but not labels, views and images.
-                                          // those must be reinstalled (and the same way so that saved item can be reselected).
-                                          // call after installing all views in order for saved view to be selected properly.
+										  // those must be reinstalled (and the same way so that saved item can be reselected).
+										  // call after installing all views in order for saved view to be selected properly.
 
 @end

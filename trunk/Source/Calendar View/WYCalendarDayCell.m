@@ -12,7 +12,7 @@
 @implementation WYCalendarDayCell
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
-    
+	
 }
 
 @end

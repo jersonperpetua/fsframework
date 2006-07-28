@@ -1,31 +1,31 @@
 /*
 	WYTreeController.h
- */
+*/
 
 #import <Cocoa/Cocoa.h>
 
 @interface WYTreeController : NSObjectController {
-    void *reserved1;
-    NSArray *_modeObservingKeyPaths;
-    void *_observedIndexPathHint;
-    id _arrangedObjects;
-    id _arrayControllerTree;
-    id _selectionIndexPaths;
-    struct _treeControllerFlags {
-        unsigned int _avoidsEmptySelection:1;
-        unsigned int _preservesSelection:1;
-        unsigned int _selectsInsertedObjects:1;
-        unsigned int _explicitlyCannotInsert:1;
-        unsigned int _explicitlyCannotInsertChild:1;
-        unsigned int _explicitlyCannotAddChild:1;
-        unsigned int _alwaysUsesMultipleValuesMarker:1;
-        unsigned int _reservedTreeController:25;
-    } _treeControllerFlags;
-    NSMutableArray *_selectedObjects;
-    NSString *_childrenKeyPath;
-    NSString *_countKeyPath;
-    NSString *_leafKeyPath;
-    NSArray *_sortDescriptors;
+	void *reserved1;
+	NSArray *_modeObservingKeyPaths;
+	void *_observedIndexPathHint;
+	id _arrangedObjects;
+	id _arrayControllerTree;
+	id _selectionIndexPaths;
+	struct _treeControllerFlags {
+		unsigned int _avoidsEmptySelection:1;
+		unsigned int _preservesSelection:1;
+		unsigned int _selectsInsertedObjects:1;
+		unsigned int _explicitlyCannotInsert:1;
+		unsigned int _explicitlyCannotInsertChild:1;
+		unsigned int _explicitlyCannotAddChild:1;
+		unsigned int _alwaysUsesMultipleValuesMarker:1;
+		unsigned int _reservedTreeController:25;
+	} _treeControllerFlags;
+	NSMutableArray *_selectedObjects;
+	NSString *_childrenKeyPath;
+	NSString *_countKeyPath;
+	NSString *_leafKeyPath;
+	NSArray *_sortDescriptors;
 }
 
 - (void)rearrangeObjects; // triggers rearranging the content objects for the user interface, including sorting (and filtering if provided by subclasses); subclasses can invoke this method if any parameter that affects the arranged objects changes
@@ -45,11 +45,11 @@
 - (id)content;
 - (void)setContent:(id)content;
 
-- (void)add:(id)sender;    // adds a new sibling node to the end of the selected objects
+- (void)add:(id)sender;	// adds a new sibling node to the end of the selected objects
 - (void)remove:(id)sender; 	//removes the currently selected objects from the tree
-- (void)addChild:(id)sender;    // adds a new child node to the end of the selected objects
-- (void)insert:(id)sender;    // inserts a peer in front of first selected node
-- (void)insertChild:(id)sender;    // inserts a new first child into the children array of the first selected node
+- (void)addChild:(id)sender;	// adds a new child node to the end of the selected objects
+- (void)insert:(id)sender;	// inserts a peer in front of first selected node
+- (void)insertChild:(id)sender;	// inserts a new first child into the children array of the first selected node
 
 - (BOOL)canInsert;
 - (BOOL)canInsertChild;
@@ -61,11 +61,11 @@
 - (void)removeObjectsAtArrangedObjectIndexPaths:(NSArray *)indexPaths;
 
 	// functionality here is parallel to what is in array controller
-- (void)setAvoidsEmptySelection:(BOOL)flag;    // default: YES
+- (void)setAvoidsEmptySelection:(BOOL)flag;	// default: YES
 - (BOOL)avoidsEmptySelection;
-- (void)setPreservesSelection:(BOOL)flag;    // default: YES
+- (void)setPreservesSelection:(BOOL)flag;	// default: YES
 - (BOOL)preservesSelection;
-- (void)setSelectsInsertedObjects:(BOOL)flag;    // default: YES
+- (void)setSelectsInsertedObjects:(BOOL)flag;	// default: YES
 - (BOOL)selectsInsertedObjects;
 - (void)setAlwaysUsesMultipleValuesMarker:(BOOL)flag;
 - (BOOL)alwaysUsesMultipleValuesMarker;
