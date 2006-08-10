@@ -36,8 +36,8 @@ NSString *KFSplitViewDidExpandSubviewNotification = @"KFSplitViewDidExpandSubvie
 
 const NSPoint KFOffScreenPoint = {1000000.0,1000000.0};
 
-// WY - what is this used for really?
-//static NSMutableSet *kfInUsePositionNames;
+
+static NSMutableSet *kfInUsePositionNames;
 
 
 #pragma mark Utility:
@@ -140,11 +140,10 @@ static BOOL kfScaleUInts(unsigned *integers, int numInts, unsigned targetTotal)
  *****************/
 #pragma mark Setup/teardown:
 
-// WY - what is this used for really?
-//+ (void)initialize
-//{
-//	kfInUsePositionNames = [[NSMutableSet alloc] init];
-//}
++ (void)initialize
+{
+	kfInUsePositionNames = [[NSMutableSet alloc] init];
+}
 
 - initWithFrame:(NSRect)frameRect
 {
@@ -1009,16 +1008,14 @@ static BOOL kfScaleUInts(unsigned *integers, int numInts, unsigned targetTotal)
 			return NO;
 	}
 
-	// WY - what is this used for really?
-	//if ([kfInUsePositionNames containsObject:name])
-	//{
-	//	return NO;
-	//}
-
+	if ([kfInUsePositionNames containsObject:name])
+	{
+		return NO;
+	}
+	
 	if (kfPositionAutosaveName)
 	{
-		// WY - what is this used for really?
-		//[kfInUsePositionNames removeObject:kfPositionAutosaveName];
+		[kfInUsePositionNames removeObject:kfPositionAutosaveName];
 		[kfPositionAutosaveName autorelease];
 		// WY - Properly remove observers
 		[kfNotificationCenter removeObserver:self
@@ -1030,8 +1027,7 @@ static BOOL kfScaleUInts(unsigned *integers, int numInts, unsigned targetTotal)
 	if (kfPositionAutosaveName)
 	{
 		[self setPositionUsingName:kfPositionAutosaveName];
-		// WY - what is this used for really?
-		//[kfInUsePositionNames addObject:kfPositionAutosaveName];
+		[kfInUsePositionNames addObject:kfPositionAutosaveName];
 		[kfNotificationCenter addObserver:self
 								 selector:@selector(kfSavePositionUsingAutosaveName:)
 									 name:NSSplitViewDidResizeSubviewsNotification
