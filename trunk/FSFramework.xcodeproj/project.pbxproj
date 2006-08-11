@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B05AB170A43559400147648 /* FSSplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B05AB150A43559400147648 /* FSSplitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B05AB180A43559400147648 /* FSSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B05AB160A43559400147648 /* FSSplitView.m */; };
+		8B42376008BA723500DC78F2 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42375F08BA723500DC78F2 /* FSTableView.m */; };
+		8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42376108BA723E00DC78F2 /* FSTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B42404208BFD09C00DC78F2 /* LNAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B42404308BFD09C00DC78F2 /* FSPreferenceWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404008BFD09C00DC78F2 /* FSPreferenceWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B42404408BFD09C00DC78F2 /* FSAlertExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B42404908BFD0C700DC78F2 /* AboutBox.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8B42404508BFD0C700DC78F2 /* AboutBox.nib */; };
+		8B42404A08BFD0C700DC78F2 /* LNAboutBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */; };
+		8B42404B08BFD0C700DC78F2 /* FSPreferenceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404708BFD0C700DC78F2 /* FSPreferenceWindow.m */; };
+		8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */; };
+		8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */; };
+		8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8B5175C40A8C2B5400B9D305 /* FSFramework.pch */; };
+		8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */; };
+		8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5B0A49F2AF00484717 /* AIGradient.m */; };
+		8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5C0A49F2AF00484717 /* AIGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA830A49F2AF00484717 /* AIGenericViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */; };
+		8B73DA840A49F2AF00484717 /* AIGenericViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5E0A49F2AF00484717 /* AIGenericViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA850A49F2AF00484717 /* AIGradientCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5F0A49F2AF00484717 /* AIGradientCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA860A49F2AF00484717 /* AIGradientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA600A49F2AF00484717 /* AIGradientCell.m */; };
+		8B73DA890A49F2AF00484717 /* AIFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA630A49F2AF00484717 /* AIFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA8A0A49F2AF00484717 /* AIFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA640A49F2AF00484717 /* AIFunctions.m */; };
+		8B73DA8B0A49F2AF00484717 /* AIFontManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA650A49F2AF00484717 /* AIFontManagerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA8C0A49F2AF00484717 /* AIFontManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA660A49F2AF00484717 /* AIFontManagerAdditions.m */; };
+		8B73DA8D0A49F2AF00484717 /* AIApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA670A49F2AF00484717 /* AIApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA8E0A49F2AF00484717 /* AIApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA680A49F2AF00484717 /* AIApplicationAdditions.m */; };
+		8B73DA8F0A49F2AF00484717 /* AIScannerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA690A49F2AF00484717 /* AIScannerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA900A49F2AF00484717 /* AIScannerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA6A0A49F2AF00484717 /* AIScannerAdditions.m */; };
+		8B73DA910A49F2AF00484717 /* AIStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA6B0A49F2AF00484717 /* AIStringAdditions.m */; };
+		8B73DA920A49F2AF00484717 /* AIStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA6C0A49F2AF00484717 /* AIStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA930A49F2AF00484717 /* AIStringUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA6D0A49F2AF00484717 /* AIStringUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA940A49F2AF00484717 /* AIScaledImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA6E0A49F2AF00484717 /* AIScaledImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA950A49F2AF00484717 /* AIScaledImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA6F0A49F2AF00484717 /* AIScaledImageCell.m */; };
+		8B73DA960A49F2AF00484717 /* AIVerticallyCenteredTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA700A49F2AF00484717 /* AIVerticallyCenteredTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA970A49F2AF00484717 /* AIVerticallyCenteredTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA710A49F2AF00484717 /* AIVerticallyCenteredTextCell.m */; };
+		8B73DA980A49F2AF00484717 /* AITextAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA720A49F2AF00484717 /* AITextAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA990A49F2AF00484717 /* AITextAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA730A49F2AF00484717 /* AITextAttributes.m */; };
+		8B73DA9A0A49F2AF00484717 /* AIParagraphStyleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA740A49F2AF00484717 /* AIParagraphStyleAdditions.m */; };
+		8B73DA9B0A49F2AF00484717 /* AIParagraphStyleAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA750A49F2AF00484717 /* AIParagraphStyleAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA9C0A49F2AF00484717 /* AIImageTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA760A49F2AF00484717 /* AIImageTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DA9D0A49F2AF00484717 /* AIImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA770A49F2AF00484717 /* AIImageTextCell.m */; };
+		8B73DA9E0A49F2AF00484717 /* AIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA780A49F2AF00484717 /* AIColorAdditions.m */; };
+		8B73DA9F0A49F2AF00484717 /* AIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA790A49F2AF00484717 /* AIColorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DAA00A49F2AF00484717 /* AIContextImageBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA7A0A49F2AF00484717 /* AIContextImageBridge.m */; };
+		8B73DAA10A49F2AF00484717 /* AIContextImageBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA7B0A49F2AF00484717 /* AIContextImageBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DAA20A49F2AF00484717 /* AIBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA7C0A49F2AF00484717 /* AIBezierPathAdditions.m */; };
+		8B73DAA30A49F2AF00484717 /* AIBezierPathAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA7D0A49F2AF00484717 /* AIBezierPathAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DAA40A49F2AF00484717 /* AIAttributedStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA7E0A49F2AF00484717 /* AIAttributedStringAdditions.m */; };
+		8B73DAA50A49F2AF00484717 /* AIAttributedStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73DB090A49F7DF00484717 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B73DB080A49F7DF00484717 /* Carbon.framework */; };
+		8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */; };
+		8BD6239A08B96CB7002E8C79 /* FSFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237008B96CB7002E8C79 /* FSFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BD623A808B96CB7002E8C79 /* FSOvalActionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BD623A908B96CB7002E8C79 /* FSOvalTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BD623C108B96CB7002E8C79 /* FSOvalActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */; };
+		8BD623C208B96CB7002E8C79 /* FSOvalTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */; };
+		8BD623DA08B96D26002E8C79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BD623D908B96D26002E8C79 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		014CEA440018CDF011CA2923 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		014CEA450018CDF011CA2923 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8B05AB150A43559400147648 /* FSSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSplitView.h; path = Source/FSSplitView.h; sourceTree = "<group>"; };
+		8B05AB160A43559400147648 /* FSSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSplitView.m; path = Source/FSSplitView.m; sourceTree = "<group>"; };
+		8B42375F08BA723500DC78F2 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSTableView.m; path = Source/FSTableView.m; sourceTree = "<group>"; };
+		8B42376108BA723E00DC78F2 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSTableView.h; path = Source/FSTableView.h; sourceTree = "<group>"; };
+		8B4239B008BA97D700DC78F2 /* FSMetalTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalTableHeaderCell.h; path = Source/FSMetalTableHeaderCell.h; sourceTree = "<group>"; };
+		8B4239B108BA97D700DC78F2 /* FSMetalTableHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalTableHeaderCell.m; path = Source/FSMetalTableHeaderCell.m; sourceTree = "<group>"; };
+		8B423C0608BC017100DC78F2 /* FSMetalDarkTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMetalDarkTableHeaderView.h; path = Source/FSMetalDarkTableHeaderView.h; sourceTree = "<group>"; };
+		8B423C0708BC017100DC78F2 /* FSMetalDarkTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalDarkTableHeaderView.m; path = Source/FSMetalDarkTableHeaderView.m; sourceTree = "<group>"; };
+		8B423C5D08BC04D600DC78F2 /* FSMetalBorderHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderHeaderView.h; path = Source/FSMetalBorderHeaderView.h; sourceTree = "<group>"; };
+		8B423C5E08BC04D600DC78F2 /* FSMetalBorderHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderHeaderView.m; path = Source/FSMetalBorderHeaderView.m; sourceTree = "<group>"; };
+		8B423C9808BC072F00DC78F2 /* FSMetalBorderHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderHeaderCell.h; path = Source/FSMetalBorderHeaderCell.h; sourceTree = "<group>"; };
+		8B423C9908BC072F00DC78F2 /* FSMetalBorderHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderHeaderCell.m; path = Source/FSMetalBorderHeaderCell.m; sourceTree = "<group>"; };
+		8B423DA008BC113C00DC78F2 /* FSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSScrollView.h; path = Source/FSScrollView.h; sourceTree = "<group>"; };
+		8B423DA108BC113C00DC78F2 /* FSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSScrollView.m; path = Source/FSScrollView.m; sourceTree = "<group>"; };
+		8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LNAboutBoxController.h; path = Source/LNAboutBoxController.h; sourceTree = "<group>"; };
+		8B42404008BFD09C00DC78F2 /* FSPreferenceWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSPreferenceWindow.h; path = Source/FSPreferenceWindow.h; sourceTree = "<group>"; };
+		8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAlertExtensions.h; path = Source/FSAlertExtensions.h; sourceTree = "<group>"; };
+		8B42404508BFD0C700DC78F2 /* AboutBox.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AboutBox.nib; path = Source/AboutBox.nib; sourceTree = "<group>"; };
+		8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = LNAboutBoxController.m; path = Source/LNAboutBoxController.m; sourceTree = "<group>"; };
+		8B42404708BFD0C700DC78F2 /* FSPreferenceWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSPreferenceWindow.m; path = Source/FSPreferenceWindow.m; sourceTree = "<group>"; };
+		8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAlertExtensions.m; path = Source/FSAlertExtensions.m; sourceTree = "<group>"; };
+		8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSApplicationAdditions.h; path = Source/FSApplicationAdditions.h; sourceTree = "<group>"; };
+		8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSApplicationAdditions.m; path = Source/FSApplicationAdditions.m; sourceTree = "<group>"; };
+		8B5175C40A8C2B5400B9D305 /* FSFramework.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSFramework.pch; sourceTree = "<group>"; };
+		8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAboutWindow.m; path = Source/FSAboutWindow.m; sourceTree = "<group>"; };
+		8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutWindow.h; path = Source/FSAboutWindow.h; sourceTree = "<group>"; };
+		8B73DA5B0A49F2AF00484717 /* AIGradient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGradient.m; path = Source/adium/AIGradient.m; sourceTree = "<group>"; };
+		8B73DA5C0A49F2AF00484717 /* AIGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGradient.h; path = Source/adium/AIGradient.h; sourceTree = "<group>"; };
+		8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGenericViewCell.m; path = Source/adium/AIGenericViewCell.m; sourceTree = "<group>"; };
+		8B73DA5E0A49F2AF00484717 /* AIGenericViewCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGenericViewCell.h; path = Source/adium/AIGenericViewCell.h; sourceTree = "<group>"; };
+		8B73DA5F0A49F2AF00484717 /* AIGradientCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGradientCell.h; path = Source/adium/AIGradientCell.h; sourceTree = "<group>"; };
+		8B73DA600A49F2AF00484717 /* AIGradientCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGradientCell.m; path = Source/adium/AIGradientCell.m; sourceTree = "<group>"; };
+		8B73DA630A49F2AF00484717 /* AIFunctions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIFunctions.h; path = Source/adium/AIFunctions.h; sourceTree = "<group>"; };
+		8B73DA640A49F2AF00484717 /* AIFunctions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIFunctions.m; path = Source/adium/AIFunctions.m; sourceTree = "<group>"; };
+		8B73DA650A49F2AF00484717 /* AIFontManagerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIFontManagerAdditions.h; path = Source/adium/AIFontManagerAdditions.h; sourceTree = "<group>"; };
+		8B73DA660A49F2AF00484717 /* AIFontManagerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIFontManagerAdditions.m; path = Source/adium/AIFontManagerAdditions.m; sourceTree = "<group>"; };
+		8B73DA670A49F2AF00484717 /* AIApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIApplicationAdditions.h; path = Source/adium/AIApplicationAdditions.h; sourceTree = "<group>"; };
+		8B73DA680A49F2AF00484717 /* AIApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIApplicationAdditions.m; path = Source/adium/AIApplicationAdditions.m; sourceTree = "<group>"; };
+		8B73DA690A49F2AF00484717 /* AIScannerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIScannerAdditions.h; path = Source/adium/AIScannerAdditions.h; sourceTree = "<group>"; };
+		8B73DA6A0A49F2AF00484717 /* AIScannerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIScannerAdditions.m; path = Source/adium/AIScannerAdditions.m; sourceTree = "<group>"; };
+		8B73DA6B0A49F2AF00484717 /* AIStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIStringAdditions.m; path = Source/adium/AIStringAdditions.m; sourceTree = "<group>"; };
+		8B73DA6C0A49F2AF00484717 /* AIStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIStringAdditions.h; path = Source/adium/AIStringAdditions.h; sourceTree = "<group>"; };
+		8B73DA6D0A49F2AF00484717 /* AIStringUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIStringUtilities.h; path = Source/adium/AIStringUtilities.h; sourceTree = "<group>"; };
+		8B73DA6E0A49F2AF00484717 /* AIScaledImageCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIScaledImageCell.h; path = Source/adium/AIScaledImageCell.h; sourceTree = "<group>"; };
+		8B73DA6F0A49F2AF00484717 /* AIScaledImageCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIScaledImageCell.m; path = Source/adium/AIScaledImageCell.m; sourceTree = "<group>"; };
+		8B73DA700A49F2AF00484717 /* AIVerticallyCenteredTextCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIVerticallyCenteredTextCell.h; path = Source/adium/AIVerticallyCenteredTextCell.h; sourceTree = "<group>"; };
+		8B73DA710A49F2AF00484717 /* AIVerticallyCenteredTextCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIVerticallyCenteredTextCell.m; path = Source/adium/AIVerticallyCenteredTextCell.m; sourceTree = "<group>"; };
+		8B73DA720A49F2AF00484717 /* AITextAttributes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AITextAttributes.h; path = Source/adium/AITextAttributes.h; sourceTree = "<group>"; };
+		8B73DA730A49F2AF00484717 /* AITextAttributes.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AITextAttributes.m; path = Source/adium/AITextAttributes.m; sourceTree = "<group>"; };
+		8B73DA740A49F2AF00484717 /* AIParagraphStyleAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIParagraphStyleAdditions.m; path = Source/adium/AIParagraphStyleAdditions.m; sourceTree = "<group>"; };
+		8B73DA750A49F2AF00484717 /* AIParagraphStyleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIParagraphStyleAdditions.h; path = Source/adium/AIParagraphStyleAdditions.h; sourceTree = "<group>"; };
+		8B73DA760A49F2AF00484717 /* AIImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIImageTextCell.h; path = Source/adium/AIImageTextCell.h; sourceTree = "<group>"; };
+		8B73DA770A49F2AF00484717 /* AIImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIImageTextCell.m; path = Source/adium/AIImageTextCell.m; sourceTree = "<group>"; };
+		8B73DA780A49F2AF00484717 /* AIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIColorAdditions.m; path = Source/adium/AIColorAdditions.m; sourceTree = "<group>"; };
+		8B73DA790A49F2AF00484717 /* AIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIColorAdditions.h; path = Source/adium/AIColorAdditions.h; sourceTree = "<group>"; };
+		8B73DA7A0A49F2AF00484717 /* AIContextImageBridge.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIContextImageBridge.m; path = Source/adium/AIContextImageBridge.m; sourceTree = "<group>"; };
+		8B73DA7B0A49F2AF00484717 /* AIContextImageBridge.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIContextImageBridge.h; path = Source/adium/AIContextImageBridge.h; sourceTree = "<group>"; };
+		8B73DA7C0A49F2AF00484717 /* AIBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIBezierPathAdditions.m; path = Source/adium/AIBezierPathAdditions.m; sourceTree = "<group>"; };
+		8B73DA7D0A49F2AF00484717 /* AIBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIBezierPathAdditions.h; path = Source/adium/AIBezierPathAdditions.h; sourceTree = "<group>"; };
+		8B73DA7E0A49F2AF00484717 /* AIAttributedStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIAttributedStringAdditions.m; path = Source/adium/AIAttributedStringAdditions.m; sourceTree = "<group>"; };
+		8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIAttributedStringAdditions.h; path = Source/adium/AIAttributedStringAdditions.h; sourceTree = "<group>"; };
+		8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIExceptionHandlingUtilities.h; path = Source/adium/AIExceptionHandlingUtilities.h; sourceTree = "<group>"; };
+		8B73DB080A49F7DF00484717 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArrayExtensions.h; path = Source/FSArrayExtensions.h; sourceTree = "<group>"; };
+		8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArrayExtensions.m; path = Source/FSArrayExtensions.m; sourceTree = "<group>"; };
+		8BD6237008B96CB7002E8C79 /* FSFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSFramework.h; path = Source/FSFramework.h; sourceTree = "<group>"; };
+		8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSBackgroundView.h; path = Source/FSBackgroundView.h; sourceTree = "<group>"; };
+		8BD6237308B96CB7002E8C79 /* FSMetalBorderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderCell.h; path = Source/FSMetalBorderCell.h; sourceTree = "<group>"; };
+		8BD6237408B96CB7002E8C79 /* FSMetalBorderView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderView.h; path = Source/FSMetalBorderView.h; sourceTree = "<group>"; };
+		8BD6237708B96CB7002E8C79 /* FSMetalImageCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalImageCell.h; path = Source/FSMetalImageCell.h; sourceTree = "<group>"; };
+		8BD6237808B96CB7002E8C79 /* FSMetalSlider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalSlider.h; path = Source/FSMetalSlider.h; sourceTree = "<group>"; };
+		8BD6237908B96CB7002E8C79 /* FSMetalSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalSliderCell.h; path = Source/FSMetalSliderCell.h; sourceTree = "<group>"; };
+		8BD6237A08B96CB7002E8C79 /* FSMetalTableCornerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalTableCornerView.h; path = Source/FSMetalTableCornerView.h; sourceTree = "<group>"; };
+		8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalActionCell.h; path = Source/FSOvalActionCell.h; sourceTree = "<group>"; };
+		8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalTextFieldCell.h; path = Source/FSOvalTextFieldCell.h; sourceTree = "<group>"; };
+		8BD6238308B96CB7002E8C79 /* FSCalendarPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSCalendarPopUpButton.h; sourceTree = "<group>"; };
+		8BD6238408B96CB7002E8C79 /* FSCalendarPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FSCalendarPopUpButton.m; sourceTree = "<group>"; };
+		8BD6238508B96CB7002E8C79 /* FSCalendarPopupButtonWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSCalendarPopupButtonWindow.h; sourceTree = "<group>"; };
+		8BD6238608B96CB7002E8C79 /* FSCalendarPopupButtonWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FSCalendarPopupButtonWindow.m; sourceTree = "<group>"; };
+		8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSBackgroundView.m; path = Source/FSBackgroundView.m; sourceTree = "<group>"; };
+		8BD6238D08B96CB7002E8C79 /* FSMetalBorderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderCell.m; path = Source/FSMetalBorderCell.m; sourceTree = "<group>"; };
+		8BD6238E08B96CB7002E8C79 /* FSMetalBorderView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderView.m; path = Source/FSMetalBorderView.m; sourceTree = "<group>"; };
+		8BD6239108B96CB7002E8C79 /* FSMetalImageCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalImageCell.m; path = Source/FSMetalImageCell.m; sourceTree = "<group>"; };
+		8BD6239208B96CB7002E8C79 /* FSMetalSlider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalSlider.m; path = Source/FSMetalSlider.m; sourceTree = "<group>"; };
+		8BD6239308B96CB7002E8C79 /* FSMetalSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalSliderCell.m; path = Source/FSMetalSliderCell.m; sourceTree = "<group>"; };
+		8BD6239408B96CB7002E8C79 /* FSMetalTableCornerView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalTableCornerView.m; path = Source/FSMetalTableCornerView.m; sourceTree = "<group>"; };
+		8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalActionCell.m; path = Source/FSOvalActionCell.m; sourceTree = "<group>"; };
+		8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalTextFieldCell.m; path = Source/FSOvalTextFieldCell.m; sourceTree = "<group>"; };
+		8BD623D208B96CF4002E8C79 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = "Other Sources/Info.plist"; sourceTree = "<group>"; };
+		8BD623D508B96D18002E8C79 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* FSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				8B73DB090A49F7DF00484717 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* FSFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* WYAppFramework */ = {
+			isa = PBXGroup;
+			children = (
+				8BD6236D08B96CAA002E8C79 /* Classes */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = WYAppFramework;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8BD623D208B96CF4002E8C79 /* Info.plist */,
+				8BD623D908B96D26002E8C79 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				8B73DB080A49F7DF00484717 /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8B42386008BA865300DC78F2 /* Metal Table */ = {
+			isa = PBXGroup;
+			children = (
+				8B423C0608BC017100DC78F2 /* FSMetalDarkTableHeaderView.h */,
+				8B423C0708BC017100DC78F2 /* FSMetalDarkTableHeaderView.m */,
+				8BD6237A08B96CB7002E8C79 /* FSMetalTableCornerView.h */,
+				8BD6239408B96CB7002E8C79 /* FSMetalTableCornerView.m */,
+				8B4239B008BA97D700DC78F2 /* FSMetalTableHeaderCell.h */,
+				8B4239B108BA97D700DC78F2 /* FSMetalTableHeaderCell.m */,
+			);
+			name = "Metal Table";
+			sourceTree = "<group>";
+		};
+		8B5177B30A8CB18F00B9D305 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */,
+				8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */,
+				8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */,
+				8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */,
+				8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */,
+				8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		8B5177B40A8CB1AD00B9D305 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B05AB150A43559400147648 /* FSSplitView.h */,
+				8B05AB160A43559400147648 /* FSSplitView.m */,
+				8BD6238008B96CB7002E8C79 /* Calendar View */,
+				8B42376108BA723E00DC78F2 /* FSTableView.h */,
+				8B42375F08BA723500DC78F2 /* FSTableView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8B5177B50A8CB1CE00B9D305 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */,
+				8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */,
+				8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */,
+				8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		8B5177B60A8CB1E400B9D305 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */,
+				8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */,
+				8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */,
+				8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */,
+				8B42404508BFD0C700DC78F2 /* AboutBox.nib */,
+				8B42404008BFD09C00DC78F2 /* FSPreferenceWindow.h */,
+				8B42404708BFD0C700DC78F2 /* FSPreferenceWindow.m */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
+		8B63F30F0A4B041000057D0D /* Disabled */ = {
+			isa = PBXGroup;
+			children = (
+				8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */,
+				8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */,
+				8BD6237308B96CB7002E8C79 /* FSMetalBorderCell.h */,
+				8BD6238D08B96CB7002E8C79 /* FSMetalBorderCell.m */,
+				8B423C9808BC072F00DC78F2 /* FSMetalBorderHeaderCell.h */,
+				8B423C9908BC072F00DC78F2 /* FSMetalBorderHeaderCell.m */,
+				8B423C5D08BC04D600DC78F2 /* FSMetalBorderHeaderView.h */,
+				8B423C5E08BC04D600DC78F2 /* FSMetalBorderHeaderView.m */,
+				8B423DA008BC113C00DC78F2 /* FSScrollView.h */,
+				8B423DA108BC113C00DC78F2 /* FSScrollView.m */,
+				8BD6237408B96CB7002E8C79 /* FSMetalBorderView.h */,
+				8BD6238E08B96CB7002E8C79 /* FSMetalBorderView.m */,
+				8BD6237708B96CB7002E8C79 /* FSMetalImageCell.h */,
+				8BD6239108B96CB7002E8C79 /* FSMetalImageCell.m */,
+				8BD6237808B96CB7002E8C79 /* FSMetalSlider.h */,
+				8BD6239208B96CB7002E8C79 /* FSMetalSlider.m */,
+				8BD6237908B96CB7002E8C79 /* FSMetalSliderCell.h */,
+				8BD6239308B96CB7002E8C79 /* FSMetalSliderCell.m */,
+				8B42386008BA865300DC78F2 /* Metal Table */,
+			);
+			name = Disabled;
+			sourceTree = "<group>";
+		};
+		8B73DA560A49F11600484717 /* From Adium */ = {
+			isa = PBXGroup;
+			children = (
+				8B73DA5B0A49F2AF00484717 /* AIGradient.m */,
+				8B73DA5C0A49F2AF00484717 /* AIGradient.h */,
+				8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */,
+				8B73DA5E0A49F2AF00484717 /* AIGenericViewCell.h */,
+				8B73DA5F0A49F2AF00484717 /* AIGradientCell.h */,
+				8B73DA600A49F2AF00484717 /* AIGradientCell.m */,
+				8B73DA630A49F2AF00484717 /* AIFunctions.h */,
+				8B73DA640A49F2AF00484717 /* AIFunctions.m */,
+				8B73DA650A49F2AF00484717 /* AIFontManagerAdditions.h */,
+				8B73DA660A49F2AF00484717 /* AIFontManagerAdditions.m */,
+				8B73DA670A49F2AF00484717 /* AIApplicationAdditions.h */,
+				8B73DA680A49F2AF00484717 /* AIApplicationAdditions.m */,
+				8B73DA690A49F2AF00484717 /* AIScannerAdditions.h */,
+				8B73DA6A0A49F2AF00484717 /* AIScannerAdditions.m */,
+				8B73DA6B0A49F2AF00484717 /* AIStringAdditions.m */,
+				8B73DA6C0A49F2AF00484717 /* AIStringAdditions.h */,
+				8B73DA6D0A49F2AF00484717 /* AIStringUtilities.h */,
+				8B73DA6E0A49F2AF00484717 /* AIScaledImageCell.h */,
+				8B73DA6F0A49F2AF00484717 /* AIScaledImageCell.m */,
+				8B73DA700A49F2AF00484717 /* AIVerticallyCenteredTextCell.h */,
+				8B73DA710A49F2AF00484717 /* AIVerticallyCenteredTextCell.m */,
+				8B73DA720A49F2AF00484717 /* AITextAttributes.h */,
+				8B73DA730A49F2AF00484717 /* AITextAttributes.m */,
+				8B73DA740A49F2AF00484717 /* AIParagraphStyleAdditions.m */,
+				8B73DA750A49F2AF00484717 /* AIParagraphStyleAdditions.h */,
+				8B73DA760A49F2AF00484717 /* AIImageTextCell.h */,
+				8B73DA770A49F2AF00484717 /* AIImageTextCell.m */,
+				8B73DA780A49F2AF00484717 /* AIColorAdditions.m */,
+				8B73DA790A49F2AF00484717 /* AIColorAdditions.h */,
+				8B73DA7A0A49F2AF00484717 /* AIContextImageBridge.m */,
+				8B73DA7B0A49F2AF00484717 /* AIContextImageBridge.h */,
+				8B73DA7C0A49F2AF00484717 /* AIBezierPathAdditions.m */,
+				8B73DA7D0A49F2AF00484717 /* AIBezierPathAdditions.h */,
+				8B73DA7E0A49F2AF00484717 /* AIAttributedStringAdditions.m */,
+				8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */,
+				8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */,
+			);
+			name = "From Adium";
+			sourceTree = "<group>";
+		};
+		8BD6236D08B96CAA002E8C79 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B5175C40A8C2B5400B9D305 /* FSFramework.pch */,
+				8BD6237008B96CB7002E8C79 /* FSFramework.h */,
+				8B5177B30A8CB18F00B9D305 /* Additions */,
+				8B73DA560A49F11600484717 /* From Adium */,
+				8B5177B40A8CB1AD00B9D305 /* Views */,
+				8B5177B50A8CB1CE00B9D305 /* Cells */,
+				8B5177B60A8CB1E400B9D305 /* Windows */,
+				8B63F30F0A4B041000057D0D /* Disabled */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		8BD6238008B96CB7002E8C79 /* Calendar View */ = {
+			isa = PBXGroup;
+			children = (
+				8BD6238308B96CB7002E8C79 /* FSCalendarPopUpButton.h */,
+				8BD6238408B96CB7002E8C79 /* FSCalendarPopUpButton.m */,
+				8BD6238508B96CB7002E8C79 /* FSCalendarPopupButtonWindow.h */,
+				8BD6238608B96CB7002E8C79 /* FSCalendarPopupButtonWindow.m */,
+			);
+			name = "Calendar View";
+			path = "Source/Calendar View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD6239A08B96CB7002E8C79 /* FSFramework.h in Headers */,
+				8BD623A808B96CB7002E8C79 /* FSOvalActionCell.h in Headers */,
+				8BD623A908B96CB7002E8C79 /* FSOvalTextFieldCell.h in Headers */,
+				8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */,
+				8B42404208BFD09C00DC78F2 /* LNAboutBoxController.h in Headers */,
+				8B42404308BFD09C00DC78F2 /* FSPreferenceWindow.h in Headers */,
+				8B42404408BFD09C00DC78F2 /* FSAlertExtensions.h in Headers */,
+				8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */,
+				8B05AB170A43559400147648 /* FSSplitView.h in Headers */,
+				8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */,
+				8B73DA840A49F2AF00484717 /* AIGenericViewCell.h in Headers */,
+				8B73DA850A49F2AF00484717 /* AIGradientCell.h in Headers */,
+				8B73DA890A49F2AF00484717 /* AIFunctions.h in Headers */,
+				8B73DA8B0A49F2AF00484717 /* AIFontManagerAdditions.h in Headers */,
+				8B73DA8D0A49F2AF00484717 /* AIApplicationAdditions.h in Headers */,
+				8B73DA8F0A49F2AF00484717 /* AIScannerAdditions.h in Headers */,
+				8B73DA920A49F2AF00484717 /* AIStringAdditions.h in Headers */,
+				8B73DA930A49F2AF00484717 /* AIStringUtilities.h in Headers */,
+				8B73DA940A49F2AF00484717 /* AIScaledImageCell.h in Headers */,
+				8B73DA960A49F2AF00484717 /* AIVerticallyCenteredTextCell.h in Headers */,
+				8B73DA980A49F2AF00484717 /* AITextAttributes.h in Headers */,
+				8B73DA9B0A49F2AF00484717 /* AIParagraphStyleAdditions.h in Headers */,
+				8B73DA9C0A49F2AF00484717 /* AIImageTextCell.h in Headers */,
+				8B73DA9F0A49F2AF00484717 /* AIColorAdditions.h in Headers */,
+				8B73DAA10A49F2AF00484717 /* AIContextImageBridge.h in Headers */,
+				8B73DAA30A49F2AF00484717 /* AIBezierPathAdditions.h in Headers */,
+				8B73DAA50A49F2AF00484717 /* AIAttributedStringAdditions.h in Headers */,
+				8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */,
+				8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */,
+				8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */,
+				8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* FSFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B03055808B8D252007EC1E7 /* Build configuration list for PBXNativeTarget "FSFramework" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WYAppFramework_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				PREBINDING = NO;
+				PRODUCT_NAME = WYAppFramework;
+				WRAPPER_EXTENSION = framework;
+			};
+			dependencies = (
+			);
+			name = FSFramework;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = WYAppFramework;
+			productReference = 8DC2EF5B0486A6940098B216 /* FSFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8B03055C08B8D252007EC1E7 /* Build configuration list for PBXProject "FSFramework" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA440018CDF011CA2923 /* Debug */,
+				014CEA450018CDF011CA2923 /* Release */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* FSFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD623DA08B96D26002E8C79 /* InfoPlist.strings in Resources */,
+				8B42404908BFD0C700DC78F2 /* AboutBox.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD623C108B96CB7002E8C79 /* FSOvalActionCell.m in Sources */,
+				8BD623C208B96CB7002E8C79 /* FSOvalTextFieldCell.m in Sources */,
+				8B42376008BA723500DC78F2 /* FSTableView.m in Sources */,
+				8B42404A08BFD0C700DC78F2 /* LNAboutBoxController.m in Sources */,
+				8B42404B08BFD0C700DC78F2 /* FSPreferenceWindow.m in Sources */,
+				8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */,
+				8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */,
+				8B05AB180A43559400147648 /* FSSplitView.m in Sources */,
+				8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */,
+				8B73DA830A49F2AF00484717 /* AIGenericViewCell.m in Sources */,
+				8B73DA860A49F2AF00484717 /* AIGradientCell.m in Sources */,
+				8B73DA8A0A49F2AF00484717 /* AIFunctions.m in Sources */,
+				8B73DA8C0A49F2AF00484717 /* AIFontManagerAdditions.m in Sources */,
+				8B73DA8E0A49F2AF00484717 /* AIApplicationAdditions.m in Sources */,
+				8B73DA900A49F2AF00484717 /* AIScannerAdditions.m in Sources */,
+				8B73DA910A49F2AF00484717 /* AIStringAdditions.m in Sources */,
+				8B73DA950A49F2AF00484717 /* AIScaledImageCell.m in Sources */,
+				8B73DA970A49F2AF00484717 /* AIVerticallyCenteredTextCell.m in Sources */,
+				8B73DA990A49F2AF00484717 /* AITextAttributes.m in Sources */,
+				8B73DA9A0A49F2AF00484717 /* AIParagraphStyleAdditions.m in Sources */,
+				8B73DA9D0A49F2AF00484717 /* AIImageTextCell.m in Sources */,
+				8B73DA9E0A49F2AF00484717 /* AIColorAdditions.m in Sources */,
+				8B73DAA00A49F2AF00484717 /* AIContextImageBridge.m in Sources */,
+				8B73DAA20A49F2AF00484717 /* AIBezierPathAdditions.m in Sources */,
+				8B73DAA40A49F2AF00484717 /* AIAttributedStringAdditions.m in Sources */,
+				8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */,
+				8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8BD623D908B96D26002E8C79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD623D508B96D18002E8C79 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B03055908B8D252007EC1E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FSFramework.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Other Sources/Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x20000000,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FSFramework;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8B03055A08B8D252007EC1E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FSFramework.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Other Sources/Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x20000000,
+				);
+				PREBINDING = YES;
+				PRODUCT_NAME = FSFramework;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		8B03055B08B8D252007EC1E7 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FSFramework.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Other Sources/Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0x20000000,
+				);
+				PREBINDING = YES;
+				PRODUCT_NAME = FSFramework;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Default;
+		};
+		8B03055D08B8D252007EC1E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		8B03055E08B8D252007EC1E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		8B03055F08B8D252007EC1E7 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B03055808B8D252007EC1E7 /* Build configuration list for PBXNativeTarget "FSFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B03055908B8D252007EC1E7 /* Debug */,
+				8B03055A08B8D252007EC1E7 /* Release */,
+				8B03055B08B8D252007EC1E7 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		8B03055C08B8D252007EC1E7 /* Build configuration list for PBXProject "FSFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B03055D08B8D252007EC1E7 /* Debug */,
+				8B03055E08B8D252007EC1E7 /* Release */,
+				8B03055F08B8D252007EC1E7 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
