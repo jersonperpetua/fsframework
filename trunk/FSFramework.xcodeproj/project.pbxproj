@@ -23,6 +23,12 @@
 		8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8B5175C40A8C2B5400B9D305 /* FSFramework.pch */; };
 		8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */; };
 		8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B517F230A8D005200B9D305 /* FSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F210A8D005200B9D305 /* FSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B517F240A8D005200B9D305 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F220A8D005200B9D305 /* FSViewController.m */; };
+		8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F270A8D005F00B9D305 /* FSControlledView.h */; };
+		8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F280A8D005F00B9D305 /* FSControlledView.m */; };
+		8B517F5D0A8D01A700B9D305 /* FSWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F5B0A8D01A700B9D305 /* FSWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F5C0A8D01A700B9D305 /* FSWindowController.m */; };
 		8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5B0A49F2AF00484717 /* AIGradient.m */; };
 		8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5C0A49F2AF00484717 /* AIGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DA830A49F2AF00484717 /* AIGenericViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */; };
@@ -125,6 +131,12 @@
 		8B5175C40A8C2B5400B9D305 /* FSFramework.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSFramework.pch; sourceTree = "<group>"; };
 		8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAboutWindow.m; path = Source/FSAboutWindow.m; sourceTree = "<group>"; };
 		8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutWindow.h; path = Source/FSAboutWindow.h; sourceTree = "<group>"; };
+		8B517F210A8D005200B9D305 /* FSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSViewController.h; path = Source/FSViewController.h; sourceTree = "<group>"; };
+		8B517F220A8D005200B9D305 /* FSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSViewController.m; path = Source/FSViewController.m; sourceTree = "<group>"; };
+		8B517F270A8D005F00B9D305 /* FSControlledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSControlledView.h; path = Source/FSControlledView.h; sourceTree = "<group>"; };
+		8B517F280A8D005F00B9D305 /* FSControlledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSControlledView.m; path = Source/FSControlledView.m; sourceTree = "<group>"; };
+		8B517F5B0A8D01A700B9D305 /* FSWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSWindowController.h; path = Source/FSWindowController.h; sourceTree = "<group>"; };
+		8B517F5C0A8D01A700B9D305 /* FSWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSWindowController.m; path = Source/FSWindowController.m; sourceTree = "<group>"; };
 		8B73DA5B0A49F2AF00484717 /* AIGradient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGradient.m; path = Source/adium/AIGradient.m; sourceTree = "<group>"; };
 		8B73DA5C0A49F2AF00484717 /* AIGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGradient.h; path = Source/adium/AIGradient.h; sourceTree = "<group>"; };
 		8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGenericViewCell.m; path = Source/adium/AIGenericViewCell.m; sourceTree = "<group>"; };
@@ -325,6 +337,35 @@
 			name = Windows;
 			sourceTree = "<group>";
 		};
+		8B517F1E0A8D003900B9D305 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B517F5A0A8D019900B9D305 /* Window Controller */,
+				8B517F590A8D018B00B9D305 /* View Controller */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8B517F590A8D018B00B9D305 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B517F210A8D005200B9D305 /* FSViewController.h */,
+				8B517F220A8D005200B9D305 /* FSViewController.m */,
+				8B517F270A8D005F00B9D305 /* FSControlledView.h */,
+				8B517F280A8D005F00B9D305 /* FSControlledView.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		8B517F5A0A8D019900B9D305 /* Window Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B517F5B0A8D01A700B9D305 /* FSWindowController.h */,
+				8B517F5C0A8D01A700B9D305 /* FSWindowController.m */,
+			);
+			name = "Window Controller";
+			sourceTree = "<group>";
+		};
 		8B63F30F0A4B041000057D0D /* Disabled */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +440,7 @@
 			children = (
 				8B5175C40A8C2B5400B9D305 /* FSFramework.pch */,
 				8BD6237008B96CB7002E8C79 /* FSFramework.h */,
+				8B517F1E0A8D003900B9D305 /* Controllers */,
 				8B5177B30A8CB18F00B9D305 /* Additions */,
 				8B73DA560A49F11600484717 /* From Adium */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
@@ -459,6 +501,9 @@
 				8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */,
 				8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */,
 				8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */,
+				8B517F230A8D005200B9D305 /* FSViewController.h in Headers */,
+				8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */,
+				8B517F5D0A8D01A700B9D305 /* FSWindowController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +612,9 @@
 				8B73DAA40A49F2AF00484717 /* AIAttributedStringAdditions.m in Sources */,
 				8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */,
 				8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */,
+				8B517F240A8D005200B9D305 /* FSViewController.m in Sources */,
+				8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */,
+				8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
