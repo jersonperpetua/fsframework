@@ -14,19 +14,30 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-// IMPORTANT: FSViewController does not handle releasing all top level objects
-// like NSWindowController does.  It does handle releasing the view for you, but
-// if your nib file contains any more top level objects, you must release them
-// youself
-
 @class FSControlledView;
 @interface FSViewController : NSObject {
 	IBOutlet FSControlledView *view;
+	NSMutableArray *topLevelObjects;
 }
 
 - (id)init;
-- (FSControlledView *)view; // load the nib (if not loaded) and show the view
+- (FSControlledView *)view; // load the nib (if not loaded) and return the view
 
+// IMPORTANT NOTE: -------------------------------
+// It is ESENTIAL that if you bind something to
+// this controller that you unbind it when finished.
+// The best practice for using bindings would be to
+// bind when the view activates and unbind when it
+// deactivates.  Activation and deactivation happen
+// when the view is added or removed from a window
+// so it shouldn't cause any performance hit (you
+// wouldn't want to be observing changes when the view
+// isn't visible anyway).  The alternative is that
+// this object will never be released because whatever
+// is bound to this will have retained it and you have
+// no way of controlling the release of it except to
+// unbind.
+// -----------------------------------------------
 
 // the following methods are for subclassers
 // none of them should be called directly
@@ -34,16 +45,15 @@
 - (void)viewWillLoad; // called before the view is loaded from the nib
 - (void)viewDidLoad; // called after the view is loaded from the nib
 
-// just before the view is released
-- (void)viewWillClose;
+- (void)viewWillClose;	// just before the view is released
 
 // the following methods are not invoked when
 // a view changes from one window to another
-- (void)viewWillActivate; // called before a view is added to a window
-- (void)viewDidActivate; // called after a view is added to a window
+- (void)viewWillActivate;	// called before a view is added to a window
+- (void)viewDidActivate;	// called after a view is added to a window
 
-- (void)viewWillInactivate; // called before a view is removed from a window
-- (void)viewDidInactivate; // called after a view is removed from a window
+- (void)viewWillInactivate;	// called before a view is removed from a window
+- (void)viewDidInactivate;	// called after a view is removed from a window
 
 @end
 

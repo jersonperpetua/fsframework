@@ -37,6 +37,7 @@
 - (id)init {
 	if (self = [super init]) {
 		view = nil;
+		topLevelObjects = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
@@ -48,16 +49,29 @@
 	
 	// IMPORTANT: make sure the view knows that this controller no longer exists
 	[view setViewController:nil];
-	// only now is it safe to release the view
-	[view release];
 	
+	// only now is it safe to release the view
+	// and all other top level objects
+	id object;
+	NSEnumerator *enumerator = [topLevelObjects objectEnumerator];
+	while (object = [enumerator nextObject]) {
+		[object release];
+	}
+
+	[topLevelObjects release];	
 	[super dealloc];
 }
 
 - (FSControlledView *)view {
     if (!view) {
 		[self viewWillLoad];
-		[NSBundle loadNibNamed:[[self class] nibName] owner:self];
+
+		NSDictionary *table = [NSDictionary dictionaryWithObjectsAndKeys:self, NSNibOwner,
+			topLevelObjects, NSNibTopLevelObjects, nil];
+		[[NSBundle bundleForClass:[self class]] loadNibFile:[[self class] nibName]
+										  externalNameTable:table
+												   withZone:[self zone]];
+
 		[view setViewController:self]; // make sure the view knows that we're the controller
 		[self viewDidLoad];
     }
