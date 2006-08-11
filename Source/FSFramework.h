@@ -18,6 +18,8 @@
 #import <FSFramework/FSAlertExtensions.h>
 #import <FSFramework/FSArrayExtensions.h>
 
+#import <FSFramework/FSWindowController.h>
+#import <FSFramework/FSViewController.h>
 
 #import <FSFramework/FSSplitView.h>
 //#import <FSFramework/FSCanendarPopUpButton.h>
