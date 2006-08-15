@@ -42,6 +42,7 @@
 - (NSString *)selectedIdentifier;
 - (void)setSelectedIdentifier:(NSString *)sel;
 - (void)changePreferenceView:(id)sender;
+- (void)saveConfigIfNeeded;
 @end
 
 @implementation FSPreferenceWindowController
@@ -58,24 +59,6 @@
 	return self;
 }
 
-//- (id)initWithContentRect:(NSRect)contentRect styleMask:(unsigned int)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag {
-//	if (self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag])
-//	{
-//		title = nil;
-//		autosaveName = nil;
-//		selected = nil;
-//		views = [[NSMutableArray alloc] init];
-//		toolbar = [[NSToolbar alloc] initWithIdentifier:@"Preference Toolbar"];
-//		[toolbar setAutosavesConfiguration:YES];
-//		[toolbar setDelegate:self];
-//		[toolbar setAllowsUserCustomization:NO];
-//		[[self window] setToolbar:toolbar];
-//		return self;
-//	} else {
-//		return nil;
-//	}
-//}
-
 - (void)dealloc {
 	[toolbar release];
 	[views release];
@@ -85,7 +68,7 @@
 	[super dealloc];
 }
 
-- (void)close {
+- (void)saveConfigIfNeeded {
 	if (autosaveName)
 	{
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -95,7 +78,6 @@
 			[self selectedIdentifier] ? [NSString stringWithString:[self selectedIdentifier]] : @"", @"Selected Item Identifier", // make a new selected string so that when reopening view, selected != identifier after retaining that object a few times.... cool!
 			nil, nil] forKey:autosaveName];
 	}
-	[super close];
 }
 
 - (NSString *)selectedIdentifier {
@@ -189,6 +171,8 @@
 		
 		// release things
 		[content release];
+		
+		[self saveConfigIfNeeded]; // autosave?
 	}
 }
 
