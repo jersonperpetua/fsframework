@@ -25,12 +25,13 @@
 //#import <FSFramework/FSCanendarPopUpButton.h>
 //#import <FSFramework/FSCanendarPopUpButtonWindow.h>
 #import <FSFramework/FSTableView.h>
+#import <FSFramework/FSBackgroundView.h>
 
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>
 
 #import <FSFramework/FSAboutWindow.h>
-#import <FSFramework/FSPreferenceWindow.h>
+#import <FSFramework/FSPreferenceWindowController.h>
 
 // From Adium
 #import <FSFramework/AIGradient.h>

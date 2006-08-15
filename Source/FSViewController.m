@@ -35,6 +35,10 @@
 }
 
 - (id)init {
+	NSAssert([[self class] nibName],
+			 @"FSViewController is designed for subclasses to use.  "
+			 "You must implement the +(NSString *)nibName method");
+	
 	if (self = [super init]) {
 		view = nil;
 		topLevelObjects = [[NSMutableArray alloc] init];

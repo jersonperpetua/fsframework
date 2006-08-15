@@ -18,8 +18,9 @@
 
 }
 
-@end
-
-@protocol FSWindowControllerProtocol
 + (NSString *)nibName;
+- (id)init;
+
+- (IBAction)closeWindow:(id)sender;
+
 @end

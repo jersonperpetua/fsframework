@@ -20,6 +20,8 @@
 	NSMutableArray *topLevelObjects;
 }
 
++ (NSString *)nibName;
+
 - (id)init;
 - (FSControlledView *)view; // load the nib (if not loaded) and return the view
 
@@ -55,8 +57,4 @@
 - (void)viewWillInactivate;	// called before a view is removed from a window
 - (void)viewDidInactivate;	// called after a view is removed from a window
 
-@end
-
-@protocol FSViewControllerProtocol
-+ (NSString *)nibName;
 @end

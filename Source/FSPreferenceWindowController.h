@@ -14,28 +14,27 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-@protocol FSPreferenceViewProtocol
+#import "FSWindowController.h"
+
+@class FSViewController;
+@protocol FSPreferenceViewControllerProtocol
 - (NSString *)label;
 - (NSImage *)image;
-
-- (BOOL)loaded;
-- (void)load;
 @end
 
-@interface FSPreferenceWindow : NSWindow {
+@interface FSPreferenceWindowController : FSWindowController {
 	NSToolbar *toolbar;
 	NSMutableArray *views;
 	NSString *title;
-	NSString *autosave_name;
+	NSString *autosaveName;
 	NSString *selected;
 }
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(unsigned int)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag;
+// when creating your preferce window, you must be sure that it's large enough to fit the width of any of your views
+// the height is not important as it will change, but the width must fit
+- (void)addView:(FSViewController <FSPreferenceViewControllerProtocol> *)view;
 
-- (void)addView:(NSView <FSPreferenceViewProtocol> *)view;// label:(NSString *)label image:(NSImage *)image;
-
-- (void)setTitle:(NSString *)new_title;
-- (NSTimeInterval)animationResizeTime:(NSRect)newFrame;
+- (void)setTitle:(NSString *)new_title; // set the title after adding the first view so that it displays right when the window is opened
 - (void)setAutosaveName:(NSString *)name; // saves window frame and selected toolbar item identifier, but not labels, views and images.
 										  // those must be reinstalled (and the same way so that saved item can be reselected).
 										  // call after installing all views in order for saved view to be selected properly.
