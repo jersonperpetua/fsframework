@@ -54,3 +54,8 @@
 #import <FSFramework/AITextAttributes.h>
 #import <FSFramework/AIExceptionHandlingUtilities.h>
 #import <FSFramework/AIStringUtilities.h>
+#import <FSFramework/AIPlasticButton.h>
+#import <FSFramework/AIPlasticButtonCell.h>
+#import <FSFramework/AIPlasticPlusButton.h>
+#import <FSFramework/AIPlasticMinusButton.h>
+#import <FSFramework/AIImageAdditions.h>
