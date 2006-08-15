@@ -11,12 +11,12 @@
 		8B05AB180A43559400147648 /* FSSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B05AB160A43559400147648 /* FSSplitView.m */; };
 		8B42376008BA723500DC78F2 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42375F08BA723500DC78F2 /* FSTableView.m */; };
 		8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42376108BA723E00DC78F2 /* FSTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B42404208BFD09C00DC78F2 /* LNAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B42404308BFD09C00DC78F2 /* FSPreferenceWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404008BFD09C00DC78F2 /* FSPreferenceWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B42404308BFD09C00DC78F2 /* FSPreferenceWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404408BFD09C00DC78F2 /* FSAlertExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404908BFD0C700DC78F2 /* AboutBox.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8B42404508BFD0C700DC78F2 /* AboutBox.nib */; };
-		8B42404A08BFD0C700DC78F2 /* LNAboutBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */; };
-		8B42404B08BFD0C700DC78F2 /* FSPreferenceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404708BFD0C700DC78F2 /* FSPreferenceWindow.m */; };
+		8B42404A08BFD0C700DC78F2 /* FSAboutBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404608BFD0C700DC78F2 /* FSAboutBoxController.m */; };
+		8B42404B08BFD0C700DC78F2 /* FSPreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */; };
 		8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */; };
 		8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */; };
@@ -25,7 +25,7 @@
 		8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F230A8D005200B9D305 /* FSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F210A8D005200B9D305 /* FSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F240A8D005200B9D305 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F220A8D005200B9D305 /* FSViewController.m */; };
-		8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F270A8D005F00B9D305 /* FSControlledView.h */; };
+		8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F270A8D005F00B9D305 /* FSControlledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F280A8D005F00B9D305 /* FSControlledView.m */; };
 		8B517F5D0A8D01A700B9D305 /* FSWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F5B0A8D01A700B9D305 /* FSWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F5C0A8D01A700B9D305 /* FSWindowController.m */; };
@@ -74,32 +74,10 @@
 		8BD623C108B96CB7002E8C79 /* FSOvalActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */; };
 		8BD623C208B96CB7002E8C79 /* FSOvalTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */; };
 		8BD623DA08B96D26002E8C79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BD623D908B96D26002E8C79 /* InfoPlist.strings */; };
+		8BE4C6720A90D86C006C0338 /* FSBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */; };
+		8BE4C6730A90D86D006C0338 /* FSBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		014CEA440018CDF011CA2923 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		014CEA450018CDF011CA2923 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -119,12 +97,12 @@
 		8B423C9908BC072F00DC78F2 /* FSMetalBorderHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderHeaderCell.m; path = Source/FSMetalBorderHeaderCell.m; sourceTree = "<group>"; };
 		8B423DA008BC113C00DC78F2 /* FSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSScrollView.h; path = Source/FSScrollView.h; sourceTree = "<group>"; };
 		8B423DA108BC113C00DC78F2 /* FSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSScrollView.m; path = Source/FSScrollView.m; sourceTree = "<group>"; };
-		8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = LNAboutBoxController.h; path = Source/LNAboutBoxController.h; sourceTree = "<group>"; };
-		8B42404008BFD09C00DC78F2 /* FSPreferenceWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSPreferenceWindow.h; path = Source/FSPreferenceWindow.h; sourceTree = "<group>"; };
+		8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutBoxController.h; path = Source/FSAboutBoxController.h; sourceTree = "<group>"; };
+		8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSPreferenceWindowController.h; path = Source/FSPreferenceWindowController.h; sourceTree = "<group>"; };
 		8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAlertExtensions.h; path = Source/FSAlertExtensions.h; sourceTree = "<group>"; };
 		8B42404508BFD0C700DC78F2 /* AboutBox.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AboutBox.nib; path = Source/AboutBox.nib; sourceTree = "<group>"; };
-		8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = LNAboutBoxController.m; path = Source/LNAboutBoxController.m; sourceTree = "<group>"; };
-		8B42404708BFD0C700DC78F2 /* FSPreferenceWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSPreferenceWindow.m; path = Source/FSPreferenceWindow.m; sourceTree = "<group>"; };
+		8B42404608BFD0C700DC78F2 /* FSAboutBoxController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAboutBoxController.m; path = Source/FSAboutBoxController.m; sourceTree = "<group>"; };
+		8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSPreferenceWindowController.m; path = Source/FSPreferenceWindowController.m; sourceTree = "<group>"; };
 		8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAlertExtensions.m; path = Source/FSAlertExtensions.m; sourceTree = "<group>"; };
 		8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSApplicationAdditions.h; path = Source/FSApplicationAdditions.h; sourceTree = "<group>"; };
 		8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSApplicationAdditions.m; path = Source/FSApplicationAdditions.m; sourceTree = "<group>"; };
@@ -308,6 +286,8 @@
 				8BD6238008B96CB7002E8C79 /* Calendar View */,
 				8B42376108BA723E00DC78F2 /* FSTableView.h */,
 				8B42375F08BA723500DC78F2 /* FSTableView.m */,
+				8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */,
+				8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -328,11 +308,11 @@
 			children = (
 				8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */,
 				8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */,
-				8B42403F08BFD09C00DC78F2 /* LNAboutBoxController.h */,
-				8B42404608BFD0C700DC78F2 /* LNAboutBoxController.m */,
+				8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */,
+				8B42404608BFD0C700DC78F2 /* FSAboutBoxController.m */,
 				8B42404508BFD0C700DC78F2 /* AboutBox.nib */,
-				8B42404008BFD09C00DC78F2 /* FSPreferenceWindow.h */,
-				8B42404708BFD0C700DC78F2 /* FSPreferenceWindow.m */,
+				8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */,
+				8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -369,8 +349,6 @@
 		8B63F30F0A4B041000057D0D /* Disabled */ = {
 			isa = PBXGroup;
 			children = (
-				8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */,
-				8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */,
 				8BD6237308B96CB7002E8C79 /* FSMetalBorderCell.h */,
 				8BD6238D08B96CB7002E8C79 /* FSMetalBorderCell.m */,
 				8B423C9808BC072F00DC78F2 /* FSMetalBorderHeaderCell.h */,
@@ -443,8 +421,8 @@
 				8B517F1E0A8D003900B9D305 /* Controllers */,
 				8B5177B30A8CB18F00B9D305 /* Additions */,
 				8B73DA560A49F11600484717 /* From Adium */,
-				8B5177B40A8CB1AD00B9D305 /* Views */,
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
+				8B5177B40A8CB1AD00B9D305 /* Views */,
 				8B5177B60A8CB1E400B9D305 /* Windows */,
 				8B63F30F0A4B041000057D0D /* Disabled */,
 			);
@@ -474,8 +452,8 @@
 				8BD623A808B96CB7002E8C79 /* FSOvalActionCell.h in Headers */,
 				8BD623A908B96CB7002E8C79 /* FSOvalTextFieldCell.h in Headers */,
 				8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */,
-				8B42404208BFD09C00DC78F2 /* LNAboutBoxController.h in Headers */,
-				8B42404308BFD09C00DC78F2 /* FSPreferenceWindow.h in Headers */,
+				8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */,
+				8B42404308BFD09C00DC78F2 /* FSPreferenceWindowController.h in Headers */,
 				8B42404408BFD09C00DC78F2 /* FSAlertExtensions.h in Headers */,
 				8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */,
 				8B05AB170A43559400147648 /* FSSplitView.h in Headers */,
@@ -504,6 +482,7 @@
 				8B517F230A8D005200B9D305 /* FSViewController.h in Headers */,
 				8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */,
 				8B517F5D0A8D01A700B9D305 /* FSWindowController.h in Headers */,
+				8BE4C6730A90D86D006C0338 /* FSBackgroundView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,23 +500,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WYAppFramework_Prefix.pch;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_STYLE = DYNAMIC;
-				PREBINDING = NO;
-				PRODUCT_NAME = WYAppFramework;
-				WRAPPER_EXTENSION = framework;
-			};
 			dependencies = (
 			);
 			name = FSFramework;
@@ -552,12 +514,6 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 8B03055C08B8D252007EC1E7 /* Build configuration list for PBXProject "FSFramework" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				014CEA440018CDF011CA2923 /* Debug */,
-				014CEA450018CDF011CA2923 /* Release */,
-			);
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -588,8 +544,8 @@
 				8BD623C108B96CB7002E8C79 /* FSOvalActionCell.m in Sources */,
 				8BD623C208B96CB7002E8C79 /* FSOvalTextFieldCell.m in Sources */,
 				8B42376008BA723500DC78F2 /* FSTableView.m in Sources */,
-				8B42404A08BFD0C700DC78F2 /* LNAboutBoxController.m in Sources */,
-				8B42404B08BFD0C700DC78F2 /* FSPreferenceWindow.m in Sources */,
+				8B42404A08BFD0C700DC78F2 /* FSAboutBoxController.m in Sources */,
+				8B42404B08BFD0C700DC78F2 /* FSPreferenceWindowController.m in Sources */,
 				8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */,
 				8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */,
 				8B05AB180A43559400147648 /* FSSplitView.m in Sources */,
@@ -615,6 +571,7 @@
 				8B517F240A8D005200B9D305 /* FSViewController.m in Sources */,
 				8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */,
 				8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */,
+				8BE4C6720A90D86C006C0338 /* FSBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

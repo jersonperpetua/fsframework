@@ -19,29 +19,31 @@
  * Visit http://www.adiumx.com/ for more information.
  */
 
-@interface LNAboutBoxController : NSWindowController {
+#import "FSWindowController.h"
+
+@interface FSAboutBoxController : FSWindowController {
 	IBOutlet	NSPanel		*panel_licenseSheet;
 	IBOutlet	NSTextView	*textView_license;
 	
-IBOutlet	NSButton	*button_version;
+	IBOutlet	NSButton	*button_version;
 	IBOutlet	NSButton	*button_homepage;
 	IBOutlet	NSButton	*button_license;
-IBOutlet	NSTextField	*textField_name;
-IBOutlet	NSTextView	*textView_credits;
+	IBOutlet	NSTextField	*textField_name;
+	IBOutlet	NSTextView	*textView_credits;
 
 	//Version and duck clicking
-NSString 				*buildDate;
-int						numberOfBuildFieldClicks, numberOfSpaceKeyDowns;
+	NSString 				*buildDate;
+	int						numberOfBuildFieldClicks, numberOfSpaceKeyDowns;
 
 	//Scrolling
-NSTimer					*scrollTimer;
+	NSTimer					*scrollTimer;
 	NSTimer					*eventLoopScrollTimer;
-float					scrollLocation;
-int						maxScroll;
-float   	scrollRate;
+	float					scrollLocation;
+	int						maxScroll;
+	float					scrollRate;
 }
 
-+ (LNAboutBoxController *)aboutBoxController;
++ (FSAboutBoxController *)aboutBoxController;
 - (IBAction)closeWindow:(id)sender;
 - (IBAction)buildFieldClicked:(id)sender;
 - (IBAction)visitHomepage:(id)sender;

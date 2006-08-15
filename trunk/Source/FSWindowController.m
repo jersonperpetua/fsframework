@@ -19,10 +19,30 @@
 
 @implementation FSWindowController
 
++ (NSString *)nibName {
+	return nil;
+}
+
 - (id)init {
+	NSAssert([[self class] nibName],
+			 @"FSWindowController is designed for subclasses to use.  "
+			 "You must implement the +(NSString *)nibName method");
+	
 	if ((self = [super initWithWindowNibName:[[self class] nibName]])) {
 	}
 	return self;
+}
+
+
+- (IBAction)closeWindow:(id)sender
+{
+    if ([self windowShouldClose:nil]) {
+		if ([[self window] isSheet]) {
+			[NSApp endSheet:[self window]];
+		} else {
+			[[self window] close];
+		}
+	}
 }
 
 @end

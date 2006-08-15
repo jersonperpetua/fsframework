@@ -19,7 +19,7 @@
  * Visit http://www.adiumx.com/ for more information.
  */
 
-#import "LNAboutBoxController.h"
+#import "FSAboutBoxController.h"
 
 #define ABOUT_BOX_NIB					@"AboutBox"
 #define ABOUT_SCROLL_FPS				20.0
@@ -27,18 +27,18 @@
 #define APP_HOMEPAGE					@"http://wbyoung.ambitiouslemon.com/senuti/"
 #define APP_DONATE						@"http://wbyoung.ambitiouslemon.com/senuti/donate.php"
 
-@interface LNAboutBoxController (PRIVATE)
+@interface FSAboutBoxController (PRIVATE)
 - (id)initWithWindowNibName:(NSString *)windowNibName;
 - (BOOL)windowShouldClose:(id)sender;
 - (NSString *)_applicationVersion;
 - (void)_loadBuildInformation;
 @end
 
-@implementation LNAboutBoxController
+@implementation FSAboutBoxController
 
 //Returns the shared about box instance
-LNAboutBoxController *sharedAboutBoxInstance = nil;
-+ (LNAboutBoxController *)aboutBoxController {
+FSAboutBoxController *sharedAboutBoxInstance = nil;
++ (FSAboutBoxController *)aboutBoxController {
 	if(!sharedAboutBoxInstance) {
 		sharedAboutBoxInstance = [[self alloc] initWithWindowNibName:ABOUT_BOX_NIB];
 	}
