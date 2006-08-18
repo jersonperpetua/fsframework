@@ -14,7 +14,8 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#ifdef __OBJC__
-	#import <Cocoa/Cocoa.h>
-	#import "FSMacros.h"
-#endif
+#define FSLog(format,...) \
+NSLog([NSString stringWithFormat:[@"%@:%i " stringByAppendingString:format], \
+	[[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
+	__LINE__, \
+	##__VA_ARGS__])
