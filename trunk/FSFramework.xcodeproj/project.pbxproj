@@ -96,6 +96,7 @@
 		8BD623DA08B96D26002E8C79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BD623D908B96D26002E8C79 /* InfoPlist.strings */; };
 		8BE4C6720A90D86C006C0338 /* FSBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */; };
 		8BE4C6730A90D86D006C0338 /* FSBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BF1AC900A963D0300B6A8C2 /* FSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF1AC8F0A963D0300B6A8C2 /* FSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +220,7 @@
 		8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalTextFieldCell.m; path = Source/FSOvalTextFieldCell.m; sourceTree = "<group>"; };
 		8BD623D208B96CF4002E8C79 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = "Other Sources/Info.plist"; sourceTree = "<group>"; };
 		8BD623D508B96D18002E8C79 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8BF1AC8F0A963D0300B6A8C2 /* FSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMacros.h; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -478,6 +480,7 @@
 			children = (
 				8B5175C40A8C2B5400B9D305 /* FSFramework.pch */,
 				8BD6237008B96CB7002E8C79 /* FSFramework.h */,
+				8BF1AC8F0A963D0300B6A8C2 /* FSMacros.h */,
 				8B517F1E0A8D003900B9D305 /* Controllers */,
 				8B5177B30A8CB18F00B9D305 /* Additions */,
 				8B73DA560A49F11600484717 /* From Adium */,
@@ -549,6 +552,7 @@
 				8BBFB96D0A9231A30038A6E3 /* AIPlasticMinusButton.h in Headers */,
 				8BBFB99B0A92330D0038A6E3 /* AIImageAdditions.h in Headers */,
 				8BBFB9AA0A9233590038A6E3 /* pxmLib.h in Headers */,
+				8BF1AC900A963D0300B6A8C2 /* FSMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
