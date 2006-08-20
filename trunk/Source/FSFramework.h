@@ -22,6 +22,7 @@
 
 #import <FSFramework/FSWindowController.h>
 #import <FSFramework/FSViewController.h>
+#import <FSFramework/FSControlledView.h>
 
 #import <FSFramework/FSSplitView.h>
 //#import <FSFramework/FSCanendarPopUpButton.h>
