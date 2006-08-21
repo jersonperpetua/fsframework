@@ -19,6 +19,9 @@
 #import "FSControlledView.h"
 #import "FSArrayExtensions.h"
 
+#define FRAME_AUTOSAVE_NAME			([NSString stringWithFormat:@"CBPreferenceWindow Frame %@", [self autosaveName]])
+#define IDENTIFIER_AUTOSAVE_NAME	([NSString stringWithFormat:@"CBPreferenceWindow SelectedItemIdentifier %@", [self autosaveName]])
+
 @interface FSPreferenceToolbarItem : NSToolbarItem {
 	FSViewController <FSPreferenceViewControllerProtocol> *viewController;
 }
@@ -44,9 +47,13 @@
 
 @interface FSPreferenceWindowController (PRIVATE)
 - (NSString *)selectedIdentifier;
+- (void)windowWillResignKey:(NSNotification *)notificaiton;
 - (void)setSelectedIdentifier:(NSString *)sel;
 - (void)changePreferenceView:(id)sender;
-- (void)saveConfigIfNeeded;
+- (void)saveSelectedIdentifierIfNeeded;
+- (void)saveFrameIfNeeded;
+- (void)updateForAutosaveName;
+- (void)updateTitle;
 @end
 
 @implementation FSPreferenceWindowController
@@ -58,12 +65,39 @@
 		[toolbar setAutosavesConfiguration:YES];
 		[toolbar setDelegate:self];
 		[toolbar setAllowsUserCustomization:NO];
-		[[self window] setToolbar:toolbar];
+		[self setShouldCascadeWindows:NO];
+		if ([self isWindowLoaded]) {
+			[[self window] setToolbar:toolbar];
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowWillResignKey:) name:NSWindowDidResignKeyNotification object:[self window]];
+		}
 	}
 	return self;
 }
 
+- (void)windowDidLoad {
+	
+	[[self window] setToolbar:toolbar];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowWillResignKey:) name:NSWindowDidResignKeyNotification object:[self window]];
+	
+	[self updateTitle];
+	[self updateForAutosaveName]; // update for the autosave name
+	
+	// if nothing's selected, select the first one
+	if (![self selectedIdentifier] && [[toolbar items] count]) {
+		[self changePreferenceView:[[toolbar items] objectAtIndex:0]];
+		[toolbar setSelectedItemIdentifier:[[[toolbar items] objectAtIndex:0] itemIdentifier]];
+	}
+	
+	[super windowDidLoad];
+}
+
+- (void)windowWillResignKey:(NSNotification *)notificaiton {
+	FSLog(@"window will close");
+	[self saveFrameIfNeeded];
+}
+
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[toolbar release];
 	[views release];
 	[title release];
@@ -72,17 +106,70 @@
 	[super dealloc];
 }
 
-- (void)saveConfigIfNeeded {
-	if (autosaveName)
-	{
+#pragma mark autosaving
+// ----------------------------------------------------------------------------------------------------
+// autosaving
+// ----------------------------------------------------------------------------------------------------
+
+- (NSString *)autosaveName {
+	return autosaveName;
+}
+
+- (void)setAutosaveName:(NSString *)name {
+	if (autosaveName != name) {
+		[autosaveName release];
+		autosaveName = [name copy];
+		if ([self isWindowLoaded]) { [self updateForAutosaveName]; }
+	}
+}
+
+- (void)updateForAutosaveName {
+	NSDictionary *savedFrame;
+	NSString *selectedItemIdentifier;
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+	if (savedFrame = [defaults objectForKey:FRAME_AUTOSAVE_NAME]) {		
+		[[self window] setFrame:NSMakeRect([[savedFrame objectForKey:@"X Origin"] floatValue],
+										   [[savedFrame objectForKey:@"Y Max Origin"] floatValue] - [[self window] frame].size.height,
+										   [[self window] frame].size.width,
+										   [[self window] frame].size.height) display:YES];		
+	}
+	
+	selectedItemIdentifier = [defaults objectForKey:IDENTIFIER_AUTOSAVE_NAME];
+	if (selectedItemIdentifier) {
+		NSEnumerator *enumerator = [[toolbar items] objectEnumerator];
+		FSPreferenceToolbarItem *toolbarItem;
+		while (toolbarItem = [enumerator nextObject]) {
+			if ([[toolbarItem itemIdentifier] isEqualToString:selectedItemIdentifier]) {
+				[self changePreferenceView:toolbarItem];
+				[toolbar setSelectedItemIdentifier:[toolbarItem itemIdentifier]];
+			}
+		}
+	}
+}
+
+- (void)saveFrameIfNeeded {
+	if (autosaveName) {
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 		[defaults setObject:[NSDictionary dictionaryWithObjectsAndKeys:
 			[NSNumber numberWithFloat:[[self window] frame].origin.x], @"X Origin",
 			[NSNumber numberWithFloat:[[self window] frame].origin.y + [[self window] frame].size.height], @"Y Max Origin",
-			[self selectedIdentifier] ? [NSString stringWithString:[self selectedIdentifier]] : @"", @"Selected Item Identifier", // make a new selected string so that when reopening view, selected != identifier after retaining that object a few times.... cool!
-			nil, nil] forKey:autosaveName];
+			nil, nil] forKey:FRAME_AUTOSAVE_NAME];
+	}	
+}
+
+- (void)saveSelectedIdentifierIfNeeded {
+	if (autosaveName) {
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		[defaults setObject:[self selectedIdentifier] ? [self selectedIdentifier] : @""
+					 forKey:IDENTIFIER_AUTOSAVE_NAME];
 	}
 }
+
+#pragma mark getter/setter methods
+// ----------------------------------------------------------------------------------------------------
+// getter/setter methods
+// ----------------------------------------------------------------------------------------------------
 
 - (NSString *)selectedIdentifier {
 	return selected;
@@ -95,53 +182,34 @@
 	}
 }
 
-- (NSString *)autosaveName {
-	return autosaveName;
-}
-
-- (void)setAutosaveName:(NSString *)name {
-	if (autosaveName != name) {
-		[autosaveName release];
-		autosaveName = [[NSString stringWithFormat:@"PreferenceWindow Configuration %@", name] retain];
-	}
-	
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	NSDictionary *saved;
-	if (saved = [defaults objectForKey:autosaveName]) {
-		[[self window] setFrame:NSMakeRect([[saved objectForKey:@"X Origin"] floatValue], [[saved objectForKey:@"Y Max Origin"] floatValue] - [[self window] frame].size.height, [[self window] frame].size.width, [[self window] frame].size.height) display:YES];
-
-		NSString *sel = [saved objectForKey:@"Selected Item Identifier"];
-		int counter;
-		for (counter = 0; counter < [[toolbar items] count]; counter++) {
-			if ([[[[toolbar items] objectAtIndex:counter] itemIdentifier] isEqualToString:sel]) {
-				[self changePreferenceView:[[toolbar items] objectAtIndex:counter]];
-				[toolbar setSelectedItemIdentifier:[[[toolbar items] objectAtIndex:counter] itemIdentifier]];
-			}
-		}
-	}
-}
-
 - (void)setTitle:(NSString *)new_title {
 	if (title != new_title) {
 		[title release];
 		title = [new_title retain];
+		if ([self isWindowLoaded]) { [self updateTitle]; }
 	}
+}
 
-	if (title && [views count]) {
-		[[self window] setTitle:[NSString stringWithFormat:@"%@%@", title, [[views objectAtIndex:0] label]]];
+- (NSString *)title {
+	return title;
+}
+
+- (void)updateTitle {
+	if ([self title] && [views count]) {
+		[[self window] setTitle:[NSString stringWithFormat:@"%@%@", [self title], [[views objectAtIndex:0] label]]];
 	} else {
 		[[self window] setTitle:@""];
 	}
 }
 
+#pragma mark adding/changing views
+// ----------------------------------------------------------------------------------------------------
+// adding/changing views
+// ----------------------------------------------------------------------------------------------------
+
 - (void)addView:(FSViewController <FSPreferenceViewControllerProtocol> *)view {
 	[views addObject:view];
 	[toolbar insertItemWithItemIdentifier:[view label] atIndex:[[toolbar items] count]];
-	if ([views count] == 1 && [[toolbar items] count] == 1) // if first added item select it
-	{
-		[self changePreferenceView:[[toolbar items] objectAtIndex:0]];
-		[toolbar setSelectedItemIdentifier:[[[toolbar items] objectAtIndex:0] itemIdentifier]];
-	}
 }
 
 - (void)changePreferenceView:(id)sender {
@@ -176,9 +244,14 @@
 		// release things
 		[content release];
 		
-		[self saveConfigIfNeeded]; // autosave?
+		[self saveSelectedIdentifierIfNeeded]; // autosave?
 	}
 }
+
+#pragma mark toolbar
+// ----------------------------------------------------------------------------------------------------
+// toolbar
+// ----------------------------------------------------------------------------------------------------
 
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag; {
 	int counter;
