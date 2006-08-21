@@ -361,8 +361,6 @@
 				8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */,
 				8B42404608BFD0C700DC78F2 /* FSAboutBoxController.m */,
 				8B42404508BFD0C700DC78F2 /* AboutBox.nib */,
-				8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */,
-				8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -370,8 +368,11 @@
 		8B517F1E0A8D003900B9D305 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8B517F5A0A8D019900B9D305 /* Window Controller */,
 				8B517F590A8D018B00B9D305 /* View Controller */,
+				8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */,
+				8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */,
+				8B517F5B0A8D01A700B9D305 /* FSWindowController.h */,
+				8B517F5C0A8D01A700B9D305 /* FSWindowController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,15 +386,6 @@
 				8B517F280A8D005F00B9D305 /* FSControlledView.m */,
 			);
 			name = "View Controller";
-			sourceTree = "<group>";
-		};
-		8B517F5A0A8D019900B9D305 /* Window Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8B517F5B0A8D01A700B9D305 /* FSWindowController.h */,
-				8B517F5C0A8D01A700B9D305 /* FSWindowController.m */,
-			);
-			name = "Window Controller";
 			sourceTree = "<group>";
 		};
 		8B63F30F0A4B041000057D0D /* Disabled */ = {
