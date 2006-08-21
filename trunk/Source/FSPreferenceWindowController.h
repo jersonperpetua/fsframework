@@ -30,13 +30,19 @@
 	NSString *selected;
 }
 
+// this class has only been tested with nib loaded windows.
+// it may need to be tweaked slightly to work with the setWindow method
+
+// be sure to add views before loading (or setting) the window (via [controller window] or [controller setWindow:window])
+// otherwise the views won't be displayed
 // when creating your preferce window, you must be sure that it's large enough to fit the width of any of your views
-// the height is not important as it will change, but the width must fit
+// the height is not important as it will change, but the width must fit.
 - (void)addView:(FSViewController <FSPreferenceViewControllerProtocol> *)view;
 
-- (void)setTitle:(NSString *)new_title; // set the title after adding the first view so that it displays right when the window is opened
+- (void)setTitle:(NSString *)new_title;
+- (NSString *)title;
 - (void)setAutosaveName:(NSString *)name; // saves window frame and selected toolbar item identifier, but not labels, views and images.
 										  // those must be reinstalled (and the same way so that saved item can be reselected).
-										  // call after installing all views in order for saved view to be selected properly.
+- (NSString *)autosaveName;
 
 @end
