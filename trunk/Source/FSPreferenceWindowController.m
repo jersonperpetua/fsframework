@@ -36,6 +36,10 @@
 		viewController = [aController retain];
 	}
 }
+- (void)dealloc {
+	[viewController release];
+	[super dealloc];
+}
 @end
 
 @interface FSPreferenceWindowController (PRIVATE)
