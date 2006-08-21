@@ -92,7 +92,6 @@
 }
 
 - (void)windowWillResignKey:(NSNotification *)notificaiton {
-	FSLog(@"window will close");
 	[self saveFrameIfNeeded];
 }
 
