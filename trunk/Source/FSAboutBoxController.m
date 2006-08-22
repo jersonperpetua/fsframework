@@ -22,16 +22,14 @@
 #import "FSAboutBoxController.h"
 
 #define ABOUT_BOX_NIB					@"AboutBox"
-#define ABOUT_SCROLL_FPS				20.0
-#define APP_NAME						@"Senuti"
-#define APP_HOMEPAGE					@"http://wbyoung.ambitiouslemon.com/senuti/"
-#define APP_DONATE						@"http://wbyoung.ambitiouslemon.com/senuti/donate.php"
+#define ABOUT_SCROLL_FPS				30.0
+#define ABOUT_SCROLL_RATE				1.0
 
 @interface FSAboutBoxController (PRIVATE)
 - (id)initWithWindowNibName:(NSString *)windowNibName;
-- (BOOL)windowShouldClose:(id)sender;
 - (NSString *)_applicationVersion;
 - (void)_loadBuildInformation;
+- (void)_filterBuildInfo;
 @end
 
 @implementation FSAboutBoxController
@@ -47,14 +45,18 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 
 //Init
 - (id)initWithWindowNibName:(NSString *)windowNibName {
-	[super initWithWindowNibName:windowNibName];
+	if (self = [super initWithWindowNibName:windowNibName]) {
+		numberOfBuildFieldClicks = -1;
+	}
 	return self;
 }
 
 //Dealloc
 - (void)dealloc {
-	[buildDate release];
-
+	[buildInfo release];
+	[buildInfoKeys release];
+	[homepage release];
+	
 	[super dealloc];
 }
 
@@ -73,7 +75,7 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 
 	//Start scrolling
 	scrollLocation = 0; 
-	scrollRate = 1.0;
+	scrollRate = ABOUT_SCROLL_RATE;
 	maxScroll = [[textView_credits textStorage] size].height - [[textView_credits enclosingScrollView] documentVisibleRect].size.height;
 	scrollTimer = [[NSTimer scheduledTimerWithTimeInterval:(1.0/ABOUT_SCROLL_FPS)
 													target:self
@@ -88,41 +90,42 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 	[[NSRunLoop currentRunLoop] addTimer:eventLoopScrollTimer forMode:NSEventTrackingRunLoopMode];
 	
 	//Setup the build date / version
-	[button_version setTitle:[self _applicationVersion]];
-	[textField_name setStringValue:APP_NAME];
+	[textField_name setStringValue:[self _applicationVersion]];
+	[self buildFieldClicked:nil];
 
 	//Set the localized values
-	[[self window] setTitle:[NSString stringWithFormat:@"About %@", APP_NAME]];
 	[button_homepage setTitle:@"Homepage"];
 	[button_license setTitle:@"License"];
 
 	[[self window] center];
 }
 
-//Close the about box
-- (IBAction)closeWindow:(id)sender {
-	if([self windowShouldClose:nil]){
-		[[self window] close];
-	}
-}
-
 //Cleanup as the window is closing
-- (BOOL)windowShouldClose:(id)sender {
+- (void)windowWillClose:(id)sender {
 	[sharedAboutBoxInstance autorelease]; sharedAboutBoxInstance = nil;
 	[scrollTimer invalidate]; [scrollTimer release]; scrollTimer = nil;
 	[eventLoopScrollTimer invalidate]; [eventLoopScrollTimer release]; eventLoopScrollTimer = nil;
-	
-	return YES;
 }
 
 //Visit the homepage
 - (IBAction)visitHomepage:(id)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:APP_HOMEPAGE]];
-}
-- (IBAction)visitDonate:(id)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:APP_DONATE]];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:homepage]];
 }
 
+- (void)setHomepage:(NSString *)string {
+	if (homepage != string) {
+		[homepage release];
+		homepage = [string retain];
+	}
+}
+
+- (void)setBuildInfoDisplayKeys:(NSArray *)keys {
+	if (keys != buildInfoKeys) {
+		[buildInfoKeys release];
+		buildInfoKeys = [keys retain];
+		[self _filterBuildInfo];
+	}	
+}
 
 //Scrolling Credits ----------------------------------------------------------------------------------------------------
 #pragma mark Scrolling Credits
@@ -139,9 +142,9 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 //Receive the flags changed event for reversing the scroll direction via option
 - (void)flagsChanged:(NSEvent *)theEvent {
 	if(([theEvent modifierFlags] & NSAlternateKeyMask) != 0) {
-		scrollRate = -1.0;
+		scrollRate = -ABOUT_SCROLL_RATE;
 	}else{
-		scrollRate = 1.0;   
+		scrollRate = ABOUT_SCROLL_RATE;
 	}
 }
 
@@ -149,21 +152,10 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 - (void)keyDown:(NSEvent *)theEvent {
 	if ([[theEvent characters] characterAtIndex:0] == ' ')
 	{
-		if((++numberOfSpaceKeyDowns) % 2 == 0){
-			scrollTimer = [[NSTimer scheduledTimerWithTimeInterval:(1.0/ABOUT_SCROLL_FPS)
-															target:self
-														  selector:@selector(scrollTimer:)
-														  userInfo:nil
-														   repeats:YES] retain];
-			eventLoopScrollTimer = [[NSTimer timerWithTimeInterval:(1.0/ABOUT_SCROLL_FPS)
-														   target:self
-														 selector:@selector(scrollTimer:)
-														 userInfo:nil
-														  repeats:YES] retain];
-			[[NSRunLoop currentRunLoop] addTimer:eventLoopScrollTimer forMode:NSEventTrackingRunLoopMode];
-		}else{
-			[scrollTimer invalidate]; [scrollTimer release]; scrollTimer = nil;
-			[eventLoopScrollTimer invalidate]; [eventLoopScrollTimer release]; eventLoopScrollTimer = nil;
+		if((++numberOfSpaceKeyDowns) % 2 == 0) {
+			scrollRate = ABOUT_SCROLL_RATE;
+		} else {
+			scrollRate = 0;
 		}
 	} else {
 		[super keyDown:theEvent];
@@ -175,50 +167,50 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 #pragma mark Build Information
 //Toggle build date/number display
 - (IBAction)buildFieldClicked:(id)sender {
-	if((++numberOfBuildFieldClicks) % 2 == 0) {
-		[button_version setTitle:[self _applicationVersion]];
-	} else {
-		[button_version setTitle:buildDate];
-	}
+	int index = ++numberOfBuildFieldClicks % [buildInfo count];	
+	id value = [[buildInfo allValues] objectAtIndex:index];
+	// convert all values to strings
+	if ([value isKindOfClass:[NSDate class]]) {
+		NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] initWithDateFormat:[[NSUserDefaults standardUserDefaults] objectForKey:NSDateFormatString]
+																 allowNaturalLanguage:NO] autorelease];
+		value = [dateFormatter stringForObjectValue:value];			
+	} else if (![value isKindOfClass:[NSString class]]) { value = [value description]; }
+
+	[button_version setTitle:value];
 }
 
 //Returns the current version of the Application
 - (NSString *)_applicationVersion {
-	NSString *version = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleShortVersionString"];
-	NSString *v_version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+	NSString *name = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+	NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 	
-	return [NSString stringWithFormat:@"%@ %@", (version ? version : @""), (v_version ? [NSString stringWithFormat:@"(v%@)", v_version] : @"")];
+	return [NSString stringWithFormat:@"%@ %@", (name ? name : @""), (version ? version : @"")];
 }
 
 //Load the current build date and our cryptic, non-sequential build number ;)
-- (void)_loadBuildInformation {
-	//Grab the info from our buildnum script
-	char *path, unixDate[256], whoami[256];
-	if(path = (char *)[[[NSBundle mainBundle] pathForResource:@"build" ofType:nil] fileSystemRepresentation]) {
-		FILE *f = fopen(path, "r");
-		fscanf(f, "%s | %s", unixDate, whoami);
-		fclose(f);
-			
-		if(*unixDate){
-			NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] initWithDateFormat:[[NSUserDefaults standardUserDefaults] stringForKey:NSShortDateFormatString] allowNaturalLanguage:NO] autorelease];
-
-			NSDate	*date;
-			
-			date = [NSDate dateWithTimeIntervalSince1970:[[NSString stringWithCString:unixDate] doubleValue]];
-			buildDate = [[dateFormatter stringForObjectValue:date] retain];
-		}
-	}
-	
-	//Default to empty strings if something goes wrong
-	if(!buildDate) buildDate = [@"" retain];
+- (void)_loadBuildInformation {	
+	NSString *buildInfoPath = [[NSBundle mainBundle] pathForResource:@"BuildInfo" ofType:@"plist"];
+	buildInfo = [[NSMutableDictionary dictionaryWithContentsOfFile:buildInfoPath] retain];
+	[self _filterBuildInfo];
 }
 
+- (void)_filterBuildInfo {
+	if (buildInfo && buildInfoKeys) {
+		NSString *key;
+		NSEnumerator *keyEnumerator = [[buildInfo allKeys] objectEnumerator];
+		while (key = [keyEnumerator nextObject]) {
+			if (![buildInfoKeys containsObject:key]) {
+				[buildInfo removeObjectForKey:key];
+			}
+		}
+	}
+}
 
 //Software License -----------------------------------------------------------------------------------------------------
 #pragma mark Software License
 //Display the software license sheet
 - (IBAction)showLicense:(id)sender {
-	NSString	*licensePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"gpl" ofType:@"txt"];
+	NSString	*licensePath = [[NSBundle mainBundle] pathForResource:@"License" ofType:@"txt"];
 	[textView_license setString:[NSString stringWithContentsOfFile:licensePath]];
 	
 	[NSApp beginSheet:panel_licenseSheet

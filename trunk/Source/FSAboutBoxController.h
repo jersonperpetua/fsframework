@@ -31,9 +31,12 @@
 	IBOutlet	NSTextField	*textField_name;
 	IBOutlet	NSTextView	*textView_credits;
 
-	//Version and duck clicking
-	NSString 				*buildDate;
+	//Version clicking
+	NSMutableDictionary		*buildInfo;
+	NSArray					*buildInfoKeys;
 	int						numberOfBuildFieldClicks, numberOfSpaceKeyDowns;
+
+	NSString				*homepage;
 
 	//Scrolling
 	NSTimer					*scrollTimer;
@@ -44,10 +47,11 @@
 }
 
 + (FSAboutBoxController *)aboutBoxController;
-- (IBAction)closeWindow:(id)sender;
+- (void)setHomepage:(NSString *)string;
+- (void)setBuildInfoDisplayKeys:(NSArray *)keys; // an array of (ordered) keys to display from the BuildInfo.plist file
+
 - (IBAction)buildFieldClicked:(id)sender;
 - (IBAction)visitHomepage:(id)sender;
-- (IBAction)visitDonate:(id)sender;
 - (IBAction)showLicense:(id)sender;
 - (IBAction)hideLicense:(id)sender;
 
