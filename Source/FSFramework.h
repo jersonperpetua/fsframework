@@ -23,6 +23,8 @@
 #import <FSFramework/FSWindowController.h>
 #import <FSFramework/FSViewController.h>
 #import <FSFramework/FSControlledView.h>
+#import <FSFramework/FSAboutBoxController.h>
+#import <FSFramework/FSPreferenceWindowController.h>
 
 #import <FSFramework/FSSplitView.h>
 //#import <FSFramework/FSCanendarPopUpButton.h>
@@ -32,9 +34,6 @@
 
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>
-
-#import <FSFramework/FSAboutWindow.h>
-#import <FSFramework/FSPreferenceWindowController.h>
 
 // From Adium
 #import <FSFramework/AIGradient.h>

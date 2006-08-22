@@ -15,7 +15,10 @@
  */
 
 #define FSLog(format,...) \
-NSLog([NSString stringWithFormat:[@"%@:%i " stringByAppendingString:format], \
-	[[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
-	__LINE__, \
-	##__VA_ARGS__])
+	NSLog([NSString stringWithFormat:[@"%@:%i " stringByAppendingString:format], \
+		[[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
+		__LINE__, \
+		##__VA_ARGS__])
+
+#define FSLocalizedString(key, comment) \
+	NSLocalizedStringFromTableInBundle(key, nil, [NSBundle bundleForClass:[self class]], comment)

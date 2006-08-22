@@ -366,7 +366,7 @@ void BeginAlertSheetWithCheckboxAndDetails(NSString *title, NSString *defaultBut
 #pragma mark rearanging the window
 		
 - (void)setupWindowForTitle:(NSString *)title message:(NSString *)msg defaultButton:(NSString *)defaultButton otherButton:(NSString *)otherButton checkboxString:(NSString *)checkboxString checkboxState:(BOOL *)checkboxState detailsString:(NSString *)detailsString detailsButtonTitle:(NSString *)detailsButtonTitle detialsState:(BOOL *)detailsState {
-	if (!defaultButton) { defaultButton = NSLocalizedString(@"OK",nil); }
+	if (!defaultButton) { defaultButton = FSLocalizedString(@"OK",nil); }
 	if (!detailsButtonTitle) { detailsButtonTitle = @""; }
 	if (!title) { title = @""; }
 	if (!msg) { msg = @""; }

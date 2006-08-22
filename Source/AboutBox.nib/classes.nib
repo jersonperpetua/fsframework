@@ -1,17 +1,15 @@
 {
     IBClasses = (
         {CLASS = AILinkTextView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
             ACTIONS = {
                 buildFieldClicked = id; 
-                closeWindow = id; 
                 hideLicense = id; 
                 showLicense = id; 
                 visitDonate = id; 
                 visitHomepage = id; 
             }; 
-            CLASS = LNAboutBoxController; 
+            CLASS = FSAboutBoxController; 
             LANGUAGE = ObjC; 
             OUTLETS = {
                 "button_homepage" = NSButton; 
@@ -22,8 +20,15 @@
                 "textView_credits" = NSTextView; 
                 "textView_license" = NSTextView; 
             }; 
+            SUPERCLASS = FSWindowController; 
+        }, 
+        {
+            ACTIONS = {closeWindow = id; }; 
+            CLASS = FSWindowController; 
+            LANGUAGE = ObjC; 
             SUPERCLASS = NSWindowController; 
-        }
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
     ); 
     IBVersion = 1; 
 }
