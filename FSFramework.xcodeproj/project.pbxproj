@@ -728,7 +728,6 @@
 					"-seg1addr",
 					0x20000000,
 				);
-				PREBINDING = YES;
 				PRODUCT_NAME = FSFramework;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = NO;
