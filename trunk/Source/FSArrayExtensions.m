@@ -17,6 +17,15 @@
 #import "FSArrayExtensions.h"
 
 @implementation NSArray (FSArrayExtensions)
+
+- (id)firstObject {
+	if ([self count] > 0) {
+		return [self objectAtIndex:0];
+	} else {
+		return nil;
+	}
+}
+
 - (NSArray *)arrayByPerformingSelectorOnObjects:(SEL)selector {
 	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
 	unsigned int i;
@@ -34,4 +43,5 @@
 	}
 	return array;	
 }
+
 @end

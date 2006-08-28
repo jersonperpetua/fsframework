@@ -15,6 +15,8 @@
  */
 
 @interface NSArray (FSArrayExtensions)
+- (id)firstObject;
+
 - (NSArray *)arrayByPerformingSelectorOnObjects:(SEL)selector;
 - (NSArray *)arrayByPerformingSelectorWithObjects:(SEL)selector onTarget:(id)target;
 @end
