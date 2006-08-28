@@ -47,6 +47,7 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 - (id)initWithWindowNibName:(NSString *)windowNibName {
 	if (self = [super initWithWindowNibName:windowNibName]) {
 		numberOfBuildFieldClicks = -1;
+		[self setShouldCascadeWindows:NO];
 	}
 	return self;
 }
