@@ -66,6 +66,10 @@
 		8B73DAA50A49F2AF00484717 /* AIAttributedStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DB090A49F7DF00484717 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B73DB080A49F7DF00484717 /* Carbon.framework */; };
+		8B7C38E70AA47C6200532495 /* FSImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7C38E50AA47C6200532495 /* FSImageAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C38E60AA47C6200532495 /* FSImageAdditions.m */; };
+		8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
 		8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */; };
 		8BBFB9500A9231400038A6E3 /* AIPlasticButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */; };
@@ -173,6 +177,10 @@
 		8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIAttributedStringAdditions.h; path = Source/adium/AIAttributedStringAdditions.h; sourceTree = "<group>"; };
 		8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIExceptionHandlingUtilities.h; path = Source/adium/AIExceptionHandlingUtilities.h; sourceTree = "<group>"; };
 		8B73DB080A49F7DF00484717 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8B7C38E50AA47C6200532495 /* FSImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSImageAdditions.h; path = Source/FSImageAdditions.h; sourceTree = "<group>"; };
+		8B7C38E60AA47C6200532495 /* FSImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSImageAdditions.m; path = Source/FSImageAdditions.m; sourceTree = "<group>"; };
+		8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSColoredMenuItem.h; path = Source/FSColoredMenuItem.h; sourceTree = "<group>"; };
+		8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSColoredMenuItem.m; path = Source/FSColoredMenuItem.m; sourceTree = "<group>"; };
 		8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArrayExtensions.h; path = Source/FSArrayExtensions.h; sourceTree = "<group>"; };
 		8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArrayExtensions.m; path = Source/FSArrayExtensions.m; sourceTree = "<group>"; };
 		8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIPlasticButton.m; path = Source/adium/AIPlasticButton.m; sourceTree = "<group>"; };
@@ -324,6 +332,8 @@
 				8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */,
 				8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */,
 				8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */,
+				8B7C38E50AA47C6200532495 /* FSImageAdditions.h */,
+				8B7C38E60AA47C6200532495 /* FSImageAdditions.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -338,6 +348,8 @@
 				8B42375F08BA723500DC78F2 /* FSTableView.m */,
 				8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */,
 				8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */,
+				8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */,
+				8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -423,8 +435,8 @@
 		8B73DA560A49F11600484717 /* From Adium */ = {
 			isa = PBXGroup;
 			children = (
-				8B73DA5B0A49F2AF00484717 /* AIGradient.m */,
 				8B73DA5C0A49F2AF00484717 /* AIGradient.h */,
+				8B73DA5B0A49F2AF00484717 /* AIGradient.m */,
 				8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */,
 				8B73DA5E0A49F2AF00484717 /* AIGenericViewCell.h */,
 				8B73DA5F0A49F2AF00484717 /* AIGradientCell.h */,
@@ -553,6 +565,8 @@
 				8BBFB99B0A92330D0038A6E3 /* AIImageAdditions.h in Headers */,
 				8BBFB9AA0A9233590038A6E3 /* pxmLib.h in Headers */,
 				8BF1AFE70A9669EC00B6A8C2 /* FSMacros.h in Headers */,
+				8B7C38E70AA47C6200532495 /* FSImageAdditions.h in Headers */,
+				8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +670,8 @@
 				8BBFB96C0A9231A30038A6E3 /* AIPlasticMinusButton.m in Sources */,
 				8BBFB99C0A92330D0038A6E3 /* AIImageAdditions.m in Sources */,
 				8BBFB9AD0A9233600038A6E3 /* pxmLib.m in Sources */,
+				8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */,
+				8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

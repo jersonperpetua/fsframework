@@ -19,6 +19,7 @@
 #import <FSFramework/FSApplicationAdditions.h>
 #import <FSFramework/FSAlertExtensions.h>
 #import <FSFramework/FSArrayExtensions.h>
+#import <FSFramework/FSImageAdditions.h>
 
 #import <FSFramework/FSWindowController.h>
 #import <FSFramework/FSViewController.h>
@@ -31,6 +32,7 @@
 //#import <FSFramework/FSCanendarPopUpButtonWindow.h>
 #import <FSFramework/FSTableView.h>
 #import <FSFramework/FSBackgroundView.h>
+#import <FSFramework/FSColoredMenuItem.h>
 
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>
