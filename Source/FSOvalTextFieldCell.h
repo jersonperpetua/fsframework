@@ -15,31 +15,22 @@
  */
 
 @interface FSOvalTextFieldCell : NSTextFieldCell {
-BOOL right_oval;
-BOOL left_oval;
-BOOL draws_oval;
-NSColor *oval_color;
-NSColor *border_color;
-float border_width;
+	BOOL right_oval;
+	BOOL left_oval;
+	NSColor *oval_color;
 	BOOL constrain_text;
 }
 
-- (void)setDrawsOval:(BOOL)flag;
-- (void)setDrawsLeftOval:(BOOL)flag;
-- (void)setDrawsRightOval:(BOOL)flag;
-- (void)setConstrainText:(BOOL)flag;
-
-- (void)setOvalColor:(NSColor *)color;
-- (void)setBorderColor:(NSColor *)color;
-- (void)setBorderWidth:(float)width;
-
-- (BOOL)drawsOval;
-- (BOOL)drawsLeftOval;
-- (BOOL)drawsRightOval;
-- (BOOL)constrainText;
-
 - (NSColor *)ovalColor;
-- (NSColor *)borderColor;
-- (float)borderWidth;
+- (void)setOvalColor:(NSColor *)color;
+
+- (BOOL)drawsLeftOval;
+- (void)setDrawsLeftOval:(BOOL)flag;
+
+- (BOOL)drawsRightOval;
+- (void)setDrawsRightOval:(BOOL)flag;
+
+- (BOOL)constrainText;
+- (void)setConstrainText:(BOOL)flag;
 
 @end
