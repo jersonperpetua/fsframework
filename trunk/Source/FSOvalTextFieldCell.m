@@ -87,38 +87,37 @@
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
 	NSRect inner = cellFrame;
 	
-	if (oval_color) {
-		[oval_color set];
-		
-		// draw the left
-		if (left_oval) {
-			NSRect left;
-			NSDivideRect(inner, &left, &inner, inner.size.height, NSMinXEdge);
-			if (![self isHighlighted]) {
-				[[NSBezierPath bezierPathWithOvalInRect:left] fill];
-			}
-			inner = NSMakeRect(inner.origin.x - (inner.size.height / 2),
-							   inner.origin.y,
-							   inner.size.width + (inner.size.height / 2),
-							   inner.size.height);
+	// set the color
+	if (oval_color) { [oval_color set]; }
+	
+	// draw the left
+	if (left_oval) {
+		NSRect left;
+		NSDivideRect(inner, &left, &inner, inner.size.height, NSMinXEdge);
+		if (oval_color && ![self isHighlighted]) {
+			[[NSBezierPath bezierPathWithOvalInRect:left] fill];
 		}
-
-		// draw the right
-		if (right_oval) {
-			NSRect right;
-			NSDivideRect(inner, &right, &inner, inner.size.height, NSMaxXEdge);
-			if (![self isHighlighted]) {
-				[[NSBezierPath bezierPathWithOvalInRect:right] fill];
-			}
-			inner = NSMakeRect(inner.origin.x,
-							   inner.origin.y,
-							   inner.size.width + (inner.size.height / 2),
-							   inner.size.height);
-		}
-
-		// draw interior
-		if (![self isHighlighted]) { [NSBezierPath fillRect:inner]; }
+		inner = NSMakeRect(inner.origin.x - (inner.size.height / 2),
+						   inner.origin.y,
+						   inner.size.width + (inner.size.height / 2),
+						   inner.size.height);
 	}
+
+	// draw the right
+	if (right_oval) {
+		NSRect right;
+		NSDivideRect(inner, &right, &inner, inner.size.height, NSMaxXEdge);
+		if (oval_color && ![self isHighlighted]) {
+			[[NSBezierPath bezierPathWithOvalInRect:right] fill];
+		}
+		inner = NSMakeRect(inner.origin.x,
+						   inner.origin.y,
+						   inner.size.width + (inner.size.height / 2),
+						   inner.size.height);
+	}
+
+	// draw interior
+	if (oval_color && ![self isHighlighted]) { [NSBezierPath fillRect:inner]; }
 	
 	if ([self constrainText]) { [super drawWithFrame:inner inView:controlView]; }
 	else { [super drawWithFrame:cellFrame inView:controlView]; }
