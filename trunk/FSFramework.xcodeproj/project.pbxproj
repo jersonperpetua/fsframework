@@ -20,7 +20,7 @@
 		8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */; };
 		8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */; };
-		8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8B5175C40A8C2B5400B9D305 /* FSFramework.pch */; };
+		8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8B5175C40A8C2B5400B9D305 /* FSFramework.pch */; settings = {ATTRIBUTES = (); }; };
 		8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */; };
 		8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F230A8D005200B9D305 /* FSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F210A8D005200B9D305 /* FSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +70,8 @@
 		8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C38E60AA47C6200532495 /* FSImageAdditions.m */; };
 		8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
+		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
 		8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */; };
 		8BBFB9500A9231400038A6E3 /* AIPlasticButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */; };
@@ -181,6 +183,8 @@
 		8B7C38E60AA47C6200532495 /* FSImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSImageAdditions.m; path = Source/FSImageAdditions.m; sourceTree = "<group>"; };
 		8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSColoredMenuItem.h; path = Source/FSColoredMenuItem.h; sourceTree = "<group>"; };
 		8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSColoredMenuItem.m; path = Source/FSColoredMenuItem.m; sourceTree = "<group>"; };
+		8B89B23B0AA8648600A87586 /* FSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSStringAdditions.h; path = Source/FSStringAdditions.h; sourceTree = "<group>"; };
+		8B89B23C0AA8648600A87586 /* FSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSStringAdditions.m; path = Source/FSStringAdditions.m; sourceTree = "<group>"; };
 		8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArrayExtensions.h; path = Source/FSArrayExtensions.h; sourceTree = "<group>"; };
 		8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArrayExtensions.m; path = Source/FSArrayExtensions.m; sourceTree = "<group>"; };
 		8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIPlasticButton.m; path = Source/adium/AIPlasticButton.m; sourceTree = "<group>"; };
@@ -334,6 +338,8 @@
 				8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */,
 				8B7C38E50AA47C6200532495 /* FSImageAdditions.h */,
 				8B7C38E60AA47C6200532495 /* FSImageAdditions.m */,
+				8B89B23B0AA8648600A87586 /* FSStringAdditions.h */,
+				8B89B23C0AA8648600A87586 /* FSStringAdditions.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -567,6 +573,7 @@
 				8BF1AFE70A9669EC00B6A8C2 /* FSMacros.h in Headers */,
 				8B7C38E70AA47C6200532495 /* FSImageAdditions.h in Headers */,
 				8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */,
+				8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +679,7 @@
 				8BBFB9AD0A9233600038A6E3 /* pxmLib.m in Sources */,
 				8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */,
 				8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */,
+				8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
