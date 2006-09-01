@@ -23,4 +23,6 @@
 
 - (IBAction)closeWindow:(id)sender;
 
+- (BOOL)windowShouldClose:(id)sender;
+
 @end
