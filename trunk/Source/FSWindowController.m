@@ -45,4 +45,8 @@
 	}
 }
 
+- (BOOL)windowShouldClose:(id)sender {
+	return YES;
+}
+
 @end
