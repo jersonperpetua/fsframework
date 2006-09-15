@@ -34,6 +34,7 @@
 #import <FSFramework/FSTableView.h>
 #import <FSFramework/FSBackgroundView.h>
 #import <FSFramework/FSColoredMenuItem.h>
+#import <FSFramework/FSTransparentBackgroundImageView.h>
 
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>

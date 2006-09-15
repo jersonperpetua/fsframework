@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B05AB170A43559400147648 /* FSSplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B05AB150A43559400147648 /* FSSplitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B05AB180A43559400147648 /* FSSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B05AB160A43559400147648 /* FSSplitView.m */; };
+		8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */; };
 		8B42376008BA723500DC78F2 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42375F08BA723500DC78F2 /* FSTableView.m */; };
 		8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42376108BA723E00DC78F2 /* FSTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -112,6 +114,8 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8B05AB150A43559400147648 /* FSSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSplitView.h; path = Source/FSSplitView.h; sourceTree = "<group>"; };
 		8B05AB160A43559400147648 /* FSSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSplitView.m; path = Source/FSSplitView.m; sourceTree = "<group>"; };
+		8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSTransparentBackgroundImageView.h; path = Source/FSTransparentBackgroundImageView.h; sourceTree = "<group>"; };
+		8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSTransparentBackgroundImageView.m; path = Source/FSTransparentBackgroundImageView.m; sourceTree = "<group>"; };
 		8B42375F08BA723500DC78F2 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSTableView.m; path = Source/FSTableView.m; sourceTree = "<group>"; };
 		8B42376108BA723E00DC78F2 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSTableView.h; path = Source/FSTableView.h; sourceTree = "<group>"; };
 		8B4239B008BA97D700DC78F2 /* FSMetalTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalTableHeaderCell.h; path = Source/FSMetalTableHeaderCell.h; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 				8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */,
 				8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */,
 				8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */,
+				8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */,
+				8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 				8B7C38E70AA47C6200532495 /* FSImageAdditions.h in Headers */,
 				8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */,
 				8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */,
+				8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +687,7 @@
 				8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */,
 				8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */,
 				8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */,
+				8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

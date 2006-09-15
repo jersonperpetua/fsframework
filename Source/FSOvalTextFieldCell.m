@@ -84,6 +84,15 @@
 	return constrain_text;
 }
 
+- (NSSize)cellSizeForBounds:(NSRect)aRect {
+	NSSize size = [super cellSizeForBounds:aRect];
+	if ([self constrainText]) {
+		if (left_oval) { size.width += (size.height / 2); }
+		if (right_oval) { size.width += (size.height / 2); }
+	}
+	return size;
+}
+
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
 	NSRect inner = cellFrame;
 	
@@ -97,10 +106,8 @@
 		if (oval_color && ![self isHighlighted]) {
 			[[NSBezierPath bezierPathWithOvalInRect:left] fill];
 		}
-		inner = NSMakeRect(inner.origin.x - (inner.size.height / 2),
-						   inner.origin.y,
-						   inner.size.width + (inner.size.height / 2),
-						   inner.size.height);
+		inner.origin.x -= (inner.size.height / 2);
+		inner.size.width += (inner.size.height / 2);
 	}
 
 	// draw the right
@@ -110,10 +117,7 @@
 		if (oval_color && ![self isHighlighted]) {
 			[[NSBezierPath bezierPathWithOvalInRect:right] fill];
 		}
-		inner = NSMakeRect(inner.origin.x,
-						   inner.origin.y,
-						   inner.size.width + (inner.size.height / 2),
-						   inner.size.height);
+	   inner.size.width += (inner.size.height / 2);
 	}
 
 	// draw interior

@@ -15,7 +15,7 @@
  */
 
 /*
- * Original alternating row drawing code taken from Adam Iser's Adium 2.0.
+ * This code is orinally from Adium.
  * Visit http://www.adiumx.com/ for more information.
  */
 

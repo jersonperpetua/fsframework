@@ -14,12 +14,17 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#define FSLog(format,...) \
-	NSLog([NSString stringWithFormat:[@"%@:%i:%@ " stringByAppendingString:format], \
-		[[NSString stringWithUTF8String:__FILE__] lastPathComponent], \
-		__LINE__, \
-		NSStringFromSelector(_cmd), \
-		##__VA_ARGS__])
+/*
+ * This code is orinally from Adium.
+ * Visit http://www.adiumx.com/ for more information.
+ */
 
-#define FSLocalizedString(key, comment) \
-	NSLocalizedStringFromTableInBundle(key, nil, [NSBundle bundleForClass:[self class]], comment)
+@interface FSTransparentBackgroundImageView : NSView {
+	NSRect transparentRect;
+	NSImage	*backgroundImage;
+}
+
+- (void)setBackgroundImage:(NSImage *)inImage;
+- (void)setTransparentRect:(NSRect)inTransparentRect;
+
+@end
