@@ -15,7 +15,7 @@
  */
 
 /*
- * This code is orinally from Adam Iser's Adium.
+ * This code is orinally from Adium.
  * Visit http://www.adiumx.com/ for more information.
  */
 

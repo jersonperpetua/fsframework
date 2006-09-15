@@ -38,6 +38,7 @@
 {
     if ([self windowShouldClose:nil]) {
 		if ([[self window] isSheet]) {
+			[[self window] orderOut:nil];
 			[NSApp endSheet:[self window]];
 		} else {
 			[[self window] close];
