@@ -20,6 +20,7 @@
  */
 
 #import "FSAboutBoxController.h"
+#import "FSApplicationAdditions.h"
 
 #define ABOUT_BOX_NIB					@"AboutBox"
 #define ABOUT_SCROLL_FPS				30.0
