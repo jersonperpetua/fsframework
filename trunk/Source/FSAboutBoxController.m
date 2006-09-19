@@ -172,8 +172,14 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 	id value = [[buildInfo allValues] objectAtIndex:index];
 	// convert all values to strings
 	if ([value isKindOfClass:[NSDate class]]) {
-		NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] initWithDateFormat:[[NSUserDefaults standardUserDefaults] objectForKey:NSDateFormatString]
+		NSDateFormatter *dateFormatter;
+		if ([NSApp isOnTigerOrBetter]) {
+			dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+			[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+		} else {
+			dateFormatter = [[[NSDateFormatter alloc] initWithDateFormat:[[NSUserDefaults standardUserDefaults] objectForKey:NSDateFormatString]
 																 allowNaturalLanguage:NO] autorelease];
+		}
 		value = [dateFormatter stringForObjectValue:value];			
 	} else if (![value isKindOfClass:[NSString class]]) { value = [value description]; }
 

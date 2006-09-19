@@ -23,8 +23,6 @@
 		8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */; };
 		8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8B5175C40A8C2B5400B9D305 /* FSFramework.pch */; settings = {ATTRIBUTES = (); }; };
-		8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */; };
-		8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F230A8D005200B9D305 /* FSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F210A8D005200B9D305 /* FSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F240A8D005200B9D305 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F220A8D005200B9D305 /* FSViewController.m */; };
 		8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F270A8D005F00B9D305 /* FSControlledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -565,7 +563,6 @@
 				8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */,
 				8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */,
 				8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */,
-				8B5176170A8C2D2900B9D305 /* FSAboutWindow.h in Headers */,
 				8B517F230A8D005200B9D305 /* FSViewController.h in Headers */,
 				8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */,
 				8B517F5D0A8D01A700B9D305 /* FSWindowController.h in Headers */,
@@ -673,7 +670,6 @@
 				8B73DAA20A49F2AF00484717 /* AIBezierPathAdditions.m in Sources */,
 				8B73DAA40A49F2AF00484717 /* AIAttributedStringAdditions.m in Sources */,
 				8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */,
-				8B5176160A8C2D2900B9D305 /* FSAboutWindow.m in Sources */,
 				8B517F240A8D005200B9D305 /* FSViewController.m in Sources */,
 				8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */,
 				8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */,
