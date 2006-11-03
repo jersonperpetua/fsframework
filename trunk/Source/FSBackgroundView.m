@@ -18,31 +18,65 @@
 
 @implementation FSBackgroundView
 
-+ (Class)cellClass {
-return [NSTextFieldCell class];
-}
-
-- (id)initWithFrame:(NSRect)frameRect {
-	self = [super initWithFrame:frameRect];
-	[self setEnabled:NO];
-	[[self cell] setStringValue:@""];
-	return self;
-}
-
 - (void)setDrawsBackground:(BOOL)flag {
-	[[self cell] setDrawsBackground:flag];
+	drawsBackground = flag;
+}
+
+- (BOOL)drawsBackground {
+	return drawsBackground;
 }
 
 - (void)setBackgroundColor:(NSColor *)color {
-	[[self cell] setBackgroundColor:color];
-}
-
-- (BOOL)darwsBackground {
-	return [[self cell] darwsBackground];
+	if (backgroundColor != color) {
+		[backgroundColor release];
+		backgroundColor = [color retain];
+	}
 }
 
 - (NSColor *)backgroundColor {
-	return [[self cell] backgroundColor];
+	return backgroundColor;
+}
+
+- (void)setDrawsBorder:(BOOL)flag {
+	drawsBorder = flag;
+}
+
+- (BOOL)drawsBorder {
+	return drawsBorder;
+}
+
+- (void)setBorderColor:(NSColor *)color {
+	if (borderColor != color) {
+		[borderColor release];
+		borderColor = [color retain];
+	}
+}
+
+- (NSColor *)borderColor {
+	return borderColor;
+}
+
+- (void)drawRect:(NSRect)rect {
+	
+	if ([self drawsBackground] && [self backgroundColor]) {
+		[[self backgroundColor] set];
+		[NSBezierPath fillRect:rect];
+	}
+	
+	if ([self drawsBorder] && [self borderColor]) {
+		float height = [self frame].size.height;
+		float width = [self frame].size.width;
+		NSRect left = NSMakeRect(0, 0, 1, height);
+		NSRect right = NSMakeRect(0, width-1, 1, height);
+		NSRect top = NSMakeRect(0, height-1, width, 1);
+		NSRect bottom = NSMakeRect(0, 0, width, 1);
+		
+		[[self borderColor] set];
+		[NSBezierPath fillRect:left];
+		[NSBezierPath fillRect:right];
+		[NSBezierPath fillRect:top];
+		[NSBezierPath fillRect:bottom];
+	}
 }
 
 @end
