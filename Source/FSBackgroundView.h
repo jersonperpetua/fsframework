@@ -14,13 +14,21 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-@interface FSBackgroundView : NSControl {
-
+@interface FSBackgroundView : NSView {
+	NSColor *borderColor, *backgroundColor;
+	BOOL drawsBorder, drawsBackground;
 }
 
 - (void)setDrawsBackground:(BOOL)flag;
+- (BOOL)drawsBackground;
+
 - (void)setBackgroundColor:(NSColor *)color;
-- (BOOL)darwsBackground;
 - (NSColor *)backgroundColor;
+
+- (void)setDrawsBorder:(BOOL)flag;
+- (BOOL)drawsBorder;
+
+- (void)setBorderColor:(NSColor *)color;
+- (NSColor *)borderColor;
 
 @end
