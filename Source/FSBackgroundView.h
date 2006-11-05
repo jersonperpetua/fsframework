@@ -14,13 +14,19 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
+@class AIGradient;
 @interface FSBackgroundView : NSView {
 	NSColor *borderColor, *backgroundColor;
+	AIGradient *backgroundGradient;
 	BOOL drawsBorder, drawsBackground;
 }
 
 - (void)setDrawsBackground:(BOOL)flag;
 - (BOOL)drawsBackground;
+
+// background gradient takes precedence over background color
+- (void)setBackgroundGradient:(AIGradient *)gradient;
+- (AIGradient *)backgroundGradient;
 
 - (void)setBackgroundColor:(NSColor *)color;
 - (NSColor *)backgroundColor;
