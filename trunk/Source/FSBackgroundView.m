@@ -15,8 +15,16 @@
  */
 
 #import "FSBackgroundView.h"
+#import "AIGradient.h"
 
 @implementation FSBackgroundView
+
+- (void)dealloc {
+	[backgroundColor release];
+	[borderColor release];
+	[backgroundGradient release];
+	[super dealloc];
+}
 
 - (void)setDrawsBackground:(BOOL)flag {
 	drawsBackground = flag;
@@ -24,6 +32,16 @@
 
 - (BOOL)drawsBackground {
 	return drawsBackground;
+}
+
+- (void)setBackgroundGradient:(AIGradient *)gradient {
+	if (backgroundGradient != gradient) {
+		[backgroundGradient release];
+		backgroundGradient = [gradient retain];
+	}
+}
+- (AIGradient *)backgroundGradient {
+	return backgroundGradient;
 }
 
 - (void)setBackgroundColor:(NSColor *)color {
@@ -58,7 +76,16 @@
 
 - (void)drawRect:(NSRect)rect {
 	
-	if ([self drawsBackground] && [self backgroundColor]) {
+	if ([self drawsBackground] && [self backgroundGradient]) {
+		if ([[self backgroundGradient] direction] == AIVertical) {
+			rect.origin.y = 0;
+			rect.size.height = [self frame].size.height;
+		} else {
+			rect.origin.x = 0;
+			rect.size.width = [self frame].size.width;
+		}
+		[[self backgroundGradient] drawInRect:rect];
+	} else if ([self drawsBackground] && [self backgroundColor]) {
 		[[self backgroundColor] set];
 		[NSBezierPath fillRect:rect];
 	}
