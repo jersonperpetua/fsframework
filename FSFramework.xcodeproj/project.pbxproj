@@ -66,6 +66,8 @@
 		8B73DAA50A49F2AF00484717 /* AIAttributedStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DB090A49F7DF00484717 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B73DB080A49F7DF00484717 /* Carbon.framework */; };
+		8B7608610B534687002074DE /* FSSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B76085F0B534687002074DE /* FSSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B7608620B534687002074DE /* FSSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7608600B534687002074DE /* FSSegmentedControl.m */; };
 		8B7C38E70AA47C6200532495 /* FSImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7C38E50AA47C6200532495 /* FSImageAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C38E60AA47C6200532495 /* FSImageAdditions.m */; };
 		8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -181,6 +183,8 @@
 		8B73DA7F0A49F2AF00484717 /* AIAttributedStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIAttributedStringAdditions.h; path = Source/adium/AIAttributedStringAdditions.h; sourceTree = "<group>"; };
 		8B73DA800A49F2AF00484717 /* AIExceptionHandlingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIExceptionHandlingUtilities.h; path = Source/adium/AIExceptionHandlingUtilities.h; sourceTree = "<group>"; };
 		8B73DB080A49F7DF00484717 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8B76085F0B534687002074DE /* FSSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSegmentedControl.h; path = Source/FSSegmentedControl.h; sourceTree = "<group>"; };
+		8B7608600B534687002074DE /* FSSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSegmentedControl.m; path = Source/FSSegmentedControl.m; sourceTree = "<group>"; };
 		8B7C38E50AA47C6200532495 /* FSImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSImageAdditions.h; path = Source/FSImageAdditions.h; sourceTree = "<group>"; };
 		8B7C38E60AA47C6200532495 /* FSImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSImageAdditions.m; path = Source/FSImageAdditions.m; sourceTree = "<group>"; };
 		8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSColoredMenuItem.h; path = Source/FSColoredMenuItem.h; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */,
 				8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */,
 				8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */,
+				8B76085F0B534687002074DE /* FSSegmentedControl.h */,
+				8B7608600B534687002074DE /* FSSegmentedControl.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */,
 				8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */,
 				8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */,
+				8B7608610B534687002074DE /* FSSegmentedControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +691,7 @@
 				8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */,
 				8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */,
 				8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */,
+				8B7608620B534687002074DE /* FSSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
