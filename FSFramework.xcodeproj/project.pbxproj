@@ -22,6 +22,8 @@
 		8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */; };
 		8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */; };
+		8B4A18590B5B1D800036B8C9 /* FSQuickChangeDateCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B4A185A0B5B1D800036B8C9 /* FSQuickChangeDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A18580B5B1D800036B8C9 /* FSQuickChangeDateCell.m */; };
 		8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8B5175C40A8C2B5400B9D305 /* FSFramework.pch */; settings = {ATTRIBUTES = (); }; };
 		8B517F230A8D005200B9D305 /* FSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F210A8D005200B9D305 /* FSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F240A8D005200B9D305 /* FSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F220A8D005200B9D305 /* FSViewController.m */; };
@@ -137,6 +139,8 @@
 		8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAlertExtensions.m; path = Source/FSAlertExtensions.m; sourceTree = "<group>"; };
 		8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSApplicationAdditions.h; path = Source/FSApplicationAdditions.h; sourceTree = "<group>"; };
 		8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSApplicationAdditions.m; path = Source/FSApplicationAdditions.m; sourceTree = "<group>"; };
+		8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSQuickChangeDateCell.h; path = Source/FSQuickChangeDateCell.h; sourceTree = "<group>"; };
+		8B4A18580B5B1D800036B8C9 /* FSQuickChangeDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSQuickChangeDateCell.m; path = Source/FSQuickChangeDateCell.m; sourceTree = "<group>"; };
 		8B5175C40A8C2B5400B9D305 /* FSFramework.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSFramework.pch; sourceTree = "<group>"; };
 		8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAboutWindow.m; path = Source/FSAboutWindow.m; sourceTree = "<group>"; };
 		8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutWindow.h; path = Source/FSAboutWindow.h; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 				8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */,
 				8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */,
 				8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */,
+				8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */,
+				8B4A18580B5B1D800036B8C9 /* FSQuickChangeDateCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */,
 				8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */,
 				8B7608610B534687002074DE /* FSSegmentedControl.h in Headers */,
+				8B4A18590B5B1D800036B8C9 /* FSQuickChangeDateCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +699,7 @@
 				8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */,
 				8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */,
 				8B7608620B534687002074DE /* FSSegmentedControl.m in Sources */,
+				8B4A185A0B5B1D800036B8C9 /* FSQuickChangeDateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
