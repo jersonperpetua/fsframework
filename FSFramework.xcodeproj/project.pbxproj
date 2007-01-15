@@ -778,33 +778,6 @@
 			};
 			name = Release;
 		};
-		8B03055B08B8D252007EC1E7 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = FSFramework.pch;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Other Sources/Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0x20000000,
-				);
-				PREBINDING = YES;
-				PRODUCT_NAME = FSFramework;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Default;
-		};
 		8B03055D08B8D252007EC1E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -827,15 +800,6 @@
 			};
 			name = Release;
 		};
-		8B03055F08B8D252007EC1E7 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -844,20 +808,18 @@
 			buildConfigurations = (
 				8B03055908B8D252007EC1E7 /* Debug */,
 				8B03055A08B8D252007EC1E7 /* Release */,
-				8B03055B08B8D252007EC1E7 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		8B03055C08B8D252007EC1E7 /* Build configuration list for PBXProject "FSFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B03055D08B8D252007EC1E7 /* Debug */,
 				8B03055E08B8D252007EC1E7 /* Release */,
-				8B03055F08B8D252007EC1E7 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
