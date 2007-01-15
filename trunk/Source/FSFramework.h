@@ -39,6 +39,7 @@
 
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>
+#import <FSFramework/FSQuickChangeDateCell.h>
 
 // From Adium
 #import <FSFramework/AIGradient.h>
