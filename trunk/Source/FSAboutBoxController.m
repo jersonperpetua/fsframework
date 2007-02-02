@@ -30,7 +30,6 @@
 - (id)initWithWindowNibName:(NSString *)windowNibName;
 - (NSString *)_applicationVersion;
 - (void)_loadBuildInformation;
-- (void)_filterBuildInfo;
 @end
 
 @implementation FSAboutBoxController
@@ -125,7 +124,6 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 	if (keys != buildInfoKeys) {
 		[buildInfoKeys release];
 		buildInfoKeys = [keys retain];
-		[self _filterBuildInfo];
 	}	
 }
 
@@ -169,8 +167,8 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 #pragma mark Build Information
 //Toggle build date/number display
 - (IBAction)buildFieldClicked:(id)sender {
-	int index = ++numberOfBuildFieldClicks % [buildInfo count];	
-	id value = [[buildInfo allValues] objectAtIndex:index];
+	int index = ++numberOfBuildFieldClicks % [buildInfoKeys count];	
+	id value = [buildInfo objectForKey:[buildInfoKeys objectAtIndex:index]];
 	// convert all values to strings
 	if ([value isKindOfClass:[NSDate class]]) {
 		NSDateFormatter *dateFormatter;
@@ -199,19 +197,6 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 - (void)_loadBuildInformation {	
 	NSString *buildInfoPath = [[NSBundle mainBundle] pathForResource:@"BuildInfo" ofType:@"plist"];
 	buildInfo = [[NSMutableDictionary dictionaryWithContentsOfFile:buildInfoPath] retain];
-	[self _filterBuildInfo];
-}
-
-- (void)_filterBuildInfo {
-	if (buildInfo && buildInfoKeys) {
-		NSString *key;
-		NSEnumerator *keyEnumerator = [[buildInfo allKeys] objectEnumerator];
-		while (key = [keyEnumerator nextObject]) {
-			if (![buildInfoKeys containsObject:key]) {
-				[buildInfo removeObjectForKey:key];
-			}
-		}
-	}
 }
 
 //Software License -----------------------------------------------------------------------------------------------------
