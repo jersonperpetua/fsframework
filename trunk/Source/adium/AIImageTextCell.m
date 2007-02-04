@@ -36,6 +36,7 @@
 	if ((self = [super init])) {
 		font = nil;
 		subString = nil;
+		color = nil;
 		maxImageWidth = DEFAULT_MAX_IMAGE_WIDTH;
 		imageTextPadding = DEFAULT_IMAGE_TEXT_PADDING;
 		[self setLineBreakMode:NSLineBreakByTruncatingTail];
@@ -49,6 +50,7 @@
 {
 	[font release]; font = nil;
 	[subString release];
+	[color release];
 
 	[super dealloc];
 }
@@ -63,6 +65,9 @@
 
 	newCell->subString = nil;
 	[newCell setSubString:subString];
+	
+	newCell->color = nil;
+	[newCell setTextColor:color];
 	
 	[newCell setMaxImageWidth:maxImageWidth];
 
@@ -179,7 +184,7 @@
 			NSSize			subStringSize;
 
 			attributes = [NSDictionary dictionaryWithObject:[NSFont systemFontOfSize:10]
-													 forKey:NSFontAttributeName];
+															forKey:NSFontAttributeName];
 			subStringSize = [subString sizeWithAttributes:attributes];
 			
 			//Use the wider of the two strings as the required width
@@ -202,6 +207,17 @@
 	}
 	
 	return cellSize;
+}
+
+- (void)setTextColor:(NSColor *)aColor {
+	if (aColor != color) {
+		[color release];
+		color = [aColor retain];
+	}
+}
+
+- (NSColor *)textColor {
+	return color;
 }
 
 //Draw
@@ -282,7 +298,9 @@
 		NSWindow			*window;
 
 		//If we don't have a control view, or we do and it's the first responder, draw the text in the alternateSelectedControl text color (white)
-		if (highlighted && ((window = [controlView window]) &&
+		if ([self textColor]) {
+			textColor = [self textColor];
+		} else if (highlighted && ((window = [controlView window]) &&
 							([window isKeyWindow] && ([window firstResponder] == controlView)))) {
 			textColor = [NSColor alternateSelectedControlTextColor]; //Draw the text inverted
 		} else {
