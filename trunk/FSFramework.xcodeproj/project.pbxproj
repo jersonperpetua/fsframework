@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B05AB170A43559400147648 /* FSSplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B05AB150A43559400147648 /* FSSplitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B05AB180A43559400147648 /* FSSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B05AB160A43559400147648 /* FSSplitView.m */; };
+		8B0A5FDD0B79ABA600ADE0FD /* FSAppleScriptAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B0A5FDE0B79ABA600ADE0FD /* FSAppleScriptAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */; };
 		8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */; };
 		8B42376008BA723500DC78F2 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42375F08BA723500DC78F2 /* FSTableView.m */; };
@@ -116,6 +118,8 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8B05AB150A43559400147648 /* FSSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSplitView.h; path = Source/FSSplitView.h; sourceTree = "<group>"; };
 		8B05AB160A43559400147648 /* FSSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSplitView.m; path = Source/FSSplitView.m; sourceTree = "<group>"; };
+		8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptAdditions.h; path = Source/FSAppleScriptAdditions.h; sourceTree = "<group>"; };
+		8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptAdditions.m; path = Source/FSAppleScriptAdditions.m; sourceTree = "<group>"; };
 		8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSTransparentBackgroundImageView.h; path = Source/FSTransparentBackgroundImageView.h; sourceTree = "<group>"; };
 		8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSTransparentBackgroundImageView.m; path = Source/FSTransparentBackgroundImageView.m; sourceTree = "<group>"; };
 		8B42375F08BA723500DC78F2 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSTableView.m; path = Source/FSTableView.m; sourceTree = "<group>"; };
@@ -350,6 +354,8 @@
 				8B7C38E60AA47C6200532495 /* FSImageAdditions.m */,
 				8B89B23B0AA8648600A87586 /* FSStringAdditions.h */,
 				8B89B23C0AA8648600A87586 /* FSStringAdditions.m */,
+				8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */,
+				8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -592,6 +598,7 @@
 				8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */,
 				8B7608610B534687002074DE /* FSSegmentedControl.h in Headers */,
 				8B4A18590B5B1D800036B8C9 /* FSQuickChangeDateCell.h in Headers */,
+				8B0A5FDD0B79ABA600ADE0FD /* FSAppleScriptAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +707,7 @@
 				8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */,
 				8B7608620B534687002074DE /* FSSegmentedControl.m in Sources */,
 				8B4A185A0B5B1D800036B8C9 /* FSQuickChangeDateCell.m in Sources */,
+				8B0A5FDE0B79ABA600ADE0FD /* FSAppleScriptAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

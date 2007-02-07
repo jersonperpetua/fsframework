@@ -21,6 +21,7 @@
 #import <FSFramework/FSArrayExtensions.h>
 #import <FSFramework/FSImageAdditions.h>
 #import <FSFramework/FSStringAdditions.h>
+#import <FSFramework/FSAppleScriptAdditions.h>
 
 #import <FSFramework/FSWindowController.h>
 #import <FSFramework/FSViewController.h>
