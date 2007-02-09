@@ -24,4 +24,13 @@
 	return value;
 }
 
++ (NSString *)stars:(int)numStars length:(int)totalLength {
+	NSMutableString *string = [NSMutableString string];
+	int counter;
+	for (counter = 0; counter < totalLength; counter++) {
+		[string appendFormat:@"%C", counter < numStars ? 0x2605 : 0x2810];
+	}
+	return string;
+}
+
 @end
