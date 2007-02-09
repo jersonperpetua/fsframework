@@ -21,5 +21,11 @@
 		NSStringFromSelector(_cmd), \
 		##__VA_ARGS__])
 
+#ifdef DEBUG
+	#define FSDLog(format, ...) FSLog(format, ##__VA_ARGS__)
+#else
+	#define FSDLog(format, ...) /**/
+#endif
+
 #define FSLocalizedString(key, comment) \
 	NSLocalizedStringFromTableInBundle(key, nil, [NSBundle bundleForClass:[self class]], comment)
