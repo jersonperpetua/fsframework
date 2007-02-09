@@ -18,8 +18,7 @@
 
 - (long long)longLongValue;
 
-/* Generates a string with unicode stars and braille
- * characters to fill the space up to totalLength */
-+ (NSString *)stars:(int)numStars length:(int)totalLength;
+/* Generates a string with unicode stars */
++ (NSString *)stars:(int)numStars;
 
 @end
