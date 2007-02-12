@@ -22,6 +22,7 @@
 #import <FSFramework/FSImageAdditions.h>
 #import <FSFramework/FSStringAdditions.h>
 #import <FSFramework/FSAppleScriptAdditions.h>
+#import <FSFramework/FSPasteboardAdditions.h>
 
 #import <FSFramework/FSWindowController.h>
 #import <FSFramework/FSViewController.h>
