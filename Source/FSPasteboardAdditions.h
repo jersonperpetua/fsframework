@@ -17,13 +17,13 @@
 @interface NSPasteboard (FSPasteboardAdditions)
 
 // For internal application use only
+// Use this when you want to provide pasteboard data without the overhead of serializing
+// the data you're adding to the pasteboard (useful for table view drag and drop)
 - (BOOL)setDataDelegate:(id)object withContext:(id)context forType:(NSString *)dataType;
 - (id)dataFromDelegateForType:(NSString *)dataType;
 
 @end
 
 @interface NSObject (FSPasteboardDelegate)
-
 - (id)pasteboard:(NSPasteboard *)pboard dataForContext:(id)context;
-
 @end
