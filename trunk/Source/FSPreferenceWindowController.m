@@ -19,8 +19,8 @@
 #import "FSControlledView.h"
 #import "FSArrayExtensions.h"
 
-#define FRAME_AUTOSAVE_NAME			([NSString stringWithFormat:@"CBPreferenceWindow Frame %@", [self autosaveName]])
-#define IDENTIFIER_AUTOSAVE_NAME	([NSString stringWithFormat:@"CBPreferenceWindow SelectedItemIdentifier %@", [self autosaveName]])
+#define FRAME_AUTOSAVE_NAME			([NSString stringWithFormat:@"FSPreferenceWindow Frame %@", [self autosaveName]])
+#define IDENTIFIER_AUTOSAVE_NAME	([NSString stringWithFormat:@"FSPreferenceWindow SelectedItemIdentifier %@", [self autosaveName]])
 
 @interface FSPreferenceToolbarItem : NSToolbarItem {
 	FSViewController <FSPreferenceViewControllerProtocol> *viewController;
