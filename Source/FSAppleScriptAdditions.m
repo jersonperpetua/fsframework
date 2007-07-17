@@ -28,6 +28,27 @@
 	return [self executeFunction:functionName withArguments:nil error:errorInfo];
 }
 
++ (NSAppleEventDescriptor *)descriptorForArray:(NSArray *)argumentArray {
+	NSAppleEventDescriptor  *arguments = [[[NSAppleEventDescriptor alloc] initListDescriptor] autorelease];
+	NSEnumerator			*enumerator = [argumentArray objectEnumerator];
+	NSString				*object;
+	
+	while((object = [enumerator nextObject])) {
+		NSAppleEventDescriptor *descriptor;
+		if ([object isKindOfClass:[NSString class]]) {
+			descriptor = [NSAppleEventDescriptor descriptorWithString:object];
+		} else if ([object isKindOfClass:[NSNumber class]]) {
+			descriptor = [NSAppleEventDescriptor descriptorWithInt32:[object intValue]];
+		} else if ([object isKindOfClass:[NSArray class]]) {
+			descriptor = [NSAppleScript descriptorForArray:(NSArray *)object];
+		}
+		[arguments insertDescriptor:descriptor
+							atIndex:[arguments numberOfItems]+1]; //This +1 seems wrong... but it's not :)
+		}
+
+	return arguments;
+}
+
 - (NSAppleEventDescriptor *)executeFunction:(NSString *)functionName withArguments:(NSArray *)argumentArray error:(NSDictionary **)errorInfo {
 	NSAppleEventDescriptor	*thisApplication;
 	NSAppleEventDescriptor	*containerEvent;
@@ -51,21 +72,7 @@
 	
 	//Pass arguments - arguments is expecting an NSArray with only NSString objects
 	if([argumentArray count]){
-		NSAppleEventDescriptor  *arguments = [[[NSAppleEventDescriptor alloc] initListDescriptor] autorelease];
-		NSEnumerator			*enumerator = [argumentArray objectEnumerator];
-		NSString				*object;
-
-		while((object = [enumerator nextObject])) {
-			NSAppleEventDescriptor *descriptor;
-			if ([object isKindOfClass:[NSString class]]) {
-				descriptor = [NSAppleEventDescriptor descriptorWithString:object];
-			} else if ([object isKindOfClass:[NSNumber class]]) {
-				descriptor = [NSAppleEventDescriptor descriptorWithInt32:[object intValue]];
-			}
-			[arguments insertDescriptor:descriptor
-								atIndex:[arguments numberOfItems]+1]; //This +1 seems wrong... but it's not :)
-		}
-		
+		NSAppleEventDescriptor *arguments = [NSAppleScript descriptorForArray:argumentArray];
 		[containerEvent setParamDescriptor:arguments forKeyword:keyDirectObject];
 	}
 	
