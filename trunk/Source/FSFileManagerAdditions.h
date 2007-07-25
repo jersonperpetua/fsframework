@@ -14,17 +14,12 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-@interface NSArray (FSArrayExtensions)
+@interface NSFileManager (FSFileManagerAdditions)
 
-/* Returns the first object or nil if
- * the array is empty */
-- (id)firstObject;
++ (NSString *)safePathComponent:(NSString *)string;
 
-- (NSArray *)arrayByPerformingSelectorOnObjects:(SEL)selector;
-- (NSArray *)arrayByPerformingSelectorWithObjects:(SEL)selector onTarget:(id)target;
+- (BOOL)createDirectoryAtPath:(NSString *)path attributes:(NSDictionary *)attributes checkExists:(BOOL)check;
+- (BOOL)trashFileAtPath:(NSString *)sourcePath;
+- (NSString *)uniquePathForPath:(NSString *)path;
 
-/* Filters the array by performing the selector on each object
- * only objects whose value is equal to the value in the where
- * clause are returned in the result */
-- (NSArray *)filter:(SEL)selector where:(id)value;
 @end
