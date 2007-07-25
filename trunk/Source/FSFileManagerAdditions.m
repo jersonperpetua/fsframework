@@ -15,6 +15,8 @@
  */
 
 #import "FSFileManagerAdditions.h"
+#include <sys/param.h>
+#include <sys/mount.h>
 
 @implementation NSFileManager (FSFileManagerAdditions)
 
@@ -93,6 +95,12 @@
 	}
 	
 	return uniquePath;
+}
+
+- (unsigned long)freeSpaceOnDeviceContainingPath:(NSString *)path {
+	struct statfs stat;
+	statfs([path cString], &stat);	
+	return (stat.f_bavail / 1024) * (stat.f_bsize / 1024);
 }
 
 @end

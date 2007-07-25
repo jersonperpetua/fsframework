@@ -26,5 +26,8 @@
 // Returns YES if the original path exists at completion.
 // Will not create directories within '/Volumes'.
 - (BOOL)safelyEnsurePath:(NSString *)path;
-	
+
+// Free space in megabytes
+- (unsigned long)freeSpaceOnDeviceContainingPath:(NSString *)path;
+
 @end
