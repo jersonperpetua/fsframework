@@ -34,6 +34,36 @@
 	else { return TRUE; }
 }
 
+- (BOOL)safelyEnsurePath:(NSString *)fullPath {
+    NSParameterAssert(fullPath != nil && [fullPath length] != 0);
+	
+    BOOL isDirectory;
+	if(![self fileExistsAtPath:fullPath isDirectory:&isDirectory] || !isDirectory) {
+		NSMutableArray	*neededDirectories = [NSMutableArray array];
+
+		while (TRUE) {
+			[neededDirectories addObject:[fullPath lastPathComponent]];
+			fullPath = [fullPath stringByDeletingLastPathComponent];
+
+			// bail out early because directories in the
+			// volumes folder aren't safe to create
+			if ([fullPath isEqualToString:@"/Volumes"]) { return FALSE; }
+						
+			// break once getting to a directory that exists
+			if ([self fileExistsAtPath:fullPath isDirectory:&isDirectory] && isDirectory) { break; }
+		}
+				
+		NSString *directory;
+		NSEnumerator *directoryEnumerator = [neededDirectories reverseObjectEnumerator];
+		while (directory = [directoryEnumerator nextObject]) {
+			fullPath = [fullPath stringByAppendingPathComponent:directory];
+			if (![self createDirectoryAtPath:fullPath attributes:nil]) { return FALSE; }
+		}
+	}
+	
+	return TRUE;
+}
+
 - (BOOL)trashFileAtPath:(NSString *)sourcePath {
     NSParameterAssert(sourcePath != nil && [sourcePath length] != 0);
 	if ([self fileExistsAtPath:sourcePath]) {
