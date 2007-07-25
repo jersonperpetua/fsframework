@@ -22,4 +22,9 @@
 - (BOOL)trashFileAtPath:(NSString *)sourcePath;
 - (NSString *)uniquePathForPath:(NSString *)path;
 
+// Creates all the folders specified in 'path' (if they don't exist).
+// Returns YES if the original path exists at completion.
+// Will not create directories within '/Volumes'.
+- (BOOL)safelyEnsurePath:(NSString *)path;
+	
 @end
