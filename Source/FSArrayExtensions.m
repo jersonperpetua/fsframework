@@ -19,11 +19,8 @@
 @implementation NSArray (FSArrayExtensions)
 
 - (id)firstObject {
-	if ([self count] > 0) {
-		return [self objectAtIndex:0];
-	} else {
-		return nil;
-	}
+	if ([self count] > 0) { return [self objectAtIndex:0]; }
+	else { return nil; }
 }
 
 - (NSArray *)arrayByPerformingSelectorOnObjects:(SEL)selector {
@@ -42,6 +39,18 @@
 		[array addObject:[target performSelector:selector withObject:[self objectAtIndex:i]]];
 	}
 	return array;	
+}
+
+- (NSArray *)filter:(SEL)selector where:(id)value {
+	id object;
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
+	NSEnumerator *objectEnumerator = [self objectEnumerator];
+	while (object = [objectEnumerator nextObject]) {
+		if ([[object performSelector:selector] isEqualTo:value]) {
+			[array addObject:object];
+		}
+	}
+	return [NSArray arrayWithArray:array];
 }
 
 @end
