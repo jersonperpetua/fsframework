@@ -34,8 +34,7 @@
 }
 
 
-- (IBAction)closeWindow:(id)sender
-{
+- (IBAction)closeWindow:(id)sender {
     if ([self windowShouldClose:nil]) {
 		if ([[self window] isSheet]) {
 			[[self window] orderOut:nil];
