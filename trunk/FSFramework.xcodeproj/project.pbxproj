@@ -17,11 +17,9 @@
 		8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42376108BA723E00DC78F2 /* FSTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404308BFD09C00DC78F2 /* FSPreferenceWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B42404408BFD09C00DC78F2 /* FSAlertExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404908BFD0C700DC78F2 /* AboutBox.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8B42404508BFD0C700DC78F2 /* AboutBox.nib */; };
 		8B42404A08BFD0C700DC78F2 /* FSAboutBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404608BFD0C700DC78F2 /* FSAboutBoxController.m */; };
 		8B42404B08BFD0C700DC78F2 /* FSPreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */; };
-		8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */; };
 		8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */; };
 		8B4A18590B5B1D800036B8C9 /* FSQuickChangeDateCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +33,8 @@
 		8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F5C0A8D01A700B9D305 /* FSWindowController.m */; };
 		8B5642D70C5ECA34001E52BB /* FSSortDescriptorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5642D50C5ECA34001E52BB /* FSSortDescriptorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B5642D80C5ECA34001E52BB /* FSSortDescriptorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */; };
+		8B5643B20C5ED7B5001E52BB /* FSArrayAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5643B10C5ED7B5001E52BB /* FSArrayAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B5643B40C5ED7BF001E52BB /* FSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5643B30C5ED7BF001E52BB /* FSArrayAdditions.m */; };
 		8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5B0A49F2AF00484717 /* AIGradient.m */; };
 		8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5C0A49F2AF00484717 /* AIGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DA830A49F2AF00484717 /* AIGenericViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */; };
@@ -80,8 +80,6 @@
 		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
 		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
-		8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */; };
 		8BBFB9500A9231400038A6E3 /* AIPlasticButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */; };
 		8BBFB9510A9231400038A6E3 /* AIPlasticButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB94D0A9231400038A6E3 /* AIPlasticButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BBFB9520A9231400038A6E3 /* AIPlasticButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB94E0A9231400038A6E3 /* AIPlasticButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -130,23 +128,11 @@
 		8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSTransparentBackgroundImageView.m; path = Source/FSTransparentBackgroundImageView.m; sourceTree = "<group>"; };
 		8B42375F08BA723500DC78F2 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSTableView.m; path = Source/FSTableView.m; sourceTree = "<group>"; };
 		8B42376108BA723E00DC78F2 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSTableView.h; path = Source/FSTableView.h; sourceTree = "<group>"; };
-		8B4239B008BA97D700DC78F2 /* FSMetalTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalTableHeaderCell.h; path = Source/FSMetalTableHeaderCell.h; sourceTree = "<group>"; };
-		8B4239B108BA97D700DC78F2 /* FSMetalTableHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalTableHeaderCell.m; path = Source/FSMetalTableHeaderCell.m; sourceTree = "<group>"; };
-		8B423C0608BC017100DC78F2 /* FSMetalDarkTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMetalDarkTableHeaderView.h; path = Source/FSMetalDarkTableHeaderView.h; sourceTree = "<group>"; };
-		8B423C0708BC017100DC78F2 /* FSMetalDarkTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalDarkTableHeaderView.m; path = Source/FSMetalDarkTableHeaderView.m; sourceTree = "<group>"; };
-		8B423C5D08BC04D600DC78F2 /* FSMetalBorderHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderHeaderView.h; path = Source/FSMetalBorderHeaderView.h; sourceTree = "<group>"; };
-		8B423C5E08BC04D600DC78F2 /* FSMetalBorderHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderHeaderView.m; path = Source/FSMetalBorderHeaderView.m; sourceTree = "<group>"; };
-		8B423C9808BC072F00DC78F2 /* FSMetalBorderHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderHeaderCell.h; path = Source/FSMetalBorderHeaderCell.h; sourceTree = "<group>"; };
-		8B423C9908BC072F00DC78F2 /* FSMetalBorderHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderHeaderCell.m; path = Source/FSMetalBorderHeaderCell.m; sourceTree = "<group>"; };
-		8B423DA008BC113C00DC78F2 /* FSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSScrollView.h; path = Source/FSScrollView.h; sourceTree = "<group>"; };
-		8B423DA108BC113C00DC78F2 /* FSScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSScrollView.m; path = Source/FSScrollView.m; sourceTree = "<group>"; };
 		8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutBoxController.h; path = Source/FSAboutBoxController.h; sourceTree = "<group>"; };
 		8B42404008BFD09C00DC78F2 /* FSPreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSPreferenceWindowController.h; path = Source/FSPreferenceWindowController.h; sourceTree = "<group>"; };
-		8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAlertExtensions.h; path = Source/FSAlertExtensions.h; sourceTree = "<group>"; };
 		8B42404508BFD0C700DC78F2 /* AboutBox.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AboutBox.nib; path = Source/AboutBox.nib; sourceTree = "<group>"; };
 		8B42404608BFD0C700DC78F2 /* FSAboutBoxController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAboutBoxController.m; path = Source/FSAboutBoxController.m; sourceTree = "<group>"; };
 		8B42404708BFD0C700DC78F2 /* FSPreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSPreferenceWindowController.m; path = Source/FSPreferenceWindowController.m; sourceTree = "<group>"; };
-		8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAlertExtensions.m; path = Source/FSAlertExtensions.m; sourceTree = "<group>"; };
 		8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSApplicationAdditions.h; path = Source/FSApplicationAdditions.h; sourceTree = "<group>"; };
 		8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSApplicationAdditions.m; path = Source/FSApplicationAdditions.m; sourceTree = "<group>"; };
 		8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSQuickChangeDateCell.h; path = Source/FSQuickChangeDateCell.h; sourceTree = "<group>"; };
@@ -162,6 +148,8 @@
 		8B517F5C0A8D01A700B9D305 /* FSWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSWindowController.m; path = Source/FSWindowController.m; sourceTree = "<group>"; };
 		8B5642D50C5ECA34001E52BB /* FSSortDescriptorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSortDescriptorAdditions.h; path = Source/FSSortDescriptorAdditions.h; sourceTree = "<group>"; };
 		8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSortDescriptorAdditions.m; path = Source/FSSortDescriptorAdditions.m; sourceTree = "<group>"; };
+		8B5643B10C5ED7B5001E52BB /* FSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSArrayAdditions.h; path = Source/FSArrayAdditions.h; sourceTree = "<group>"; };
+		8B5643B30C5ED7BF001E52BB /* FSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSArrayAdditions.m; path = Source/FSArrayAdditions.m; sourceTree = "<group>"; };
 		8B73DA5B0A49F2AF00484717 /* AIGradient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGradient.m; path = Source/adium/AIGradient.m; sourceTree = "<group>"; };
 		8B73DA5C0A49F2AF00484717 /* AIGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGradient.h; path = Source/adium/AIGradient.h; sourceTree = "<group>"; };
 		8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGenericViewCell.m; path = Source/adium/AIGenericViewCell.m; sourceTree = "<group>"; };
@@ -207,8 +195,6 @@
 		8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSColoredMenuItem.m; path = Source/FSColoredMenuItem.m; sourceTree = "<group>"; };
 		8B89B23B0AA8648600A87586 /* FSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSStringAdditions.h; path = Source/FSStringAdditions.h; sourceTree = "<group>"; };
 		8B89B23C0AA8648600A87586 /* FSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSStringAdditions.m; path = Source/FSStringAdditions.m; sourceTree = "<group>"; };
-		8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArrayExtensions.h; path = Source/FSArrayExtensions.h; sourceTree = "<group>"; };
-		8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArrayExtensions.m; path = Source/FSArrayExtensions.m; sourceTree = "<group>"; };
 		8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIPlasticButton.m; path = Source/adium/AIPlasticButton.m; sourceTree = "<group>"; };
 		8BBFB94D0A9231400038A6E3 /* AIPlasticButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticButton.h; path = Source/adium/AIPlasticButton.h; sourceTree = "<group>"; };
 		8BBFB94E0A9231400038A6E3 /* AIPlasticButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticButtonCell.h; path = Source/adium/AIPlasticButtonCell.h; sourceTree = "<group>"; };
@@ -231,12 +217,6 @@
 		8BBFBED40A92359E0038A6E3 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minus.png; path = Resources/adium/minus.png; sourceTree = "<group>"; };
 		8BD6237008B96CB7002E8C79 /* FSFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSFramework.h; path = Source/FSFramework.h; sourceTree = "<group>"; };
 		8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSBackgroundView.h; path = Source/FSBackgroundView.h; sourceTree = "<group>"; };
-		8BD6237308B96CB7002E8C79 /* FSMetalBorderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderCell.h; path = Source/FSMetalBorderCell.h; sourceTree = "<group>"; };
-		8BD6237408B96CB7002E8C79 /* FSMetalBorderView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalBorderView.h; path = Source/FSMetalBorderView.h; sourceTree = "<group>"; };
-		8BD6237708B96CB7002E8C79 /* FSMetalImageCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalImageCell.h; path = Source/FSMetalImageCell.h; sourceTree = "<group>"; };
-		8BD6237808B96CB7002E8C79 /* FSMetalSlider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalSlider.h; path = Source/FSMetalSlider.h; sourceTree = "<group>"; };
-		8BD6237908B96CB7002E8C79 /* FSMetalSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalSliderCell.h; path = Source/FSMetalSliderCell.h; sourceTree = "<group>"; };
-		8BD6237A08B96CB7002E8C79 /* FSMetalTableCornerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMetalTableCornerView.h; path = Source/FSMetalTableCornerView.h; sourceTree = "<group>"; };
 		8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalActionCell.h; path = Source/FSOvalActionCell.h; sourceTree = "<group>"; };
 		8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalTextFieldCell.h; path = Source/FSOvalTextFieldCell.h; sourceTree = "<group>"; };
 		8BD6238308B96CB7002E8C79 /* FSCalendarPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSCalendarPopUpButton.h; sourceTree = "<group>"; };
@@ -244,12 +224,6 @@
 		8BD6238508B96CB7002E8C79 /* FSCalendarPopupButtonWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSCalendarPopupButtonWindow.h; sourceTree = "<group>"; };
 		8BD6238608B96CB7002E8C79 /* FSCalendarPopupButtonWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FSCalendarPopupButtonWindow.m; sourceTree = "<group>"; };
 		8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSBackgroundView.m; path = Source/FSBackgroundView.m; sourceTree = "<group>"; };
-		8BD6238D08B96CB7002E8C79 /* FSMetalBorderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderCell.m; path = Source/FSMetalBorderCell.m; sourceTree = "<group>"; };
-		8BD6238E08B96CB7002E8C79 /* FSMetalBorderView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalBorderView.m; path = Source/FSMetalBorderView.m; sourceTree = "<group>"; };
-		8BD6239108B96CB7002E8C79 /* FSMetalImageCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalImageCell.m; path = Source/FSMetalImageCell.m; sourceTree = "<group>"; };
-		8BD6239208B96CB7002E8C79 /* FSMetalSlider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalSlider.m; path = Source/FSMetalSlider.m; sourceTree = "<group>"; };
-		8BD6239308B96CB7002E8C79 /* FSMetalSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalSliderCell.m; path = Source/FSMetalSliderCell.m; sourceTree = "<group>"; };
-		8BD6239408B96CB7002E8C79 /* FSMetalTableCornerView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSMetalTableCornerView.m; path = Source/FSMetalTableCornerView.m; sourceTree = "<group>"; };
 		8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalActionCell.m; path = Source/FSOvalActionCell.m; sourceTree = "<group>"; };
 		8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalTextFieldCell.m; path = Source/FSOvalTextFieldCell.m; sourceTree = "<group>"; };
 		8BD623D208B96CF4002E8C79 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = "Other Sources/Info.plist"; sourceTree = "<group>"; };
@@ -340,40 +314,25 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		8B42386008BA865300DC78F2 /* Metal Table */ = {
-			isa = PBXGroup;
-			children = (
-				8B423C0608BC017100DC78F2 /* FSMetalDarkTableHeaderView.h */,
-				8B423C0708BC017100DC78F2 /* FSMetalDarkTableHeaderView.m */,
-				8BD6237A08B96CB7002E8C79 /* FSMetalTableCornerView.h */,
-				8BD6239408B96CB7002E8C79 /* FSMetalTableCornerView.m */,
-				8B4239B008BA97D700DC78F2 /* FSMetalTableHeaderCell.h */,
-				8B4239B108BA97D700DC78F2 /* FSMetalTableHeaderCell.m */,
-			);
-			name = "Metal Table";
-			sourceTree = "<group>";
-		};
 		8B5177B30A8CB18F00B9D305 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */,
+				8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */,
 				8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */,
 				8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */,
-				8B42404108BFD09C00DC78F2 /* FSAlertExtensions.h */,
-				8B42404808BFD0C700DC78F2 /* FSAlertExtensions.m */,
-				8B9892250A5EAFC500F73045 /* FSArrayExtensions.h */,
-				8B9892260A5EAFC500F73045 /* FSArrayExtensions.m */,
+				8B5643B10C5ED7B5001E52BB /* FSArrayAdditions.h */,
+				8B5643B30C5ED7BF001E52BB /* FSArrayAdditions.m */,
 				8BECF58C0C561FA7008ADDEB /* FSFileManagerAdditions.h */,
 				8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */,
 				8B7C38E50AA47C6200532495 /* FSImageAdditions.h */,
 				8B7C38E60AA47C6200532495 /* FSImageAdditions.m */,
-				8B89B23B0AA8648600A87586 /* FSStringAdditions.h */,
-				8B89B23C0AA8648600A87586 /* FSStringAdditions.m */,
-				8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */,
-				8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */,
 				8BE5A1070B7FFBE0008678F4 /* FSPasteboardAdditions.h */,
 				8BE5A1080B7FFBE0008678F4 /* FSPasteboardAdditions.m */,
 				8B5642D50C5ECA34001E52BB /* FSSortDescriptorAdditions.h */,
 				8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */,
+				8B89B23B0AA8648600A87586 /* FSStringAdditions.h */,
+				8B89B23C0AA8648600A87586 /* FSStringAdditions.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -442,30 +401,6 @@
 				8B517F280A8D005F00B9D305 /* FSControlledView.m */,
 			);
 			name = "View Controller";
-			sourceTree = "<group>";
-		};
-		8B63F30F0A4B041000057D0D /* Disabled */ = {
-			isa = PBXGroup;
-			children = (
-				8BD6237308B96CB7002E8C79 /* FSMetalBorderCell.h */,
-				8BD6238D08B96CB7002E8C79 /* FSMetalBorderCell.m */,
-				8B423C9808BC072F00DC78F2 /* FSMetalBorderHeaderCell.h */,
-				8B423C9908BC072F00DC78F2 /* FSMetalBorderHeaderCell.m */,
-				8B423C5D08BC04D600DC78F2 /* FSMetalBorderHeaderView.h */,
-				8B423C5E08BC04D600DC78F2 /* FSMetalBorderHeaderView.m */,
-				8B423DA008BC113C00DC78F2 /* FSScrollView.h */,
-				8B423DA108BC113C00DC78F2 /* FSScrollView.m */,
-				8BD6237408B96CB7002E8C79 /* FSMetalBorderView.h */,
-				8BD6238E08B96CB7002E8C79 /* FSMetalBorderView.m */,
-				8BD6237708B96CB7002E8C79 /* FSMetalImageCell.h */,
-				8BD6239108B96CB7002E8C79 /* FSMetalImageCell.m */,
-				8BD6237808B96CB7002E8C79 /* FSMetalSlider.h */,
-				8BD6239208B96CB7002E8C79 /* FSMetalSlider.m */,
-				8BD6237908B96CB7002E8C79 /* FSMetalSliderCell.h */,
-				8BD6239308B96CB7002E8C79 /* FSMetalSliderCell.m */,
-				8B42386008BA865300DC78F2 /* Metal Table */,
-			);
-			name = Disabled;
 			sourceTree = "<group>";
 		};
 		8B648C9A0A9B203D005A3C42 /* About Box Controller */ = {
@@ -545,7 +480,6 @@
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
 				8B5177B60A8CB1E400B9D305 /* Windows */,
-				8B63F30F0A4B041000057D0D /* Disabled */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -575,7 +509,6 @@
 				8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */,
 				8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */,
 				8B42404308BFD09C00DC78F2 /* FSPreferenceWindowController.h in Headers */,
-				8B42404408BFD09C00DC78F2 /* FSAlertExtensions.h in Headers */,
 				8B4240A508BFE5CD00DC78F2 /* FSApplicationAdditions.h in Headers */,
 				8B05AB170A43559400147648 /* FSSplitView.h in Headers */,
 				8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */,
@@ -597,7 +530,6 @@
 				8B73DAA30A49F2AF00484717 /* AIBezierPathAdditions.h in Headers */,
 				8B73DAA50A49F2AF00484717 /* AIAttributedStringAdditions.h in Headers */,
 				8B73DAA60A49F2AF00484717 /* AIExceptionHandlingUtilities.h in Headers */,
-				8B9892270A5EAFC500F73045 /* FSArrayExtensions.h in Headers */,
 				8B5175C50A8C2B5400B9D305 /* FSFramework.pch in Headers */,
 				8B517F230A8D005200B9D305 /* FSViewController.h in Headers */,
 				8B517F290A8D005F00B9D305 /* FSControlledView.h in Headers */,
@@ -620,6 +552,7 @@
 				8BE5A1090B7FFBE0008678F4 /* FSPasteboardAdditions.h in Headers */,
 				8BECF58E0C561FA7008ADDEB /* FSFileManagerAdditions.h in Headers */,
 				8B5642D70C5ECA34001E52BB /* FSSortDescriptorAdditions.h in Headers */,
+				8B5643B20C5ED7B5001E52BB /* FSArrayAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,7 +624,6 @@
 				8B42376008BA723500DC78F2 /* FSTableView.m in Sources */,
 				8B42404A08BFD0C700DC78F2 /* FSAboutBoxController.m in Sources */,
 				8B42404B08BFD0C700DC78F2 /* FSPreferenceWindowController.m in Sources */,
-				8B42404C08BFD0C700DC78F2 /* FSAlertExtensions.m in Sources */,
 				8B4240A708BFE5D600DC78F2 /* FSApplicationAdditions.m in Sources */,
 				8B05AB180A43559400147648 /* FSSplitView.m in Sources */,
 				8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */,
@@ -711,7 +643,6 @@
 				8B73DAA00A49F2AF00484717 /* AIContextImageBridge.m in Sources */,
 				8B73DAA20A49F2AF00484717 /* AIBezierPathAdditions.m in Sources */,
 				8B73DAA40A49F2AF00484717 /* AIAttributedStringAdditions.m in Sources */,
-				8B9892280A5EAFC500F73045 /* FSArrayExtensions.m in Sources */,
 				8B517F240A8D005200B9D305 /* FSViewController.m in Sources */,
 				8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */,
 				8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */,
@@ -732,6 +663,7 @@
 				8BE5A10A0B7FFBE0008678F4 /* FSPasteboardAdditions.m in Sources */,
 				8BECF58F0C561FA7008ADDEB /* FSFileManagerAdditions.m in Sources */,
 				8B5642D80C5ECA34001E52BB /* FSSortDescriptorAdditions.m in Sources */,
+				8B5643B40C5ED7BF001E52BB /* FSArrayAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

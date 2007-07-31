@@ -17,7 +17,7 @@
 #import "FSPreferenceWindowController.h"
 #import "FSViewController.h"
 #import "FSControlledView.h"
-#import "FSArrayExtensions.h"
+#import "FSArrayAdditions.h"
 
 #define FRAME_AUTOSAVE_NAME			([NSString stringWithFormat:@"FSPreferenceWindow Frame %@", [self autosaveName]])
 #define IDENTIFIER_AUTOSAVE_NAME	([NSString stringWithFormat:@"FSPreferenceWindow SelectedItemIdentifier %@", [self autosaveName]])
