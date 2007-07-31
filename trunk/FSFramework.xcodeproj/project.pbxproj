@@ -33,6 +33,8 @@
 		8B517F2A0A8D005F00B9D305 /* FSControlledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F280A8D005F00B9D305 /* FSControlledView.m */; };
 		8B517F5D0A8D01A700B9D305 /* FSWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B517F5B0A8D01A700B9D305 /* FSWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B517F5E0A8D01A700B9D305 /* FSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B517F5C0A8D01A700B9D305 /* FSWindowController.m */; };
+		8B5642D70C5ECA34001E52BB /* FSSortDescriptorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5642D50C5ECA34001E52BB /* FSSortDescriptorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B5642D80C5ECA34001E52BB /* FSSortDescriptorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */; };
 		8B73DA810A49F2AF00484717 /* AIGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5B0A49F2AF00484717 /* AIGradient.m */; };
 		8B73DA820A49F2AF00484717 /* AIGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B73DA5C0A49F2AF00484717 /* AIGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B73DA830A49F2AF00484717 /* AIGenericViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */; };
@@ -158,6 +160,8 @@
 		8B517F280A8D005F00B9D305 /* FSControlledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSControlledView.m; path = Source/FSControlledView.m; sourceTree = "<group>"; };
 		8B517F5B0A8D01A700B9D305 /* FSWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSWindowController.h; path = Source/FSWindowController.h; sourceTree = "<group>"; };
 		8B517F5C0A8D01A700B9D305 /* FSWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSWindowController.m; path = Source/FSWindowController.m; sourceTree = "<group>"; };
+		8B5642D50C5ECA34001E52BB /* FSSortDescriptorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSortDescriptorAdditions.h; path = Source/FSSortDescriptorAdditions.h; sourceTree = "<group>"; };
+		8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSortDescriptorAdditions.m; path = Source/FSSortDescriptorAdditions.m; sourceTree = "<group>"; };
 		8B73DA5B0A49F2AF00484717 /* AIGradient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGradient.m; path = Source/adium/AIGradient.m; sourceTree = "<group>"; };
 		8B73DA5C0A49F2AF00484717 /* AIGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGradient.h; path = Source/adium/AIGradient.h; sourceTree = "<group>"; };
 		8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGenericViewCell.m; path = Source/adium/AIGenericViewCell.m; sourceTree = "<group>"; };
@@ -368,6 +372,8 @@
 				8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */,
 				8BE5A1070B7FFBE0008678F4 /* FSPasteboardAdditions.h */,
 				8BE5A1080B7FFBE0008678F4 /* FSPasteboardAdditions.m */,
+				8B5642D50C5ECA34001E52BB /* FSSortDescriptorAdditions.h */,
+				8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				8B0A5FDD0B79ABA600ADE0FD /* FSAppleScriptAdditions.h in Headers */,
 				8BE5A1090B7FFBE0008678F4 /* FSPasteboardAdditions.h in Headers */,
 				8BECF58E0C561FA7008ADDEB /* FSFileManagerAdditions.h in Headers */,
+				8B5642D70C5ECA34001E52BB /* FSSortDescriptorAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +731,7 @@
 				8B0A5FDE0B79ABA600ADE0FD /* FSAppleScriptAdditions.m in Sources */,
 				8BE5A10A0B7FFBE0008678F4 /* FSPasteboardAdditions.m in Sources */,
 				8BECF58F0C561FA7008ADDEB /* FSFileManagerAdditions.m in Sources */,
+				8B5642D80C5ECA34001E52BB /* FSSortDescriptorAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
