@@ -90,8 +90,6 @@
 		8BBFB96D0A9231A30038A6E3 /* AIPlasticMinusButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB9690A9231A30038A6E3 /* AIPlasticMinusButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BBFB99B0A92330D0038A6E3 /* AIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB9990A92330D0038A6E3 /* AIImageAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BBFB99C0A92330D0038A6E3 /* AIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB99A0A92330D0038A6E3 /* AIImageAdditions.m */; };
-		8BBFB9AA0A9233590038A6E3 /* pxmLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB9A90A9233590038A6E3 /* pxmLib.h */; };
-		8BBFB9AD0A9233600038A6E3 /* pxmLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB9AC0A9233600038A6E3 /* pxmLib.m */; };
 		8BBFBED50A92359E0038A6E3 /* PlasticButtonDefault_Caps.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBFBECD0A92359E0038A6E3 /* PlasticButtonDefault_Caps.png */; };
 		8BBFBED60A92359E0038A6E3 /* PlasticButtonDefault_Middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBFBECE0A92359E0038A6E3 /* PlasticButtonDefault_Middle.png */; };
 		8BBFBED70A92359E0038A6E3 /* PlasticButtonNormal_Caps.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBFBECF0A92359E0038A6E3 /* PlasticButtonNormal_Caps.png */; };
@@ -205,8 +203,6 @@
 		8BBFB9690A9231A30038A6E3 /* AIPlasticMinusButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticMinusButton.h; path = Source/adium/AIPlasticMinusButton.h; sourceTree = "<group>"; };
 		8BBFB9990A92330D0038A6E3 /* AIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIImageAdditions.h; path = Source/adium/AIImageAdditions.h; sourceTree = "<group>"; };
 		8BBFB99A0A92330D0038A6E3 /* AIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIImageAdditions.m; path = Source/adium/AIImageAdditions.m; sourceTree = "<group>"; };
-		8BBFB9A90A9233590038A6E3 /* pxmLib.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = pxmLib.h; path = Source/adium/pxmLib.h; sourceTree = "<group>"; };
-		8BBFB9AC0A9233600038A6E3 /* pxmLib.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = pxmLib.m; path = Source/adium/pxmLib.m; sourceTree = "<group>"; };
 		8BBFBECD0A92359E0038A6E3 /* PlasticButtonDefault_Caps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlasticButtonDefault_Caps.png; path = Resources/adium/PlasticButtonDefault_Caps.png; sourceTree = "<group>"; };
 		8BBFBECE0A92359E0038A6E3 /* PlasticButtonDefault_Middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlasticButtonDefault_Middle.png; path = Resources/adium/PlasticButtonDefault_Middle.png; sourceTree = "<group>"; };
 		8BBFBECF0A92359E0038A6E3 /* PlasticButtonNormal_Caps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlasticButtonNormal_Caps.png; path = Resources/adium/PlasticButtonNormal_Caps.png; sourceTree = "<group>"; };
@@ -462,8 +458,6 @@
 				8BBFB9690A9231A30038A6E3 /* AIPlasticMinusButton.h */,
 				8BBFB9990A92330D0038A6E3 /* AIImageAdditions.h */,
 				8BBFB99A0A92330D0038A6E3 /* AIImageAdditions.m */,
-				8BBFB9A90A9233590038A6E3 /* pxmLib.h */,
-				8BBFB9AC0A9233600038A6E3 /* pxmLib.m */,
 			);
 			name = "From Adium";
 			sourceTree = "<group>";
@@ -540,7 +534,6 @@
 				8BBFB96A0A9231A30038A6E3 /* AIPlasticPlusButton.h in Headers */,
 				8BBFB96D0A9231A30038A6E3 /* AIPlasticMinusButton.h in Headers */,
 				8BBFB99B0A92330D0038A6E3 /* AIImageAdditions.h in Headers */,
-				8BBFB9AA0A9233590038A6E3 /* pxmLib.h in Headers */,
 				8BF1AFE70A9669EC00B6A8C2 /* FSMacros.h in Headers */,
 				8B7C38E70AA47C6200532495 /* FSImageAdditions.h in Headers */,
 				8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */,
@@ -652,7 +645,6 @@
 				8BBFB96B0A9231A30038A6E3 /* AIPlasticPlusButton.m in Sources */,
 				8BBFB96C0A9231A30038A6E3 /* AIPlasticMinusButton.m in Sources */,
 				8BBFB99C0A92330D0038A6E3 /* AIImageAdditions.m in Sources */,
-				8BBFB9AD0A9233600038A6E3 /* pxmLib.m in Sources */,
 				8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */,
 				8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */,
 				8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */,
@@ -702,6 +694,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = "-fobjc-exceptions";
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x20000000,
@@ -732,6 +725,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = "-fobjc-exceptions";
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0x20000000,
