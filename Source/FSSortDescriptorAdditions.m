@@ -15,7 +15,7 @@
  */
 
 #import "FSSortDescriptorAdditions.h"
-#import "FSArrayExtensions.h"
+#import "FSArrayAdditions.h"
 
 @implementation NSSortDescriptor (FSSortDescriptorAdditions)
 

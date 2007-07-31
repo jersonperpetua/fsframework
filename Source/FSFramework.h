@@ -17,8 +17,7 @@
 #import <FSFramework/FSMacros.h>
 
 #import <FSFramework/FSApplicationAdditions.h>
-#import <FSFramework/FSAlertExtensions.h>
-#import <FSFramework/FSArrayExtensions.h>
+#import <FSFramework/FSArrayAdditions.h>
 #import <FSFramework/FSImageAdditions.h>
 #import <FSFramework/FSStringAdditions.h>
 #import <FSFramework/FSAppleScriptAdditions.h>
