@@ -24,6 +24,7 @@
 @interface AIImageTextCell : NSCell {
 	NSFont			*font;
     NSString		*subString;
+	NSColor			*color; 
 	float			maxImageWidth;
 	float			imageTextPadding;
 	NSLineBreakMode lineBreakMode;
@@ -52,5 +53,10 @@
 - (void)setImageTextPadding:(float)inImageTextPadding;
 
 - (void)setLineBreakMode:(NSLineBreakMode)inLineBreakMode;
+
+/* Get/set the textColor.  A textColor of nil means to draw 
+ * with default text colors */ 
+- (NSColor *)textColor; 
+- (void)setTextColor:(NSColor *)color; 
 
 @end
