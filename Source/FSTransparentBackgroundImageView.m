@@ -23,6 +23,7 @@
 {
 	if ((self = [super initWithFrame:inFrame])) {
 		transparentRect = NSZeroRect;
+		opacity = 0.30;
 	}
 	
 	return self;
@@ -43,6 +44,14 @@
 	transparentRect = inTransparentRect;
 	
 	[self setNeedsDisplay:YES];
+}
+
+- (void)setOpacity:(float)value {
+	opacity = value;
+}
+
+- (float)opacity {
+	return opacity;
 }
 
 /*
@@ -71,7 +80,7 @@
 			[backgroundImage drawInRect:imageDrawingRect
 								 atSize:imageSize
 							   position:IMAGE_POSITION_LEFT
-							   fraction:.30];
+							   fraction:opacity];
 			[NSGraphicsContext restoreGraphicsState];
 		}		
 		

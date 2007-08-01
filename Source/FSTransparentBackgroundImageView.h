@@ -22,9 +22,13 @@
 @interface FSTransparentBackgroundImageView : NSView {
 	NSRect transparentRect;
 	NSImage	*backgroundImage;
+	float opacity;
 }
 
 - (void)setBackgroundImage:(NSImage *)inImage;
 - (void)setTransparentRect:(NSRect)inTransparentRect;
+
+- (float)opacity;
+- (void)setOpacity:(float)opacity;
 
 @end
