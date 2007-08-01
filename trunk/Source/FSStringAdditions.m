@@ -33,4 +33,9 @@
 	return string;
 }
 
++ (NSString *)stringWithStringOrNil:(id)value {
+	if (!value) { return @""; }
+	else { return value; }
+}
+
 @end

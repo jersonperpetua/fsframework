@@ -21,4 +21,9 @@
 /* Generates a string with unicode stars */
 + (NSString *)stars:(int)numStars;
 
+/* Returns the given value or an empty string
+ * if the value is nil.  This is a convenient
+ * way to always get a string. */
++ (NSString *)stringWithStringOrNil:(id)value;
+
 @end
