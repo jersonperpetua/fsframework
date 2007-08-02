@@ -22,6 +22,7 @@
 
 + (NSString *)nibName;
 
++ (id)controller;
 - (id)init;
 - (FSControlledView *)view; // load the nib (if not loaded) and return the view
 

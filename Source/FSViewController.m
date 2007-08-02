@@ -34,6 +34,10 @@
 	return nil;
 }
 
++ (id)controller {
+	return [[[self alloc] init] autorelease];
+}
+
 - (id)init {
 	NSAssert([[self class] nibName],
 			 @"FSViewController is designed for subclasses to use.  "
