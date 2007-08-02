@@ -16,6 +16,9 @@
 
 @interface NSSortDescriptor (FSSortDescriptorAdditions)
 
++ (id)descriptorWithKey:(NSString *)key ascending:(BOOL)flag;
++ (id)descriptorWithKey:(NSString *)key ascending:(BOOL)flag selector:(SEL)selector;
+
 /* Will analyize keys and check to make sure that the descriptors keep the ordering
  * specified in keys.  If the first key in keys is different from the first descriptor's
  * key, then standard ordering won't be applied (nil will be returned).  If the descriptors

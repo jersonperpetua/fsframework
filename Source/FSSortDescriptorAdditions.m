@@ -19,6 +19,14 @@
 
 @implementation NSSortDescriptor (FSSortDescriptorAdditions)
 
++ (id)descriptorWithKey:(NSString *)key ascending:(BOOL)flag selector:(SEL)selector {
+	return [[[self alloc] initWithKey:key ascending:flag selector:selector] autorelease];
+}
+
++ (id)descriptorWithKey:(NSString *)key ascending:(BOOL)flag {
+	return [[[self alloc] initWithKey:key ascending:flag] autorelease];
+}
+
 + (NSArray *)applyStandardOrdering:(NSArray *)keys toDescriptors:(NSArray *)descriptors {
 	
 	NSParameterAssert([keys count] > 0);
@@ -49,7 +57,7 @@
 			NSEnumerator *keyEnumerator = [keys objectEnumerator];
 			NSString *key;
 			while (key = [keyEnumerator nextObject]) {
-				[newDescriptors addObject:[[[NSSortDescriptor alloc] initWithKey:key ascending:[firstDescriptor ascending]] autorelease]];
+				[newDescriptors addObject:[NSSortDescriptor descriptorWithKey:key ascending:[firstDescriptor ascending]]];
 			}
 			
 			
