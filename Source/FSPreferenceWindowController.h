@@ -17,7 +17,7 @@
 #import "FSWindowController.h"
 
 @class FSViewController;
-@protocol FSPreferenceViewControllerProtocol
+@protocol FSPreferenceViewController
 - (NSString *)label;
 - (NSImage *)image;
 @end
@@ -37,7 +37,7 @@
 // otherwise the views won't be displayed
 // when creating your preferce window, you must be sure that it's large enough to fit the width of any of your views
 // the height is not important as it will change, but the width must fit.
-- (void)addView:(FSViewController <FSPreferenceViewControllerProtocol> *)view;
+- (void)addView:(FSViewController <FSPreferenceViewController> *)view;
 
 - (void)setTitle:(NSString *)new_title;
 - (NSString *)title;

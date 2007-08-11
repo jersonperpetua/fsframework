@@ -23,17 +23,17 @@
 #define IDENTIFIER_AUTOSAVE_NAME	([NSString stringWithFormat:@"FSPreferenceWindow SelectedItemIdentifier %@", [self autosaveName]])
 
 @interface FSPreferenceToolbarItem : NSToolbarItem {
-	FSViewController <FSPreferenceViewControllerProtocol> *viewController;
+	FSViewController <FSPreferenceViewController> *viewController;
 }
-- (FSViewController <FSPreferenceViewControllerProtocol> *)preferenceViewController;
-- (void)setPreferenceViewController:(FSViewController <FSPreferenceViewControllerProtocol> *)viewController;
+- (FSViewController <FSPreferenceViewController> *)preferenceViewController;
+- (void)setPreferenceViewController:(FSViewController <FSPreferenceViewController> *)viewController;
 @end
 
 @implementation FSPreferenceToolbarItem : NSToolbarItem
-- (FSViewController <FSPreferenceViewControllerProtocol> *)preferenceViewController {
+- (FSViewController <FSPreferenceViewController> *)preferenceViewController {
 	return viewController;
 }
-- (void)setPreferenceViewController:(FSViewController <FSPreferenceViewControllerProtocol> *)aController {
+- (void)setPreferenceViewController:(FSViewController <FSPreferenceViewController> *)aController {
 	if (aController != viewController) {
 		[viewController release];
 		viewController = [aController retain];
@@ -206,7 +206,7 @@
 // adding/changing views
 // ----------------------------------------------------------------------------------------------------
 
-- (void)addView:(FSViewController <FSPreferenceViewControllerProtocol> *)view {
+- (void)addView:(FSViewController <FSPreferenceViewController> *)view {
 	[views addObject:view];
 	[toolbar insertItemWithItemIdentifier:[view label] atIndex:[[toolbar items] count]];
 }
@@ -222,7 +222,7 @@
 		
 		// declare some stuff
 		NSView *content = [[NSView alloc] init];
-		FSViewController <FSPreferenceViewControllerProtocol> *newViewController = [sender preferenceViewController];
+		FSViewController <FSPreferenceViewController> *newViewController = [sender preferenceViewController];
 		NSView *newView = [newViewController view];
 		
 		float height_difference = [newView frame].size.height - [[[self window] contentView] frame].size.height;
@@ -256,7 +256,7 @@
 	int counter;
 	for (counter = 0; counter < [views count]; counter++)
 	{
-		FSViewController <FSPreferenceViewControllerProtocol> *viewController = [views objectAtIndex:counter];
+		FSViewController <FSPreferenceViewController> *viewController = [views objectAtIndex:counter];
 		if ([[viewController label] isEqualToString:itemIdentifier])
 		{
 			FSPreferenceToolbarItem *item = [[[FSPreferenceToolbarItem alloc] initWithItemIdentifier:[viewController label]] autorelease];
