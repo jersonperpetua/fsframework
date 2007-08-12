@@ -98,6 +98,9 @@
 		8BBFBEDA0A92359E0038A6E3 /* PlasticButtonPressed_Caps.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBFBED20A92359E0038A6E3 /* PlasticButtonPressed_Caps.png */; };
 		8BBFBEDB0A92359E0038A6E3 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBFBED30A92359E0038A6E3 /* plus.png */; };
 		8BBFBEDC0A92359E0038A6E3 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBFBED40A92359E0038A6E3 /* minus.png */; };
+		8BC801E10C6E991300439BDA /* FSModelTranslation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC801E00C6E991300439BDA /* FSModelTranslation.plist */; };
+		8BC8025E0C6EA00D00439BDA /* FSSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8025C0C6EA00D00439BDA /* FSSystem.m */; };
+		8BC8025F0C6EA00D00439BDA /* FSSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC8025D0C6EA00D00439BDA /* FSSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BD6239A08B96CB7002E8C79 /* FSFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237008B96CB7002E8C79 /* FSFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BD623A808B96CB7002E8C79 /* FSOvalActionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BD623A908B96CB7002E8C79 /* FSOvalTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -211,6 +214,9 @@
 		8BBFBED20A92359E0038A6E3 /* PlasticButtonPressed_Caps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlasticButtonPressed_Caps.png; path = Resources/adium/PlasticButtonPressed_Caps.png; sourceTree = "<group>"; };
 		8BBFBED30A92359E0038A6E3 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = Resources/adium/plus.png; sourceTree = "<group>"; };
 		8BBFBED40A92359E0038A6E3 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minus.png; path = Resources/adium/minus.png; sourceTree = "<group>"; };
+		8BC801E00C6E991300439BDA /* FSModelTranslation.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = FSModelTranslation.plist; path = Resources/FSModelTranslation.plist; sourceTree = "<group>"; };
+		8BC8025C0C6EA00D00439BDA /* FSSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSystem.m; path = Source/FSSystem.m; sourceTree = "<group>"; };
+		8BC8025D0C6EA00D00439BDA /* FSSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSystem.h; path = Source/FSSystem.h; sourceTree = "<group>"; };
 		8BD6237008B96CB7002E8C79 /* FSFramework.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSFramework.h; path = Source/FSFramework.h; sourceTree = "<group>"; };
 		8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSBackgroundView.h; path = Source/FSBackgroundView.h; sourceTree = "<group>"; };
 		8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalActionCell.h; path = Source/FSOvalActionCell.h; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 				8BBFBED40A92359E0038A6E3 /* minus.png */,
 				8BD623D208B96CF4002E8C79 /* Info.plist */,
 				8BD623D908B96D26002E8C79 /* InfoPlist.strings */,
+				8BC801E00C6E991300439BDA /* FSModelTranslation.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -462,6 +469,15 @@
 			name = "From Adium";
 			sourceTree = "<group>";
 		};
+		8BC8025B0C6E9FE900439BDA /* Additions - Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8BC8025D0C6EA00D00439BDA /* FSSystem.h */,
+				8BC8025C0C6EA00D00439BDA /* FSSystem.m */,
+			);
+			name = "Additions - Custom";
+			sourceTree = "<group>";
+		};
 		8BD6236D08B96CAA002E8C79 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +486,7 @@
 				8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */,
 				8B517F1E0A8D003900B9D305 /* Controllers */,
 				8B5177B30A8CB18F00B9D305 /* Additions */,
+				8BC8025B0C6E9FE900439BDA /* Additions - Custom */,
 				8B73DA560A49F11600484717 /* From Adium */,
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
@@ -546,6 +563,7 @@
 				8BECF58E0C561FA7008ADDEB /* FSFileManagerAdditions.h in Headers */,
 				8B5642D70C5ECA34001E52BB /* FSSortDescriptorAdditions.h in Headers */,
 				8B5643B20C5ED7B5001E52BB /* FSArrayAdditions.h in Headers */,
+				8BC8025F0C6EA00D00439BDA /* FSSystem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +620,7 @@
 				8BBFBEDA0A92359E0038A6E3 /* PlasticButtonPressed_Caps.png in Resources */,
 				8BBFBEDB0A92359E0038A6E3 /* plus.png in Resources */,
 				8BBFBEDC0A92359E0038A6E3 /* minus.png in Resources */,
+				8BC801E10C6E991300439BDA /* FSModelTranslation.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +675,7 @@
 				8BECF58F0C561FA7008ADDEB /* FSFileManagerAdditions.m in Sources */,
 				8B5642D80C5ECA34001E52BB /* FSSortDescriptorAdditions.m in Sources */,
 				8B5643B40C5ED7BF001E52BB /* FSArrayAdditions.m in Sources */,
+				8BC8025E0C6EA00D00439BDA /* FSSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
