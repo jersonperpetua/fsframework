@@ -24,6 +24,7 @@
 #import <FSFramework/FSPasteboardAdditions.h>
 #import <FSFramework/FSFileManagerAdditions.h>
 #import <FSFramework/FSSortDescriptorAdditions.h>
+#import <FSFramework/FSSystem.h>
 
 #import <FSFramework/FSWindowController.h>
 #import <FSFramework/FSViewController.h>
