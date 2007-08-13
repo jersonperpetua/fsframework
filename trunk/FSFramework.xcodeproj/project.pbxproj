@@ -139,8 +139,6 @@
 		8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSQuickChangeDateCell.h; path = Source/FSQuickChangeDateCell.h; sourceTree = "<group>"; };
 		8B4A18580B5B1D800036B8C9 /* FSQuickChangeDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSQuickChangeDateCell.m; path = Source/FSQuickChangeDateCell.m; sourceTree = "<group>"; };
 		8B5175C40A8C2B5400B9D305 /* FSFramework.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSFramework.pch; sourceTree = "<group>"; };
-		8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSAboutWindow.m; path = Source/FSAboutWindow.m; sourceTree = "<group>"; };
-		8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutWindow.h; path = Source/FSAboutWindow.h; sourceTree = "<group>"; };
 		8B517F210A8D005200B9D305 /* FSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSViewController.h; path = Source/FSViewController.h; sourceTree = "<group>"; };
 		8B517F220A8D005200B9D305 /* FSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSViewController.m; path = Source/FSViewController.m; sourceTree = "<group>"; };
 		8B517F270A8D005F00B9D305 /* FSControlledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSControlledView.h; path = Source/FSControlledView.h; sourceTree = "<group>"; };
@@ -373,15 +371,6 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		8B5177B60A8CB1E400B9D305 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				8B5176150A8C2D2900B9D305 /* FSAboutWindow.h */,
-				8B5176140A8C2D2900B9D305 /* FSAboutWindow.m */,
-			);
-			name = Windows;
-			sourceTree = "<group>";
-		};
 		8B517F1E0A8D003900B9D305 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,7 +479,6 @@
 				8B73DA560A49F11600484717 /* From Adium */,
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
-				8B5177B60A8CB1E400B9D305 /* Windows */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
