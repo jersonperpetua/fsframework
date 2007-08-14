@@ -80,6 +80,19 @@
 		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
 		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
+		8BB323180C71CF8D002AE53C /* NSGrayFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323120C71CF8D002AE53C /* NSGrayFrame.h */; settings = {ATTRIBUTES = (); }; };
+		8BB323190C71CF8D002AE53C /* FSHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323130C71CF8D002AE53C /* FSHUDWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BB3231A0C71CF8D002AE53C /* FSHUDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB323140C71CF8D002AE53C /* FSHUDFrame.m */; };
+		8BB3231B0C71CF8D002AE53C /* NSThemeFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323150C71CF8D002AE53C /* NSThemeFrame.h */; settings = {ATTRIBUTES = (); }; };
+		8BB3231C0C71CF8D002AE53C /* FSHUDFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323160C71CF8D002AE53C /* FSHUDFrame.h */; };
+		8BB3231D0C71CF8D002AE53C /* FSHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB323170C71CF8D002AE53C /* FSHUDWindow.m */; };
+		8BB3233D0C71D0AC002AE53C /* NSTitledFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB3233C0C71D0AC002AE53C /* NSTitledFrame.h */; settings = {ATTRIBUTES = (); }; };
+		8BB323530C71D0F7002AE53C /* NSFrameView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323520C71D0F7002AE53C /* NSFrameView.h */; settings = {ATTRIBUTES = (); }; };
+		8BB323570C71D130002AE53C /* FSEtchedTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323550C71D130002AE53C /* FSEtchedTextCell.h */; };
+		8BB323580C71D130002AE53C /* FSEtchedTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB323560C71D130002AE53C /* FSEtchedTextCell.m */; };
+		8BB3236F0C71D1AE002AE53C /* NSImage+FrameworkImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB3236E0C71D1AE002AE53C /* NSImage+FrameworkImage.h */; settings = {ATTRIBUTES = (); }; };
+		8BB323B60C71D333002AE53C /* NSImage+FrameworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB323B50C71D333002AE53C /* NSImage+FrameworkImage.m */; };
+		8BB3242C0C71D61D002AE53C /* HUDCloseButton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3242B0C71D61D002AE53C /* HUDCloseButton.tiff */; };
 		8BBFB9500A9231400038A6E3 /* AIPlasticButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */; };
 		8BBFB9510A9231400038A6E3 /* AIPlasticButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB94D0A9231400038A6E3 /* AIPlasticButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BBFB9520A9231400038A6E3 /* AIPlasticButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB94E0A9231400038A6E3 /* AIPlasticButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -194,6 +207,19 @@
 		8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSColoredMenuItem.m; path = Source/FSColoredMenuItem.m; sourceTree = "<group>"; };
 		8B89B23B0AA8648600A87586 /* FSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSStringAdditions.h; path = Source/FSStringAdditions.h; sourceTree = "<group>"; };
 		8B89B23C0AA8648600A87586 /* FSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSStringAdditions.m; path = Source/FSStringAdditions.m; sourceTree = "<group>"; };
+		8BB323120C71CF8D002AE53C /* NSGrayFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSGrayFrame.h; path = Source/NSGrayFrame.h; sourceTree = "<group>"; };
+		8BB323130C71CF8D002AE53C /* FSHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDWindow.h; path = Source/FSHUDWindow.h; sourceTree = "<group>"; };
+		8BB323140C71CF8D002AE53C /* FSHUDFrame.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDFrame.m; path = Source/FSHUDFrame.m; sourceTree = "<group>"; };
+		8BB323150C71CF8D002AE53C /* NSThemeFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSThemeFrame.h; path = Source/NSThemeFrame.h; sourceTree = "<group>"; };
+		8BB323160C71CF8D002AE53C /* FSHUDFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDFrame.h; path = Source/FSHUDFrame.h; sourceTree = "<group>"; };
+		8BB323170C71CF8D002AE53C /* FSHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDWindow.m; path = Source/FSHUDWindow.m; sourceTree = "<group>"; };
+		8BB3233C0C71D0AC002AE53C /* NSTitledFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSTitledFrame.h; path = Source/NSTitledFrame.h; sourceTree = "<group>"; };
+		8BB323520C71D0F7002AE53C /* NSFrameView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSFrameView.h; path = Source/NSFrameView.h; sourceTree = "<group>"; };
+		8BB323550C71D130002AE53C /* FSEtchedTextCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSEtchedTextCell.h; path = Source/FSEtchedTextCell.h; sourceTree = "<group>"; };
+		8BB323560C71D130002AE53C /* FSEtchedTextCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSEtchedTextCell.m; path = Source/FSEtchedTextCell.m; sourceTree = "<group>"; };
+		8BB3236E0C71D1AE002AE53C /* NSImage+FrameworkImage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "NSImage+FrameworkImage.h"; path = "../../../../Desktop/iLifeControls/NSImage+FrameworkImage.h"; sourceTree = SOURCE_ROOT; };
+		8BB323B50C71D333002AE53C /* NSImage+FrameworkImage.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = "NSImage+FrameworkImage.m"; path = "../../../../Desktop/iLifeControls/NSImage+FrameworkImage.m"; sourceTree = SOURCE_ROOT; };
+		8BB3242B0C71D61D002AE53C /* HUDCloseButton.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDCloseButton.tiff; path = ../../../../Desktop/iLifeControls/HUDCloseButton.tiff; sourceTree = SOURCE_ROOT; };
 		8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIPlasticButton.m; path = Source/adium/AIPlasticButton.m; sourceTree = "<group>"; };
 		8BBFB94D0A9231400038A6E3 /* AIPlasticButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticButton.h; path = Source/adium/AIPlasticButton.h; sourceTree = "<group>"; };
 		8BBFB94E0A9231400038A6E3 /* AIPlasticButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticButtonCell.h; path = Source/adium/AIPlasticButtonCell.h; sourceTree = "<group>"; };
@@ -281,6 +307,7 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BB3242B0C71D61D002AE53C /* HUDCloseButton.tiff */,
 				8BBFBECD0A92359E0038A6E3 /* PlasticButtonDefault_Caps.png */,
 				8BBFBECE0A92359E0038A6E3 /* PlasticButtonDefault_Middle.png */,
 				8BBFBECF0A92359E0038A6E3 /* PlasticButtonNormal_Caps.png */,
@@ -458,6 +485,33 @@
 			name = "From Adium";
 			sourceTree = "<group>";
 		};
+		8BB31E140C71251D002AE53C /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				8BB323130C71CF8D002AE53C /* FSHUDWindow.h */,
+				8BB323170C71CF8D002AE53C /* FSHUDWindow.m */,
+				8BB323160C71CF8D002AE53C /* FSHUDFrame.h */,
+				8BB323140C71CF8D002AE53C /* FSHUDFrame.m */,
+				8BB323550C71D130002AE53C /* FSEtchedTextCell.h */,
+				8BB323560C71D130002AE53C /* FSEtchedTextCell.m */,
+				8BB3236E0C71D1AE002AE53C /* NSImage+FrameworkImage.h */,
+				8BB323B50C71D333002AE53C /* NSImage+FrameworkImage.m */,
+				8BB3233F0C71D0B6002AE53C /* Cocoa Private Classes */,
+			);
+			name = HUD;
+			sourceTree = "<group>";
+		};
+		8BB3233F0C71D0B6002AE53C /* Cocoa Private Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8BB323150C71CF8D002AE53C /* NSThemeFrame.h */,
+				8BB3233C0C71D0AC002AE53C /* NSTitledFrame.h */,
+				8BB323120C71CF8D002AE53C /* NSGrayFrame.h */,
+				8BB323520C71D0F7002AE53C /* NSFrameView.h */,
+			);
+			name = "Cocoa Private Classes";
+			sourceTree = "<group>";
+		};
 		8BC8025B0C6E9FE900439BDA /* Additions - Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +533,7 @@
 				8B73DA560A49F11600484717 /* From Adium */,
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
+				8BB31E140C71251D002AE53C /* HUD */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -552,6 +607,14 @@
 				8B5642D70C5ECA34001E52BB /* FSSortDescriptorAdditions.h in Headers */,
 				8B5643B20C5ED7B5001E52BB /* FSArrayAdditions.h in Headers */,
 				8BC8025F0C6EA00D00439BDA /* FSSystem.h in Headers */,
+				8BB323180C71CF8D002AE53C /* NSGrayFrame.h in Headers */,
+				8BB323190C71CF8D002AE53C /* FSHUDWindow.h in Headers */,
+				8BB3231B0C71CF8D002AE53C /* NSThemeFrame.h in Headers */,
+				8BB3231C0C71CF8D002AE53C /* FSHUDFrame.h in Headers */,
+				8BB3233D0C71D0AC002AE53C /* NSTitledFrame.h in Headers */,
+				8BB323530C71D0F7002AE53C /* NSFrameView.h in Headers */,
+				8BB323570C71D130002AE53C /* FSEtchedTextCell.h in Headers */,
+				8BB3236F0C71D1AE002AE53C /* NSImage+FrameworkImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +672,7 @@
 				8BBFBEDB0A92359E0038A6E3 /* plus.png in Resources */,
 				8BBFBEDC0A92359E0038A6E3 /* minus.png in Resources */,
 				8BC801E10C6E991300439BDA /* FSModelTranslation.plist in Resources */,
+				8BB3242C0C71D61D002AE53C /* HUDCloseButton.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +728,10 @@
 				8B5642D80C5ECA34001E52BB /* FSSortDescriptorAdditions.m in Sources */,
 				8B5643B40C5ED7BF001E52BB /* FSArrayAdditions.m in Sources */,
 				8BC8025E0C6EA00D00439BDA /* FSSystem.m in Sources */,
+				8BB3231A0C71CF8D002AE53C /* FSHUDFrame.m in Sources */,
+				8BB3231D0C71CF8D002AE53C /* FSHUDWindow.m in Sources */,
+				8BB323580C71D130002AE53C /* FSEtchedTextCell.m in Sources */,
+				8BB323B60C71D333002AE53C /* NSImage+FrameworkImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,6 +41,8 @@
 #import <FSFramework/FSTransparentBackgroundImageView.h>
 #import <FSFramework/FSSegmentedControl.h>
 
+#import <FSFramework/FSHUDWindow.h>
+
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>
 #import <FSFramework/FSQuickChangeDateCell.h>
