@@ -42,6 +42,8 @@
 #import <FSFramework/FSSegmentedControl.h>
 
 #import <FSFramework/FSHUDWindow.h>
+#import <FSFramework/FSEtchedTextCell.h>
+#import <FSFramework/FSEtchedTextField.h>
 
 #import <FSFramework/FSOvalActionCell.h>
 #import <FSFramework/FSOvalTextFieldCell.h>
