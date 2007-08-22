@@ -6,6 +6,20 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8BF74CDE0C7BD4C100C4D9B2 /* Build configuration list for PBXAggregateTarget "Generate Dynamic Macros" */;
+			buildPhases = (
+				8BF74CD80C7BD4A300C4D9B2 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Generate Dynamic Macros";
+			productName = "Generate Dynamic Macros";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8B05AB170A43559400147648 /* FSSplitView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B05AB150A43559400147648 /* FSSplitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B05AB180A43559400147648 /* FSSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B05AB160A43559400147648 /* FSSplitView.m */; };
@@ -129,8 +143,19 @@
 		8BECF58E0C561FA7008ADDEB /* FSFileManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BECF58C0C561FA7008ADDEB /* FSFileManagerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BECF58F0C561FA7008ADDEB /* FSFileManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */; };
 		8BF1AFE70A9669EC00B6A8C2 /* FSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BF74E480C7BD5D600C4D9B2 /* ImportedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BF74CED0C7BD54C00C4D9B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */;
+			remoteInfo = "Generate Dynamic Macros";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -263,8 +288,8 @@
 		8BECF58C0C561FA7008ADDEB /* FSFileManagerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSFileManagerAdditions.h; path = Source/FSFileManagerAdditions.h; sourceTree = "<group>"; };
 		8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSFileManagerAdditions.m; path = Source/FSFileManagerAdditions.m; sourceTree = "<group>"; };
 		8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMacros.h; path = Source/FSMacros.h; sourceTree = "<group>"; };
+		8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ImportedMacros.h; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,20 +317,23 @@
 			isa = PBXGroup;
 			children = (
 				8BD6236D08B96CAA002E8C79 /* Classes */,
+				8BF74CF80C7BD59200C4D9B2 /* Dynamic Files */,
 				089C1665FE841158C02AAC07 /* Resources */,
-				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
 			name = WYAppFramework;
 			sourceTree = "<group>";
 		};
-		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
-				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				8B73DB080A49F7DF00484717 /* Carbon.framework */,
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
 			);
-			name = "External Frameworks and Libraries";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		089C1665FE841158C02AAC07 /* Resources */ = {
@@ -325,25 +353,6 @@
 				8BC801E00C6E991300439BDA /* FSModelTranslation.plist */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
-				8B73DB080A49F7DF00484717 /* Carbon.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
-				D2F7E79907B2D74100F64583 /* CoreData.framework */,
-				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		8B5177B30A8CB18F00B9D305 /* Additions */ = {
@@ -556,6 +565,14 @@
 			path = "Source/Calendar View";
 			sourceTree = "<group>";
 		};
+		8BF74CF80C7BD59200C4D9B2 /* Dynamic Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */,
+			);
+			name = "Dynamic Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -622,6 +639,7 @@
 				8BB323570C71D130002AE53C /* FSEtchedTextCell.h in Headers */,
 				8BB324660C71D94E002AE53C /* NSImage+FrameworkImage.h in Headers */,
 				8BE827D00C73C73C00D1E949 /* FSEtchedTextField.h in Headers */,
+				8BF74E480C7BD5D600C4D9B2 /* ImportedMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +658,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8BF74CEE0C7BD54C00C4D9B2 /* PBXTargetDependency */,
 			);
 			name = FSFramework;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -659,6 +678,7 @@
 			projectDirPath = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* FSFramework */,
+				8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */,
 			);
 		};
 /* End PBXProject section */
@@ -684,6 +704,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BF74CD80C7BD4A300C4D9B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\n# don't specify any output files for this script.\n# it won't run every time if there are any\n\nOUTPUT=\"$SRCROOT/ImportedMacros.h\"\nTMP_OUTPUT=\"$SRCROOT/ImportedMacrosTemp.h\"\n\n# create the file one way or another\nif ( ! [ -e \"$OUTPUT\" ] ); then\n\ttouch \"$OUTPUT\"\n\tchmod 555 \"$OUTPUT\"\nfi\n\n# write to a temp file\nif ( [ \"$CONFIGURATION\" = \"Release\" ] ) ; then\n\techo \"#define RELEASE\" > \"$TMP_OUTPUT\"\nelse\n    echo \"#define DEBUG\" > \"$TMP_OUTPUT\"\nfi\n\n# write a new file only if there were changes\nCHANGES=`diff \"$OUTPUT\" \"$TMP_OUTPUT\"`\nif ( [ -n \"$CHANGES\" ] ) ; then\n\tchmod 755 \"$OUTPUT\"\n\tcat \"$TMP_OUTPUT\" > \"$OUTPUT\"\n\tchmod 555 \"$OUTPUT\"\nfi\n\n# remove the temp file\nrm \"$TMP_OUTPUT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {
@@ -744,6 +780,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BF74CEE0C7BD54C00C4D9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */;
+			targetProxy = 8BF74CED0C7BD54C00C4D9B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8BD623D908B96D26002E8C79 /* InfoPlist.strings */ = {
@@ -842,6 +886,28 @@
 			};
 			name = Release;
 		};
+		8BF74CDF0C7BD4C100C4D9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Generate Dynamic Macros";
+			};
+			name = Debug;
+		};
+		8BF74CE00C7BD4C100C4D9B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = "Generate Dynamic Macros";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -859,6 +925,15 @@
 			buildConfigurations = (
 				8B03055D08B8D252007EC1E7 /* Debug */,
 				8B03055E08B8D252007EC1E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8BF74CDE0C7BD4C100C4D9B2 /* Build configuration list for PBXAggregateTarget "Generate Dynamic Macros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BF74CDF0C7BD4C100C4D9B2 /* Debug */,
+				8BF74CE00C7BD4C100C4D9B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

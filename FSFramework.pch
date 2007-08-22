@@ -16,5 +16,6 @@
 
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
+	#import "ImportedMacros.h"
 	#import "FSMacros.h"
 #endif

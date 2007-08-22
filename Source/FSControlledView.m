@@ -17,20 +17,10 @@
 #import "FSControlledView.h"
 #import "FSViewController.h"
 
-@interface FSControlledView (PRIVATE)
-// These private methods are used by FSViewController
-// and expected to exist.  Be sure not to delete them
-// unless modifying FSViewController as well.  (Be sure
-// to remove the private definitions in the
-// implementation file.)
-- (FSViewController *)viewController;
-- (void)setViewController:(FSViewController *)viewController;
-@end
-
 @implementation FSControlledView
 
 - (void)dealloc {
-	NSLog(@"view dying");
+	FSDLog(@"");
 	[super dealloc];
 }
 
