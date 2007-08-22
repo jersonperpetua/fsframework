@@ -19,4 +19,7 @@
 	FSViewController *viewController;
 }
 
+- (FSViewController *)viewController;
+- (void)setViewController:(FSViewController *)viewController;
+
 @end
