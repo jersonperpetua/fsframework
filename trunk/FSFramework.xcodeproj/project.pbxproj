@@ -152,7 +152,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */;
+			remoteGlobalIDString = 8BF74CD90C7BD4A300C4D9B2;
 			remoteInfo = "Generate Dynamic Macros";
 		};
 /* End PBXContainerItemProxy section */
