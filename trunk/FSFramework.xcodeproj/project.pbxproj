@@ -144,6 +144,15 @@
 		8BECF58F0C561FA7008ADDEB /* FSFileManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */; };
 		8BF1AFE70A9669EC00B6A8C2 /* FSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BF74E480C7BD5D600C4D9B2 /* ImportedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */; };
+		8BFD368D0C81ADC9000E909A /* FSHUDSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BFD368B0C81ADC9000E909A /* FSHUDSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BFD368C0C81ADC9000E909A /* FSHUDSliderCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BFD36910C81ADD6000E909A /* FSHUDSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD368F0C81ADD6000E909A /* FSHUDSlider.m */; };
+		8BFD36920C81ADD6000E909A /* FSHUDSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD36900C81ADD6000E909A /* FSHUDSliderCell.m */; };
+		8BFD36A80C81AE98000E909A /* HUDSliderKnobRound.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A30C81AE98000E909A /* HUDSliderKnobRound.tiff */; };
+		8BFD36A90C81AE98000E909A /* HUDSliderKnob.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A40C81AE98000E909A /* HUDSliderKnob.tiff */; };
+		8BFD36AA0C81AE98000E909A /* HUDSliderTrackFill.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A50C81AE98000E909A /* HUDSliderTrackFill.tiff */; };
+		8BFD36AB0C81AE98000E909A /* HUDSliderTrackLeft.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A60C81AE98000E909A /* HUDSliderTrackLeft.tiff */; };
+		8BFD36AC0C81AE98000E909A /* HUDSliderTrackRight.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A70C81AE98000E909A /* HUDSliderTrackRight.tiff */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -289,6 +298,15 @@
 		8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSFileManagerAdditions.m; path = Source/FSFileManagerAdditions.m; sourceTree = "<group>"; };
 		8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMacros.h; path = Source/FSMacros.h; sourceTree = "<group>"; };
 		8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ImportedMacros.h; sourceTree = "<group>"; };
+		8BFD368B0C81ADC9000E909A /* FSHUDSlider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDSlider.h; path = Source/FSHUDSlider.h; sourceTree = "<group>"; };
+		8BFD368C0C81ADC9000E909A /* FSHUDSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDSliderCell.h; path = Source/FSHUDSliderCell.h; sourceTree = "<group>"; };
+		8BFD368F0C81ADD6000E909A /* FSHUDSlider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDSlider.m; path = Source/FSHUDSlider.m; sourceTree = "<group>"; };
+		8BFD36900C81ADD6000E909A /* FSHUDSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDSliderCell.m; path = Source/FSHUDSliderCell.m; sourceTree = "<group>"; };
+		8BFD36A30C81AE98000E909A /* HUDSliderKnobRound.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderKnobRound.tiff; path = Resources/HUDSliderKnobRound.tiff; sourceTree = "<group>"; };
+		8BFD36A40C81AE98000E909A /* HUDSliderKnob.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderKnob.tiff; path = Resources/HUDSliderKnob.tiff; sourceTree = "<group>"; };
+		8BFD36A50C81AE98000E909A /* HUDSliderTrackFill.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderTrackFill.tiff; path = Resources/HUDSliderTrackFill.tiff; sourceTree = "<group>"; };
+		8BFD36A60C81AE98000E909A /* HUDSliderTrackLeft.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderTrackLeft.tiff; path = Resources/HUDSliderTrackLeft.tiff; sourceTree = "<group>"; };
+		8BFD36A70C81AE98000E909A /* HUDSliderTrackRight.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderTrackRight.tiff; path = Resources/HUDSliderTrackRight.tiff; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -340,6 +358,11 @@
 			isa = PBXGroup;
 			children = (
 				8BB324620C71D932002AE53C /* HUDCloseButton.tiff */,
+				8BFD36A30C81AE98000E909A /* HUDSliderKnobRound.tiff */,
+				8BFD36A40C81AE98000E909A /* HUDSliderKnob.tiff */,
+				8BFD36A50C81AE98000E909A /* HUDSliderTrackFill.tiff */,
+				8BFD36A60C81AE98000E909A /* HUDSliderTrackLeft.tiff */,
+				8BFD36A70C81AE98000E909A /* HUDSliderTrackRight.tiff */,
 				8BBFBECD0A92359E0038A6E3 /* PlasticButtonDefault_Caps.png */,
 				8BBFBECE0A92359E0038A6E3 /* PlasticButtonDefault_Middle.png */,
 				8BBFBECF0A92359E0038A6E3 /* PlasticButtonNormal_Caps.png */,
@@ -509,6 +532,10 @@
 				8BB323560C71D130002AE53C /* FSEtchedTextCell.m */,
 				8BE827CF0C73C73C00D1E949 /* FSEtchedTextField.h */,
 				8BE827D10C73C74700D1E949 /* FSEtchedTextField.m */,
+				8BFD368B0C81ADC9000E909A /* FSHUDSlider.h */,
+				8BFD368F0C81ADD6000E909A /* FSHUDSlider.m */,
+				8BFD368C0C81ADC9000E909A /* FSHUDSliderCell.h */,
+				8BFD36900C81ADD6000E909A /* FSHUDSliderCell.m */,
 				8BB324640C71D94E002AE53C /* NSImage+FrameworkImage.h */,
 				8BB324650C71D94E002AE53C /* NSImage+FrameworkImage.m */,
 				8BB3233F0C71D0B6002AE53C /* Cocoa Private Classes */,
@@ -640,6 +667,8 @@
 				8BB324660C71D94E002AE53C /* NSImage+FrameworkImage.h in Headers */,
 				8BE827D00C73C73C00D1E949 /* FSEtchedTextField.h in Headers */,
 				8BF74E480C7BD5D600C4D9B2 /* ImportedMacros.h in Headers */,
+				8BFD368D0C81ADC9000E909A /* FSHUDSlider.h in Headers */,
+				8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +729,11 @@
 				8BBFBEDC0A92359E0038A6E3 /* minus.png in Resources */,
 				8BC801E10C6E991300439BDA /* FSModelTranslation.plist in Resources */,
 				8BB324630C71D932002AE53C /* HUDCloseButton.tiff in Resources */,
+				8BFD36A80C81AE98000E909A /* HUDSliderKnobRound.tiff in Resources */,
+				8BFD36A90C81AE98000E909A /* HUDSliderKnob.tiff in Resources */,
+				8BFD36AA0C81AE98000E909A /* HUDSliderTrackFill.tiff in Resources */,
+				8BFD36AB0C81AE98000E909A /* HUDSliderTrackLeft.tiff in Resources */,
+				8BFD36AC0C81AE98000E909A /* HUDSliderTrackRight.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +810,8 @@
 				8BB323580C71D130002AE53C /* FSEtchedTextCell.m in Sources */,
 				8BB324670C71D94E002AE53C /* NSImage+FrameworkImage.m in Sources */,
 				8BE827D20C73C74700D1E949 /* FSEtchedTextField.m in Sources */,
+				8BFD36910C81ADD6000E909A /* FSHUDSlider.m in Sources */,
+				8BFD36920C81ADD6000E909A /* FSHUDSliderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

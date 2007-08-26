@@ -42,6 +42,8 @@
 #import <FSFramework/FSSegmentedControl.h>
 
 #import <FSFramework/FSHUDWindow.h>
+#import <FSFramework/FSHUDSliderCell.h>
+#import <FSFramework/FSHUDSlider.h>
 #import <FSFramework/FSEtchedTextCell.h>
 #import <FSFramework/FSEtchedTextField.h>
 
