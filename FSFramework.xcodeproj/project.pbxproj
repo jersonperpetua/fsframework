@@ -153,6 +153,8 @@
 		8BFD36AA0C81AE98000E909A /* HUDSliderTrackFill.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A50C81AE98000E909A /* HUDSliderTrackFill.tiff */; };
 		8BFD36AB0C81AE98000E909A /* HUDSliderTrackLeft.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A60C81AE98000E909A /* HUDSliderTrackLeft.tiff */; };
 		8BFD36AC0C81AE98000E909A /* HUDSliderTrackRight.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD36A70C81AE98000E909A /* HUDSliderTrackRight.tiff */; };
+		8BFD37E80C82FFB7000E909A /* FSHUDBorderlessFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BFD37E60C82FFB7000E909A /* FSHUDBorderlessFrame.h */; };
+		8BFD37E90C82FFB7000E909A /* FSHUDBorderlessFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD37E70C82FFB7000E909A /* FSHUDBorderlessFrame.m */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -307,6 +309,8 @@
 		8BFD36A50C81AE98000E909A /* HUDSliderTrackFill.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderTrackFill.tiff; path = Resources/HUDSliderTrackFill.tiff; sourceTree = "<group>"; };
 		8BFD36A60C81AE98000E909A /* HUDSliderTrackLeft.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderTrackLeft.tiff; path = Resources/HUDSliderTrackLeft.tiff; sourceTree = "<group>"; };
 		8BFD36A70C81AE98000E909A /* HUDSliderTrackRight.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDSliderTrackRight.tiff; path = Resources/HUDSliderTrackRight.tiff; sourceTree = "<group>"; };
+		8BFD37E60C82FFB7000E909A /* FSHUDBorderlessFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSHUDBorderlessFrame.h; path = Source/FSHUDBorderlessFrame.h; sourceTree = "<group>"; };
+		8BFD37E70C82FFB7000E909A /* FSHUDBorderlessFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSHUDBorderlessFrame.m; path = Source/FSHUDBorderlessFrame.m; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -528,6 +532,8 @@
 				8BB323170C71CF8D002AE53C /* FSHUDWindow.m */,
 				8BB323160C71CF8D002AE53C /* FSHUDFrame.h */,
 				8BB323140C71CF8D002AE53C /* FSHUDFrame.m */,
+				8BFD37E60C82FFB7000E909A /* FSHUDBorderlessFrame.h */,
+				8BFD37E70C82FFB7000E909A /* FSHUDBorderlessFrame.m */,
 				8BB323550C71D130002AE53C /* FSEtchedTextCell.h */,
 				8BB323560C71D130002AE53C /* FSEtchedTextCell.m */,
 				8BE827CF0C73C73C00D1E949 /* FSEtchedTextField.h */,
@@ -669,6 +675,7 @@
 				8BF74E480C7BD5D600C4D9B2 /* ImportedMacros.h in Headers */,
 				8BFD368D0C81ADC9000E909A /* FSHUDSlider.h in Headers */,
 				8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */,
+				8BFD37E80C82FFB7000E909A /* FSHUDBorderlessFrame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +819,7 @@
 				8BE827D20C73C74700D1E949 /* FSEtchedTextField.m in Sources */,
 				8BFD36910C81ADD6000E909A /* FSHUDSlider.m in Sources */,
 				8BFD36920C81ADD6000E909A /* FSHUDSliderCell.m in Sources */,
+				8BFD37E90C82FFB7000E909A /* FSHUDBorderlessFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
