@@ -18,6 +18,14 @@
  * and has been minimally modified.  It is published under an MIT
  * license, and that license holds for this file. */
 
+//
+//  FSHUDSliderCell.h
+//  iLife HUD Window
+//
+//  Created by Sean Patrick O'Brien on 9/23/06.
+//  Copyright 2006 Sean Patrick O'Brien. All rights reserved.
+//
+
 @interface FSHUDSliderCell : NSSliderCell {
 
 }
