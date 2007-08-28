@@ -95,8 +95,8 @@ FSAboutBoxController *sharedAboutBoxInstance = nil;
 	[self buildFieldClicked:nil];
 
 	//Set the localized values
-	[button_homepage setTitle:@"Homepage"];
-	[button_license setTitle:@"License"];
+	[button_homepage setTitle:FSLocalizedString(@"Homepage", nil)];
+	[button_license setTitle:FSLocalizedString(@"License", nil)];
 
 	[[self window] center];
 }
