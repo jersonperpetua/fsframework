@@ -18,53 +18,14 @@
  * and has been minimally modified.  It is published under an MIT
  * license, and that license holds for this file. */
 
-//
-//  FSHUDWindow.m
-//  iLife HUD Window
-//
-//  Created by Sean Patrick O'Brien on 9/23/06.
-//  Copyright 2006 Sean Patrick O'Brien. All rights reserved.
-//
+#import "NSGrayFrame.h"
 
-#import "FSHUDWindow.h"
-#import "FSHUDFrame.h"
-#import "FSHUDBorderlessFrame.h"
+@interface FSHUDBorderlessFrame : NSGrayFrame {
 
-@implementation FSHUDWindow
-
-+ (Class)frameViewClassForStyleMask:(unsigned int)styleMask
-{
-	if (styleMask & NSTitledWindowMask) {
-		return [FSHUDFrame class];
-	} else {
-		return [FSHUDBorderlessFrame class];		
-	}
 }
 
-- (id)initWithContentRect:(NSRect)contentRect 
-                styleMask:(unsigned int)styleMask 
-                  backing:(NSBackingStoreType)bufferingType 
-                    defer:(BOOL)flag
-{
-	if(self = [super initWithContentRect:contentRect 
-                                styleMask:styleMask 
-                                  backing:bufferingType 
-                                    defer:flag]){
-		[self setLevel:NSFloatingWindowLevel];
-		return self;
-	}
-	
-	return nil;
-}
++ (NSBezierPath*)_clippingPathForFrame:(NSRect)aRect;
 
--(void)awakeFromNib
-{
-	[self setLevel:NSFloatingWindowLevel];
-}
-
--(BOOL)isOpaque
-{
-	return NO;
-}
+- (void)drawRect:(NSRect)rect;
 
 @end
