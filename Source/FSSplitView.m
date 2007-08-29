@@ -275,7 +275,7 @@ static BOOL kfScaleUInts(unsigned *integers, int numInts, unsigned targetTotal)
 	float   firstSubviewMinCoord, secondSubviewMaxCoord;		// top of the first, bottom of the second (if !isVertical)
 	BOOL	firstSubviewCanCollapse, secondSubviewCanCollapse;  
 	NSDate *distantFuture;
-	float (*splitPosConstraintFunc)(id, SEL, ...);			  // delegate supplied function to constrain dividerCoord
+	float (*splitPosConstraintFunc)(id, SEL, id, float, int);			  // delegate supplied function to constrain dividerCoord
 	
 	// setup
 	minorDim = KFMINORDIMOFSIZE([self frame].size);
@@ -384,7 +384,7 @@ static BOOL kfScaleUInts(unsigned *integers, int numInts, unsigned targetTotal)
 	splitPosConstraintFunc = NULL;
 	if ([kfDelegate respondsToSelector:@selector(splitView:constrainSplitPosition:ofSubviewAt:)])
 	{
-		splitPosConstraintFunc = (float (*)(id, SEL, ...))[kfDelegate methodForSelector:@selector(splitView:constrainSplitPosition:ofSubviewAt:)];
+		splitPosConstraintFunc = (float (*)(id, SEL, id, float, int))[kfDelegate methodForSelector:@selector(splitView:constrainSplitPosition:ofSubviewAt:)];
 	}
 
 	// When the user grabs and drags the divider he holds onto that
