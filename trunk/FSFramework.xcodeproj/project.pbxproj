@@ -338,7 +338,16 @@
 		0867D691FE84028FC02AAC07 /* WYAppFramework */ = {
 			isa = PBXGroup;
 			children = (
-				8BD6236D08B96CAA002E8C79 /* Classes */,
+				8B5175C40A8C2B5400B9D305 /* FSFramework.pch */,
+				8BD6237008B96CB7002E8C79 /* FSFramework.h */,
+				8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */,
+				8B517F1E0A8D003900B9D305 /* Controllers */,
+				8B5177B30A8CB18F00B9D305 /* Additions */,
+				8BC8025B0C6E9FE900439BDA /* Additions - Custom */,
+				8B73DA560A49F11600484717 /* From Adium */,
+				8B5177B50A8CB1CE00B9D305 /* Cells */,
+				8B5177B40A8CB1AD00B9D305 /* Views */,
+				8BB31E140C71251D002AE53C /* HUD */,
 				8BF74CF80C7BD59200C4D9B2 /* Dynamic Files */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -567,23 +576,6 @@
 				8BC8025C0C6EA00D00439BDA /* FSSystem.m */,
 			);
 			name = "Additions - Custom";
-			sourceTree = "<group>";
-		};
-		8BD6236D08B96CAA002E8C79 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8B5175C40A8C2B5400B9D305 /* FSFramework.pch */,
-				8BD6237008B96CB7002E8C79 /* FSFramework.h */,
-				8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */,
-				8B517F1E0A8D003900B9D305 /* Controllers */,
-				8B5177B30A8CB18F00B9D305 /* Additions */,
-				8BC8025B0C6E9FE900439BDA /* Additions - Custom */,
-				8B73DA560A49F11600484717 /* From Adium */,
-				8B5177B50A8CB1CE00B9D305 /* Cells */,
-				8B5177B40A8CB1AD00B9D305 /* Views */,
-				8BB31E140C71251D002AE53C /* HUD */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		8BD6238008B96CB7002E8C79 /* Calendar View */ = {
