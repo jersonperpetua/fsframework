@@ -143,6 +143,7 @@
 		8BECF58E0C561FA7008ADDEB /* FSFileManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BECF58C0C561FA7008ADDEB /* FSFileManagerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BECF58F0C561FA7008ADDEB /* FSFileManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */; };
 		8BF1AFE70A9669EC00B6A8C2 /* FSMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BF367950C8644A200137F3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BF367940C8644A200137F3C /* Localizable.strings */; };
 		8BF74E480C7BD5D600C4D9B2 /* ImportedMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */; };
 		8BFD368D0C81ADC9000E909A /* FSHUDSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BFD368B0C81ADC9000E909A /* FSHUDSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BFD368C0C81ADC9000E909A /* FSHUDSliderCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -291,7 +292,6 @@
 		8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalActionCell.m; path = Source/FSOvalActionCell.m; sourceTree = "<group>"; };
 		8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalTextFieldCell.m; path = Source/FSOvalTextFieldCell.m; sourceTree = "<group>"; };
 		8BD623D208B96CF4002E8C79 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = "Other Sources/Info.plist"; sourceTree = "<group>"; };
-		8BD623D508B96D18002E8C79 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8BE5A1070B7FFBE0008678F4 /* FSPasteboardAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPasteboardAdditions.h; path = Source/FSPasteboardAdditions.h; sourceTree = "<group>"; };
 		8BE5A1080B7FFBE0008678F4 /* FSPasteboardAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPasteboardAdditions.m; path = Source/FSPasteboardAdditions.m; sourceTree = "<group>"; };
 		8BE827CF0C73C73C00D1E949 /* FSEtchedTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSEtchedTextField.h; path = Source/FSEtchedTextField.h; sourceTree = "<group>"; };
@@ -299,6 +299,8 @@
 		8BECF58C0C561FA7008ADDEB /* FSFileManagerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSFileManagerAdditions.h; path = Source/FSFileManagerAdditions.h; sourceTree = "<group>"; };
 		8BECF58D0C561FA7008ADDEB /* FSFileManagerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSFileManagerAdditions.m; path = Source/FSFileManagerAdditions.m; sourceTree = "<group>"; };
 		8BF1AFE60A9669EC00B6A8C2 /* FSMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSMacros.h; path = Source/FSMacros.h; sourceTree = "<group>"; };
+		8BF367910C86441D00137F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8BF367960C8644AA00137F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8BF74E470C7BD5D600C4D9B2 /* ImportedMacros.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ImportedMacros.h; sourceTree = "<group>"; };
 		8BFD368B0C81ADC9000E909A /* FSHUDSlider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDSlider.h; path = Source/FSHUDSlider.h; sourceTree = "<group>"; };
 		8BFD368C0C81ADC9000E909A /* FSHUDSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDSliderCell.h; path = Source/FSHUDSliderCell.h; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				8BBFBED30A92359E0038A6E3 /* plus.png */,
 				8BBFBED40A92359E0038A6E3 /* minus.png */,
 				8BD623D208B96CF4002E8C79 /* Info.plist */,
+				8BF367940C8644A200137F3C /* Localizable.strings */,
 				8BD623D908B96D26002E8C79 /* InfoPlist.strings */,
 				8BC801E00C6E991300439BDA /* FSModelTranslation.plist */,
 			);
@@ -701,6 +704,13 @@
 			isa = PBXProject;
 			buildConfigurationList = 8B03055C08B8D252007EC1E7 /* Build configuration list for PBXProject "FSFramework" */;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -733,6 +743,7 @@
 				8BFD36AA0C81AE98000E909A /* HUDSliderTrackFill.tiff in Resources */,
 				8BFD36AB0C81AE98000E909A /* HUDSliderTrackLeft.tiff in Resources */,
 				8BFD36AC0C81AE98000E909A /* HUDSliderTrackRight.tiff in Resources */,
+				8BF367950C8644A200137F3C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,9 +840,17 @@
 		8BD623D908B96D26002E8C79 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BD623D508B96D18002E8C79 /* English */,
+				8BF367910C86441D00137F3C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8BF367940C8644A200137F3C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BF367960C8644AA00137F3C /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
