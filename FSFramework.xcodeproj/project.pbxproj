@@ -173,6 +173,8 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8B041D290C8C50B30026829B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B041D2A0C8C50BF0026829B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B05AB150A43559400147648 /* FSSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSplitView.h; path = Source/FSSplitView.h; sourceTree = "<group>"; };
 		8B05AB160A43559400147648 /* FSSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSplitView.m; path = Source/FSSplitView.m; sourceTree = "<group>"; };
 		8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptAdditions.h; path = Source/FSAppleScriptAdditions.h; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 				French,
 				German,
 				en,
+				fr,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -841,6 +844,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8BF367910C86441D00137F3C /* en */,
+				8B041D2A0C8C50BF0026829B /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -849,6 +853,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8BF367960C8644AA00137F3C /* en */,
+				8B041D290C8C50B30026829B /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
