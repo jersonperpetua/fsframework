@@ -175,6 +175,8 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8B041D290C8C50B30026829B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B041D2A0C8C50BF0026829B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B041E910C8D74A30026829B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B041E920C8D74AD0026829B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B05AB150A43559400147648 /* FSSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSplitView.h; path = Source/FSSplitView.h; sourceTree = "<group>"; };
 		8B05AB160A43559400147648 /* FSSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSplitView.m; path = Source/FSSplitView.m; sourceTree = "<group>"; };
 		8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptAdditions.h; path = Source/FSAppleScriptAdditions.h; sourceTree = "<group>"; };
@@ -713,6 +715,7 @@
 				German,
 				en,
 				fr,
+				de,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -845,6 +848,7 @@
 			children = (
 				8BF367910C86441D00137F3C /* en */,
 				8B041D2A0C8C50BF0026829B /* fr */,
+				8B041E920C8D74AD0026829B /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -854,6 +858,7 @@
 			children = (
 				8BF367960C8644AA00137F3C /* en */,
 				8B041D290C8C50B30026829B /* fr */,
+				8B041E910C8D74A30026829B /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
