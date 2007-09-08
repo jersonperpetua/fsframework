@@ -24,7 +24,7 @@
 	NSMutableString *replace = [NSMutableString stringWithString:string];
 	[replace replaceOccurrencesOfString:@"/" withString:@":" options:0 range:NSMakeRange(0, [replace length])];
 	[replace replaceOccurrencesOfString:@"." withString:@"_" options:0 range:NSMakeRange(0, 1)];
-	return [NSString stringWithString:replace];
+	return [NSString stringWithCString:[[NSString stringWithString:replace] fileSystemRepresentation]];
 }
 
 - (BOOL)createDirectoryAtPath:(NSString *)path attributes:(NSDictionary *)attributes checkExists:(BOOL)check {	
