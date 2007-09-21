@@ -250,8 +250,8 @@
 		8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSColoredMenuItem.m; path = Source/FSColoredMenuItem.m; sourceTree = "<group>"; };
 		8B89B23B0AA8648600A87586 /* FSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSStringAdditions.h; path = Source/FSStringAdditions.h; sourceTree = "<group>"; };
 		8B89B23C0AA8648600A87586 /* FSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSStringAdditions.m; path = Source/FSStringAdditions.m; sourceTree = "<group>"; };
-		8B95F0F90CA2A4F200F7861B /* jp */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = jp; path = Resources/jp.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8B95F0FA0CA2A4FD00F7861B /* jp */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = jp; path = Resources/jp.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B95F12C0CA3E78C00F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B95F12E0CA3E79500F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8BB323120C71CF8D002AE53C /* NSGrayFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSGrayFrame.h; path = Source/NSGrayFrame.h; sourceTree = "<group>"; };
 		8BB323130C71CF8D002AE53C /* FSHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDWindow.h; path = Source/FSHUDWindow.h; sourceTree = "<group>"; };
 		8BB323140C71CF8D002AE53C /* FSHUDFrame.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDFrame.m; path = Source/FSHUDFrame.m; sourceTree = "<group>"; };
@@ -719,6 +719,7 @@
 				fr,
 				de,
 				jp,
+				ja,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -852,7 +853,7 @@
 				8BF367910C86441D00137F3C /* en */,
 				8B041D2A0C8C50BF0026829B /* fr */,
 				8B041E920C8D74AD0026829B /* de */,
-				8B95F0FA0CA2A4FD00F7861B /* jp */,
+				8B95F12E0CA3E79500F7861B /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -863,7 +864,7 @@
 				8BF367960C8644AA00137F3C /* en */,
 				8B041D290C8C50B30026829B /* fr */,
 				8B041E910C8D74A30026829B /* de */,
-				8B95F0F90CA2A4F200F7861B /* jp */,
+				8B95F12C0CA3E78C00F7861B /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
