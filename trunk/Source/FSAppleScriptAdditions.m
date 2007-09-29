@@ -77,7 +77,7 @@
 	}
 	
 	//Execute the event
-	return [self executeAppleEvent:containerEvent error:nil];
+	return [self executeAppleEvent:containerEvent error:errorInfo];
 }
 
 @end
