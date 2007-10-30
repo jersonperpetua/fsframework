@@ -27,8 +27,7 @@
 //
 
 #import "NSImage+FrameworkImage.h"
-
-@class FSHUDWindow;
+#import "FSHUDWindow.h";
 
 @implementation NSImage(FrameworkImageAdditions)
 
