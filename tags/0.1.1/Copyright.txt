@@ -1,6 +1,0 @@
-The Fadingred.org Shared Framework
-Copyright (C) 2004-2006 Whitney Young
-
-Portions of the code taken from:
-  Sean Patrick O'Brien's iLife Controls Framework
-  MIT License (See AdditionalLicenses)
