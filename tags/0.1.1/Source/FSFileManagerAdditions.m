@@ -21,7 +21,7 @@
 @implementation NSFileManager (FSFileManagerAdditions)
 
 + (NSString *)safePathComponent:(NSString *)string {
-	char *fsrep;
+	const char *fsrep;
 	if ([string length]) {
 		NSMutableString *replace = [NSMutableString stringWithString:string];
 		[replace replaceOccurrencesOfString:@"/" withString:@":" options:0 range:NSMakeRange(0, [replace length])];
