@@ -711,6 +711,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 8B03055C08B8D252007EC1E7 /* Build configuration list for PBXProject "FSFramework" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -727,6 +728,7 @@
 			mainGroup = 0867D691FE84028FC02AAC07 /* WYAppFramework */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* FSFramework */,
 				8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */,
