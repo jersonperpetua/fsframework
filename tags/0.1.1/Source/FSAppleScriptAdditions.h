@@ -43,3 +43,10 @@
 - (NSAppleEventDescriptor *)executeFunction:(NSString *)functionName withArguments:(NSArray *)argumentArray error:(NSDictionary **)errorInfo;
 
 @end
+
+@interface NSAppleEventDescriptor (FSAppleScriptAdditions)
+
++ (NSAppleEventDescriptor *)descriptorWithDate:(NSDate *)date;
+- (id)initWithDate:(NSDate *)date;
+
+@end
