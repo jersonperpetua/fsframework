@@ -21,13 +21,15 @@
 @implementation NSFileManager (FSFileManagerAdditions)
 
 + (NSString *)safePathComponent:(NSString *)string {
+	const char *fsrep;
 	if ([string length]) {
 		NSMutableString *replace = [NSMutableString stringWithString:string];
 		[replace replaceOccurrencesOfString:@"/" withString:@":" options:0 range:NSMakeRange(0, [replace length])];
 		[replace replaceOccurrencesOfString:@"." withString:@"_" options:0 range:NSMakeRange(0, 1)];
 		string = [NSString stringWithString:replace];
 	}
-	return [NSString stringWithCString:[string fileSystemRepresentation]];
+	fsrep = [string fileSystemRepresentation];
+	return (fsrep ? [NSString stringWithCString:fsrep] : string);
 }
 
 - (BOOL)createDirectoryAtPath:(NSString *)path attributes:(NSDictionary *)attributes checkExists:(BOOL)check {	
