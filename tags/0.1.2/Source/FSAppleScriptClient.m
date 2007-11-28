@@ -75,13 +75,13 @@
 	}
 
 	FSAppleScriptServer *proxy = (FSAppleScriptServer *)[client rootProxy];
-	NSArray *result = [proxy run:script
-				 executeFunction:function
-				   withArguments:arguments];
+	NSDictionary *result = [proxy run:script
+					  executeFunction:function
+						withArguments:arguments];
 	if (error) {
-		*error = [result objectAtIndex:1];
+		*error = [result objectForKey:@"error"];
 	}
-	return [result objectAtIndex:0];
+	return [result objectForKey:@"result"];
 }
 
 @end

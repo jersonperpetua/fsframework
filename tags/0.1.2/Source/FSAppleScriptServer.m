@@ -45,14 +45,18 @@
 	[super dealloc];
 }
 
-- (NSArray *)run:(NSAppleScript *)script
+- (NSDictionary *)run:(NSAppleScript *)script
  executeFunction:(NSString *)functionName
    withArguments:(NSArray *)argumentArray {
 
 	NSDictionary *errorInfo = nil;
 	NSAppleEventDescriptor *result = [script executeFunction:functionName withArguments:argumentArray error:&errorInfo];
 	[self resetAutomaticQuitTimer];
-	return [NSArray arrayWithObjects:result, errorInfo, nil];
+	
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	if (result) { [dict setObject:result forKey:@"result"]; }
+	if (errorInfo) { [dict setObject:errorInfo forKey:@"error"]; }
+	return [dict copy];
 }
 
 - (void)quit:(NSNotification *)inNotification {

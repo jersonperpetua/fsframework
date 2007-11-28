@@ -25,7 +25,7 @@
 	NSConnection *server;
 }
 
-- (NSArray *)run:(NSAppleScript *)script
+- (NSDictionary *)run:(NSAppleScript *)script
  executeFunction:(NSString *)functionName 
    withArguments:(NSArray *)argumentArray;
 @end
