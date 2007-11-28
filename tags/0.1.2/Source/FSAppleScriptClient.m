@@ -62,19 +62,15 @@
 					  arguments:(NSArray *)arguments
 						  error:(NSDictionary **)error {
 	
-	NSLog(@"call");
 	if (![client isValid]) {
-		NSLog(@"check");
 		[client release];
 		client = [[NSConnection connectionWithRegisteredName:@"org.fadingred.AppleScript" host:nil] retain];
 		if (![client isValid]) {
-			NSLog(@"launch");
 			[self launchServer];
 			while (!client) {
 				[client release];
 				client = [[NSConnection connectionWithRegisteredName:@"org.fadingred.AppleScript" host:nil] retain];
 			}		
-			NSLog(@"out of while");
 		}
 	}
 
