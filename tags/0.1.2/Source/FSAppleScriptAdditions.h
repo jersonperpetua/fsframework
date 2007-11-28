@@ -21,6 +21,8 @@
 
 @interface NSAppleScript (FSAppleScriptAdditions)
 
++ (NSAppleEventDescriptor *)descriptorForArray:(NSArray *)argumentArray;
+
 /*!
  * @brief Execute a function
  *
