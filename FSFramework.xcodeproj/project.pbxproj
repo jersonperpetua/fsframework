@@ -94,6 +94,10 @@
 		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
 		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
+		8BAEEEAD0CFDC427005677EE /* FSAppleScriptRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAEEEAB0CFDC427005677EE /* FSAppleScriptRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BAEEEAE0CFDC427005677EE /* FSAppleScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEEEAC0CFDC427005677EE /* FSAppleScriptRunner.m */; };
+		8BAEEF3B0CFDD2EA005677EE /* FSAppleScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEEEA50CFDC3E9005677EE /* FSAppleScriptRunner.m */; };
+		8BAEEF3C0CFDD2F0005677EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		8BB323180C71CF8D002AE53C /* NSGrayFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323120C71CF8D002AE53C /* NSGrayFrame.h */; settings = {ATTRIBUTES = (); }; };
 		8BB323190C71CF8D002AE53C /* FSHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323130C71CF8D002AE53C /* FSHUDWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BB3231A0C71CF8D002AE53C /* FSHUDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB323140C71CF8D002AE53C /* FSHUDFrame.m */; };
@@ -254,6 +258,10 @@
 		8B95F12E0CA3E79500F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B95F1690CA3F1EC00F7861B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B95F16A0CA3F1F300F7861B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8BAEEEA50CFDC3E9005677EE /* FSAppleScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptRunner.m; path = Source/FSApplescriptRunner/FSAppleScriptRunner.m; sourceTree = "<group>"; };
+		8BAEEEAB0CFDC427005677EE /* FSAppleScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptRunner.h; path = Source/FSAppleScriptRunner.h; sourceTree = "<group>"; };
+		8BAEEEAC0CFDC427005677EE /* FSAppleScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptRunner.m; path = Source/FSAppleScriptRunner.m; sourceTree = "<group>"; };
+		8BAEEF370CFDD2E1005677EE /* FSAppleScriptRunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = FSAppleScriptRunner; path = build/Debug/FSAppleScriptRunner; sourceTree = "<group>"; };
 		8BB323120C71CF8D002AE53C /* NSGrayFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSGrayFrame.h; path = Source/NSGrayFrame.h; sourceTree = "<group>"; };
 		8BB323130C71CF8D002AE53C /* FSHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDWindow.h; path = Source/FSHUDWindow.h; sourceTree = "<group>"; };
 		8BB323140C71CF8D002AE53C /* FSHUDFrame.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDFrame.m; path = Source/FSHUDFrame.m; sourceTree = "<group>"; };
@@ -325,6 +333,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8BAEEF350CFDD2E1005677EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BAEEF3C0CFDD2F0005677EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* FSFramework.framework */,
+				8BAEEF370CFDD2E1005677EE /* FSAppleScriptRunner */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,6 +379,7 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				8BAEEE8C0CFDC1C5005677EE /* AppleScriptRunner */,
 			);
 			name = WYAppFramework;
 			sourceTree = "<group>";
@@ -407,6 +425,8 @@
 			children = (
 				8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */,
 				8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */,
+				8BAEEEAB0CFDC427005677EE /* FSAppleScriptRunner.h */,
+				8BAEEEAC0CFDC427005677EE /* FSAppleScriptRunner.m */,
 				8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */,
 				8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */,
 				8B5643B10C5ED7B5001E52BB /* FSArrayAdditions.h */,
@@ -545,6 +565,14 @@
 			name = "From Adium";
 			sourceTree = "<group>";
 		};
+		8BAEEE8C0CFDC1C5005677EE /* AppleScriptRunner */ = {
+			isa = PBXGroup;
+			children = (
+				8BAEEEA50CFDC3E9005677EE /* FSAppleScriptRunner.m */,
+			);
+			name = AppleScriptRunner;
+			sourceTree = "<group>";
+		};
 		8BB31E140C71251D002AE53C /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,12 +707,29 @@
 				8BFD368D0C81ADC9000E909A /* FSHUDSlider.h in Headers */,
 				8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */,
 				8BFD37E80C82FFB7000E909A /* FSHUDBorderlessFrame.h in Headers */,
+				8BAEEEAD0CFDC427005677EE /* FSAppleScriptRunner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8BAEEF360CFDD2E1005677EE /* FSAppleScriptRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BAEEF400CFDD2F4005677EE /* Build configuration list for PBXNativeTarget "FSAppleScriptRunner" */;
+			buildPhases = (
+				8BAEEF340CFDD2E1005677EE /* Sources */,
+				8BAEEF350CFDD2E1005677EE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSAppleScriptRunner;
+			productName = FSAppleScriptRunner;
+			productReference = 8BAEEF370CFDD2E1005677EE /* FSAppleScriptRunner */;
+			productType = "com.apple.product-type.tool";
+		};
 		8DC2EF4F0486A6940098B216 /* FSFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B03055808B8D252007EC1E7 /* Build configuration list for PBXNativeTarget "FSFramework" */;
@@ -731,6 +776,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* FSFramework */,
+				8BAEEF360CFDD2E1005677EE /* FSAppleScriptRunner */,
 				8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */,
 			);
 		};
@@ -781,6 +827,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8BAEEF340CFDD2E1005677EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BAEEF3B0CFDD2EA005677EE /* FSAppleScriptRunner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -838,6 +892,7 @@
 				8BFD36910C81ADD6000E909A /* FSHUDSlider.m in Sources */,
 				8BFD36920C81ADD6000E909A /* FSHUDSliderCell.m in Sources */,
 				8BFD37E90C82FFB7000E909A /* FSHUDBorderlessFrame.m in Sources */,
+				8BAEEEAE0CFDC427005677EE /* FSAppleScriptRunner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +1019,51 @@
 			};
 			name = Release;
 		};
+		8BAEEF390CFDD2E2005677EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FSAppleScriptRunner;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8BAEEF3A0CFDD2E2005677EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FSAppleScriptRunner;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		8BF74CDF0C7BD4C100C4D9B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1003,6 +1103,15 @@
 			buildConfigurations = (
 				8B03055D08B8D252007EC1E7 /* Debug */,
 				8B03055E08B8D252007EC1E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8BAEEF400CFDD2F4005677EE /* Build configuration list for PBXNativeTarget "FSAppleScriptRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BAEEF390CFDD2E2005677EE /* Debug */,
+				8BAEEF3A0CFDD2E2005677EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
