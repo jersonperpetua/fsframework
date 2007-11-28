@@ -19,18 +19,14 @@
  * Visit http://www.adiumx.com/ for more information.
  */
 
-#import <Cocoa/Cocoa.h>
-
-@interface FSApplescriptRunner : NSObject {
-	NSMutableDictionary	*runningApplescriptsDict;
-	NSMutableArray		*pendingApplescriptsArray;
-	BOOL				applescriptRunnerIsReady;	
+@interface FSAppleScriptClient : NSObject {
+	NSConnection *client;
 }
 
-- (void)runApplescriptAtPath:(NSString *)path
-					function:(NSString *)function
-				   arguments:(NSArray *)arguments
-			 notifyingTarget:(id)target
-					selector:(SEL)selector
-					userInfo:(id)userInfo;
+/* This blocks until the script is executed.  It can not be called on the main
+ * thread otherwise the application will lock up */
+- (NSAppleEventDescriptor *)run:(NSAppleScript *)script
+					   function:(NSString *)function
+					  arguments:(NSArray *)arguments
+						  error:(NSDictionary **)error;
 @end

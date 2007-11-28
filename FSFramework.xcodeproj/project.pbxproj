@@ -94,10 +94,11 @@
 		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
 		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
-		8BAEEEAD0CFDC427005677EE /* FSAppleScriptRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAEEEAB0CFDC427005677EE /* FSAppleScriptRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BAEEEAE0CFDC427005677EE /* FSAppleScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEEEAC0CFDC427005677EE /* FSAppleScriptRunner.m */; };
-		8BAEEF3B0CFDD2EA005677EE /* FSAppleScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEEEA50CFDC3E9005677EE /* FSAppleScriptRunner.m */; };
-		8BAEEF3C0CFDD2F0005677EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		8B9772140CFE24080044A626 /* FSAppleScriptServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5FC8ED0CFE21C60010B563 /* FSAppleScriptServer.m */; };
+		8B9772150CFE24110044A626 /* FSAppleScriptAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */; };
+		8B9772930CFE24130044A626 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		8BAEEEAD0CFDC427005677EE /* FSAppleScriptClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAEEEAB0CFDC427005677EE /* FSAppleScriptClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BAEEEAE0CFDC427005677EE /* FSAppleScriptClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEEEAC0CFDC427005677EE /* FSAppleScriptClient.m */; };
 		8BB323180C71CF8D002AE53C /* NSGrayFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323120C71CF8D002AE53C /* NSGrayFrame.h */; settings = {ATTRIBUTES = (); }; };
 		8BB323190C71CF8D002AE53C /* FSHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB323130C71CF8D002AE53C /* FSHUDWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BB3231A0C71CF8D002AE53C /* FSHUDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB323140C71CF8D002AE53C /* FSHUDFrame.m */; };
@@ -209,6 +210,8 @@
 		8B5642D60C5ECA34001E52BB /* FSSortDescriptorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSortDescriptorAdditions.m; path = Source/FSSortDescriptorAdditions.m; sourceTree = "<group>"; };
 		8B5643B10C5ED7B5001E52BB /* FSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSArrayAdditions.h; path = Source/FSArrayAdditions.h; sourceTree = "<group>"; };
 		8B5643B30C5ED7BF001E52BB /* FSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSArrayAdditions.m; path = Source/FSArrayAdditions.m; sourceTree = "<group>"; };
+		8B5FC8EC0CFE21C60010B563 /* FSAppleScriptServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptServer.h; path = Source/FSAppleScriptServer.h; sourceTree = "<group>"; };
+		8B5FC8ED0CFE21C60010B563 /* FSAppleScriptServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptServer.m; path = Source/FSAppleScriptServer.m; sourceTree = "<group>"; };
 		8B73DA5B0A49F2AF00484717 /* AIGradient.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGradient.m; path = Source/adium/AIGradient.m; sourceTree = "<group>"; };
 		8B73DA5C0A49F2AF00484717 /* AIGradient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIGradient.h; path = Source/adium/AIGradient.h; sourceTree = "<group>"; };
 		8B73DA5D0A49F2AF00484717 /* AIGenericViewCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIGenericViewCell.m; path = Source/adium/AIGenericViewCell.m; sourceTree = "<group>"; };
@@ -258,10 +261,9 @@
 		8B95F12E0CA3E79500F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B95F1690CA3F1EC00F7861B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B95F16A0CA3F1F300F7861B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8BAEEEA50CFDC3E9005677EE /* FSAppleScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptRunner.m; path = Source/FSApplescriptRunner/FSAppleScriptRunner.m; sourceTree = "<group>"; };
-		8BAEEEAB0CFDC427005677EE /* FSAppleScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptRunner.h; path = Source/FSAppleScriptRunner.h; sourceTree = "<group>"; };
-		8BAEEEAC0CFDC427005677EE /* FSAppleScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptRunner.m; path = Source/FSAppleScriptRunner.m; sourceTree = "<group>"; };
-		8BAEEF370CFDD2E1005677EE /* FSAppleScriptRunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = FSAppleScriptRunner; path = build/Debug/FSAppleScriptRunner; sourceTree = "<group>"; };
+		8B9772100CFE23FE0044A626 /* FSAppleScriptServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = FSAppleScriptServer; path = build/Debug/FSAppleScriptServer; sourceTree = "<group>"; };
+		8BAEEEAB0CFDC427005677EE /* FSAppleScriptClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptClient.h; path = Source/FSAppleScriptClient.h; sourceTree = "<group>"; };
+		8BAEEEAC0CFDC427005677EE /* FSAppleScriptClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptClient.m; path = Source/FSAppleScriptClient.m; sourceTree = "<group>"; };
 		8BB323120C71CF8D002AE53C /* NSGrayFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSGrayFrame.h; path = Source/NSGrayFrame.h; sourceTree = "<group>"; };
 		8BB323130C71CF8D002AE53C /* FSHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSHUDWindow.h; path = Source/FSHUDWindow.h; sourceTree = "<group>"; };
 		8BB323140C71CF8D002AE53C /* FSHUDFrame.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSHUDFrame.m; path = Source/FSHUDFrame.m; sourceTree = "<group>"; };
@@ -333,11 +335,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8BAEEF350CFDD2E1005677EE /* Frameworks */ = {
+		8B97720E0CFE23FE0044A626 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BAEEF3C0CFDD2F0005677EE /* Foundation.framework in Frameworks */,
+				8B9772930CFE24130044A626 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* FSFramework.framework */,
-				8BAEEF370CFDD2E1005677EE /* FSAppleScriptRunner */,
+				8B9772100CFE23FE0044A626 /* FSAppleScriptServer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,8 +427,8 @@
 			children = (
 				8B0A5FDB0B79ABA600ADE0FD /* FSAppleScriptAdditions.h */,
 				8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */,
-				8BAEEEAB0CFDC427005677EE /* FSAppleScriptRunner.h */,
-				8BAEEEAC0CFDC427005677EE /* FSAppleScriptRunner.m */,
+				8BAEEEAB0CFDC427005677EE /* FSAppleScriptClient.h */,
+				8BAEEEAC0CFDC427005677EE /* FSAppleScriptClient.m */,
 				8B4240A408BFE5CD00DC78F2 /* FSApplicationAdditions.h */,
 				8B4240A608BFE5D600DC78F2 /* FSApplicationAdditions.m */,
 				8B5643B10C5ED7B5001E52BB /* FSArrayAdditions.h */,
@@ -568,7 +570,8 @@
 		8BAEEE8C0CFDC1C5005677EE /* AppleScriptRunner */ = {
 			isa = PBXGroup;
 			children = (
-				8BAEEEA50CFDC3E9005677EE /* FSAppleScriptRunner.m */,
+				8B5FC8EC0CFE21C60010B563 /* FSAppleScriptServer.h */,
+				8B5FC8ED0CFE21C60010B563 /* FSAppleScriptServer.m */,
 			);
 			name = AppleScriptRunner;
 			sourceTree = "<group>";
@@ -707,27 +710,27 @@
 				8BFD368D0C81ADC9000E909A /* FSHUDSlider.h in Headers */,
 				8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */,
 				8BFD37E80C82FFB7000E909A /* FSHUDBorderlessFrame.h in Headers */,
-				8BAEEEAD0CFDC427005677EE /* FSAppleScriptRunner.h in Headers */,
+				8BAEEEAD0CFDC427005677EE /* FSAppleScriptClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8BAEEF360CFDD2E1005677EE /* FSAppleScriptRunner */ = {
+		8B97720F0CFE23FE0044A626 /* FSAppleScriptServer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BAEEF400CFDD2F4005677EE /* Build configuration list for PBXNativeTarget "FSAppleScriptRunner" */;
+			buildConfigurationList = 8B9772A20CFE24300044A626 /* Build configuration list for PBXNativeTarget "FSAppleScriptServer" */;
 			buildPhases = (
-				8BAEEF340CFDD2E1005677EE /* Sources */,
-				8BAEEF350CFDD2E1005677EE /* Frameworks */,
+				8B97720D0CFE23FE0044A626 /* Sources */,
+				8B97720E0CFE23FE0044A626 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FSAppleScriptRunner;
-			productName = FSAppleScriptRunner;
-			productReference = 8BAEEF370CFDD2E1005677EE /* FSAppleScriptRunner */;
+			name = FSAppleScriptServer;
+			productName = FSAppleScriptServer;
+			productReference = 8B9772100CFE23FE0044A626 /* FSAppleScriptServer */;
 			productType = "com.apple.product-type.tool";
 		};
 		8DC2EF4F0486A6940098B216 /* FSFramework */ = {
@@ -776,8 +779,8 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* FSFramework */,
-				8BAEEF360CFDD2E1005677EE /* FSAppleScriptRunner */,
 				8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */,
+				8B97720F0CFE23FE0044A626 /* FSAppleScriptServer */,
 			);
 		};
 /* End PBXProject section */
@@ -827,11 +830,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8BAEEF340CFDD2E1005677EE /* Sources */ = {
+		8B97720D0CFE23FE0044A626 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BAEEF3B0CFDD2EA005677EE /* FSAppleScriptRunner.m in Sources */,
+				8B9772140CFE24080044A626 /* FSAppleScriptServer.m in Sources */,
+				8B9772150CFE24110044A626 /* FSAppleScriptAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,7 +896,7 @@
 				8BFD36910C81ADD6000E909A /* FSHUDSlider.m in Sources */,
 				8BFD36920C81ADD6000E909A /* FSHUDSliderCell.m in Sources */,
 				8BFD37E90C82FFB7000E909A /* FSHUDBorderlessFrame.m in Sources */,
-				8BAEEEAE0CFDC427005677EE /* FSAppleScriptRunner.m in Sources */,
+				8BAEEEAE0CFDC427005677EE /* FSAppleScriptClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,7 +1023,7 @@
 			};
 			name = Release;
 		};
-		8BAEEF390CFDD2E2005677EE /* Debug */ = {
+		8B9772120CFE23FE0044A626 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -1037,12 +1041,12 @@
 					AppKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = FSAppleScriptRunner;
+				PRODUCT_NAME = FSAppleScriptServer;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
-		8BAEEF3A0CFDD2E2005677EE /* Release */ = {
+		8B9772130CFE23FE0044A626 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -1059,7 +1063,7 @@
 					AppKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = FSAppleScriptRunner;
+				PRODUCT_NAME = FSAppleScriptServer;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1107,11 +1111,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8BAEEF400CFDD2F4005677EE /* Build configuration list for PBXNativeTarget "FSAppleScriptRunner" */ = {
+		8B9772A20CFE24300044A626 /* Build configuration list for PBXNativeTarget "FSAppleScriptServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BAEEF390CFDD2E2005677EE /* Debug */,
-				8BAEEF3A0CFDD2E2005677EE /* Release */,
+				8B9772120CFE23FE0044A626 /* Debug */,
+				8B9772130CFE23FE0044A626 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
