@@ -22,7 +22,7 @@
 #import "FSAppleScriptServer.h"
 #import "FSAppleScriptAdditions.h"
 
-#define SECONDS_INACTIVITY_BEFORE_AUTOMATIC_QUIT 6 /* 10 minutes */
+#define SECONDS_INACTIVITY_BEFORE_AUTOMATIC_QUIT 600 /* 10 minutes */
 
 @interface FSAppleScriptServer (PRIVATE)
 - (void)resetAutomaticQuitTimer;
