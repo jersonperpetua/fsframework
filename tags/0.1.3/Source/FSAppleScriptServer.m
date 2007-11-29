@@ -32,17 +32,12 @@
 
 - (id)init {
 	if ((self = [super init])) {
-		server = [[NSConnection alloc] init];
+		server = [NSConnection defaultConnection];
 		[server setRootObject:self];
 		[server registerName:@"org.fadingred.AppleScript"];
 		[self resetAutomaticQuitTimer];
 	}
 	return self;
-}
-
-- (void)dealloc {
-	[server release];
-	[super dealloc];
 }
 
 - (NSDictionary *)run:(NSAppleScript *)script
