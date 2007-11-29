@@ -261,7 +261,7 @@
 		8B95F12E0CA3E79500F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B95F1690CA3F1EC00F7861B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B95F16A0CA3F1F300F7861B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8B9772100CFE23FE0044A626 /* FSAppleScriptServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = FSAppleScriptServer; path = build/Debug/FSAppleScriptServer; sourceTree = "<group>"; };
+		8B9772100CFE23FE0044A626 /* FSAppleScriptServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FSAppleScriptServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAEEEAB0CFDC427005677EE /* FSAppleScriptClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAppleScriptClient.h; path = Source/FSAppleScriptClient.h; sourceTree = "<group>"; };
 		8BAEEEAC0CFDC427005677EE /* FSAppleScriptClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptClient.m; path = Source/FSAppleScriptClient.m; sourceTree = "<group>"; };
 		8BB323120C71CF8D002AE53C /* NSGrayFrame.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = NSGrayFrame.h; path = Source/NSGrayFrame.h; sourceTree = "<group>"; };
@@ -779,8 +779,8 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* FSFramework */,
-				8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */,
 				8B97720F0CFE23FE0044A626 /* FSAppleScriptServer */,
+				8BF74CD90C7BD4A300C4D9B2 /* Generate Dynamic Macros */,
 			);
 		};
 /* End PBXProject section */
