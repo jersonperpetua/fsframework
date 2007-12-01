@@ -62,22 +62,43 @@
 					  arguments:(NSArray *)arguments
 						  error:(NSDictionary **)error {
 	
-	if (![client isValid]) {
-		[client release];
-		client = [[NSConnection connectionWithRegisteredName:@"org.fadingred.AppleScript" host:nil] retain];
+	BOOL success = FALSE;
+	NSDictionary *result;
+	
+	while (!success) {
 		if (![client isValid]) {
-			[self launchServer];
-			while (!client) {
-				[client release];
-				client = [[NSConnection connectionWithRegisteredName:@"org.fadingred.AppleScript" host:nil] retain];
-			}		
+			[client release];
+			client = [[NSConnection connectionWithRegisteredName:@"org.fadingred.AppleScript" host:nil] retain];
+			if (![client isValid]) {
+				[self launchServer];
+				while (!client) {
+					[client release];
+					client = [[NSConnection connectionWithRegisteredName:@"org.fadingred.AppleScript" host:nil] retain];
+				}		
+			}
+		}
+		
+		/* it's still possible that even though the above checks for the client's
+		 * validity passed, that the socket could close in the mean time or that
+		 * some other exception would happen, so we'll just continue trying untill
+		 * succeeding */
+		@try {
+			FSAppleScriptServer *proxy = (FSAppleScriptServer *)[client rootProxy];
+			result = [proxy run:script
+				executeFunction:function
+				  withArguments:arguments];
+			success = TRUE;
+		} @catch (NSException *exception) {
+			NSString *name = [exception name];
+			if (![name isEqualToString:NSDestinationInvalidException] &&
+				![name isEqualToString:NSPortTimeoutException] &&
+				![name isEqualToString:NSInvalidSendPortException] &&
+				![name isEqualToString:NSInvalidReceivePortException]) {
+				@throw;
+			}
 		}
 	}
-
-	FSAppleScriptServer *proxy = (FSAppleScriptServer *)[client rootProxy];
-	NSDictionary *result = [proxy run:script
-					  executeFunction:function
-						withArguments:arguments];
+	
 	if (error) {
 		*error = [result objectForKey:@"error"];
 	}
