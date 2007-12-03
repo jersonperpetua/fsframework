@@ -57,7 +57,7 @@
 	}
 }
 
-- (NSAppleEventDescriptor *)run:(NSAppleScript *)script
+- (NSAppleEventDescriptor *)run:(NSString *)scriptPath
 					   function:(NSString *)function
 					  arguments:(NSArray *)arguments
 						  error:(NSDictionary **)error {
@@ -84,7 +84,7 @@
 		 * succeeding */
 		@try {
 			FSAppleScriptServer *proxy = (FSAppleScriptServer *)[client rootProxy];
-			result = [proxy run:script
+			result = [proxy run:scriptPath
 				executeFunction:function
 				  withArguments:arguments];
 			success = TRUE;

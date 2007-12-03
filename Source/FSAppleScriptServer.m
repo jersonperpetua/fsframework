@@ -21,6 +21,7 @@
 
 #import "FSAppleScriptServer.h"
 #import "FSAppleScriptAdditions.h"
+#import "FSMacros.h"
 
 #define SECONDS_INACTIVITY_BEFORE_AUTOMATIC_QUIT 600 /* 10 minutes */
 
@@ -33,6 +34,7 @@
 - (id)init {
 	if ((self = [super init])) {
 		server = [NSConnection defaultConnection];
+		scripts = [[NSMutableDictionary alloc] init];
 		[server setRootObject:self];
 		[server registerName:@"org.fadingred.AppleScript"];
 		[self resetAutomaticQuitTimer];
@@ -40,10 +42,30 @@
 	return self;
 }
 
-- (NSDictionary *)run:(NSAppleScript *)script
+- (void)dealloc {
+	[scripts release];
+	[super dealloc];
+}
+
+- (NSDictionary *)run:(NSString *)scriptPath
  executeFunction:(NSString *)functionName
    withArguments:(NSArray *)argumentArray {
 
+	NSAppleScript *script = [scripts objectForKey:scriptPath];
+	if (!script) {
+		// load the script
+		NSDictionary *errorInfo = nil;
+		script = [[NSAppleScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:scriptPath] error:&errorInfo];
+		if (errorInfo) { FSLog(@"AppleScript loaded with error: %@", errorInfo); }
+		
+		if (![script isCompiled]) {
+			[script compileAndReturnError:&errorInfo];
+			if (errorInfo) { FSLog(@"AppleScript compiled with error: %@", errorInfo); }
+		}
+
+		[scripts setObject:script forKey:scriptPath];
+	}
+	
 	NSDictionary *errorInfo = nil;
 	NSAppleEventDescriptor *result = [script executeFunction:functionName withArguments:argumentArray error:&errorInfo];
 	[self resetAutomaticQuitTimer];
