@@ -85,6 +85,10 @@
     return view;
 }
 
+- (BOOL)isViewLoaded {
+	return (view != nil);
+}
+
 // these are for subclassers,
 // default implemenations do nothing
 - (void)viewWillLoad { }
