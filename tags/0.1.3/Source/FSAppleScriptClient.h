@@ -25,7 +25,7 @@
 
 /* This blocks until the script is executed.  It can not be called on the main
  * thread otherwise the application will lock up */
-- (NSAppleEventDescriptor *)run:(NSAppleScript *)script
+- (NSAppleEventDescriptor *)run:(NSString *)scriptPath
 					   function:(NSString *)function
 					  arguments:(NSArray *)arguments
 						  error:(NSDictionary **)error;

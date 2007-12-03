@@ -23,9 +23,10 @@
 
 @interface FSAppleScriptServer : NSObject {
 	NSConnection *server;
+	NSMutableDictionary *scripts;
 }
 
-- (NSDictionary *)run:(NSAppleScript *)script
+- (NSDictionary *)run:(NSString *)scriptPath
  executeFunction:(NSString *)functionName 
    withArguments:(NSArray *)argumentArray;
 @end
