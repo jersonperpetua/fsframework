@@ -89,13 +89,7 @@
 				  withArguments:arguments];
 			success = TRUE;
 		} @catch (NSException *exception) {
-			NSString *name = [exception name];
-			if (![name isEqualToString:NSDestinationInvalidException] &&
-				![name isEqualToString:NSPortTimeoutException] &&
-				![name isEqualToString:NSInvalidSendPortException] &&
-				![name isEqualToString:NSInvalidReceivePortException]) {
-				@throw;
-			}
+			// try again for all exceptions
 		}
 	}
 	
