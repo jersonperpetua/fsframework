@@ -103,6 +103,12 @@
 }
 
 - (unsigned long)freeSpaceOnDeviceContainingPath:(NSString *)path {
+	
+	while (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+		path = [path stringByDeletingLastPathComponent];
+		if (!path) { return 0; }
+	}
+	
 	struct statfs stat;
 	statfs([path cString], &stat);	
 	return (stat.f_bavail / 1024) * (stat.f_bsize / 1024);
