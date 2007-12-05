@@ -19,5 +19,6 @@
 @implementation NSApplication (ApplicationAdditions)
 
 - (BOOL)isOnTigerOrBetter { return(floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_3); }
+- (BOOL)isOnLeopardOrBetter { return (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_4); }
 
 @end

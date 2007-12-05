@@ -25,6 +25,7 @@
 + (id)controller;
 - (id)init;
 - (FSControlledView *)view; // load the nib (if not loaded) and return the view
+- (BOOL)isViewLoaded;
 
 // IMPORTANT NOTE: -------------------------------
 // It is ESENTIAL that if you bind something to

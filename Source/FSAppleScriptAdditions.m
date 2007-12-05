@@ -39,6 +39,8 @@
 			descriptor = [NSAppleEventDescriptor descriptorWithString:object];
 		} else if ([object isKindOfClass:[NSNumber class]]) {
 			descriptor = [NSAppleEventDescriptor descriptorWithInt32:[object intValue]];
+		} else if ([object isKindOfClass:[NSDate class]]) {
+			descriptor = [NSAppleEventDescriptor descriptorWithDate:(NSDate *)object];
 		} else if ([object isKindOfClass:[NSArray class]]) {
 			descriptor = [NSAppleScript descriptorForArray:(NSArray *)object];
 		}
@@ -78,6 +80,23 @@
 	
 	//Execute the event
 	return [self executeAppleEvent:containerEvent error:errorInfo];
+}
+
+@end
+
+
+@implementation NSAppleEventDescriptor (FSAppleScriptAdditions)
+
++ (NSAppleEventDescriptor *)descriptorWithDate:(NSDate *)date {
+	return [[[[self class] alloc] initWithDate:date] autorelease];
+}
+
+- (id)initWithDate:(NSDate *)date {
+	LongDateTime ldt;	
+	UCConvertCFAbsoluteTimeToLongDateTime(CFDateGetAbsoluteTime((CFDateRef)date), &ldt);
+	return [self initWithDescriptorType:typeLongDateTime
+								  bytes:&ldt
+								 length:sizeof(ldt)];
 }
 
 @end
