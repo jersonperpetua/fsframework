@@ -14,15 +14,19 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#ifndef NSAppKitVersionNumber10_3
-	#define NSAppKitVersionNumber10_3 743
-#endif
+/*
+ * This code is orinally from Adium.
+ * Visit http://www.adiumx.com/ for more information.
+ */
 
-#ifndef NSAppKitVersionNumber10_4
-	#define NSAppKitVersionNumber10_4 824
-#endif
+#import <Foundation/Foundation.h>
 
-@interface NSApplication (FSApplicationAdditions)
-- (BOOL)isOnTigerOrBetter;
-- (BOOL)isOnLeopardOrBetter;
+@interface FSAppleScriptServer : NSObject {
+	NSConnection *server;
+	NSMutableDictionary *scripts;
+}
+
+- (NSDictionary *)run:(NSString *)scriptPath
+ executeFunction:(NSString *)functionName 
+   withArguments:(NSArray *)argumentArray;
 @end
