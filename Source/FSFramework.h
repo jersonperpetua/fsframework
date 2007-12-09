@@ -21,6 +21,7 @@
 #import <FSFramework/FSImageAdditions.h>
 #import <FSFramework/FSStringAdditions.h>
 #import <FSFramework/FSAppleScriptAdditions.h>
+#import <FSFramework/FSAppleScriptClient.h>
 #import <FSFramework/FSPasteboardAdditions.h>
 #import <FSFramework/FSFileManagerAdditions.h>
 #import <FSFramework/FSSortDescriptorAdditions.h>
