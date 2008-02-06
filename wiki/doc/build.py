@@ -10,6 +10,7 @@ def main():
 
 if __name__ == '__main__':
   try:
+    sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
     sys.path.insert(0, os.path.dirname(__file__))
     import settings
   except ImportError:

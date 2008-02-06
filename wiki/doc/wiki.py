@@ -4,9 +4,10 @@ import variables
 import os
 
 def process():
+  v = dictionary(variables)
   for f, wiki in files():
     out = file(os.path.join(settings.PROJECT_ROOT, wiki), 'w')
-    out.write(render_to_string(f, variables))
+    out.write(render_to_string(f, v))
     out.close()
 
 def files():
@@ -17,5 +18,11 @@ def files():
       files.append((f, page))
   
   return files
-      
+
+def dictionary(module):
+  d = {}
+  for key in dir(module):
+    if not key.startswith('__') and not key.endswith('__'):
+      d[key] = getattr(module, key)
+  return d
       
