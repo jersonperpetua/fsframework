@@ -21,6 +21,6 @@ The SDKs are custom-install options in the Xcode installer. You can install thes
 == Newest {{ project.display_name }} Source Code ==
 
 After you have [GettingSubversion Subversion] installed, you can check out {{ project.display_name }} by running the following command in your [Terminal Terminal]:
-{{{
-svn co svn://fadingred.org/{{ project.name }}/trunk {{ project.name }}
-}}}
+{% templatetag openbrace %}{% templatetag openbrace %}{% templatetag openbrace %}
+svn co http://{{ project.name }}.googlecode.com/svn/trunk {{ project.name }}
+{% templatetag closebrace %}{% templatetag closebrace %}{% templatetag closebrace %}
