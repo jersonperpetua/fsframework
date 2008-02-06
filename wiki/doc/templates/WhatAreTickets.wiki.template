@@ -1,2 +1,0 @@
-= What Are Tickets? = 
-Tickets are, in brief, bug reports, feature requests, and feedback.  Tickets are used to ensure that bugs are fixed and to keep track of what users want {{ project.display_name }} to be able to do. For a more technical explanation see [TracTickets TracTickets].
