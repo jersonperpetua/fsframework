@@ -1,0 +1,14 @@
+= Installing {{ project.display_name }} =
+Installing {{ project.display_name }} is similar to installing most Mac OS X applications.
+
+
+ 1. Download the disk image from the download page.
+ 1. If a {{ project.display_name }} window doesn't open automatically, double click the downloaded file
+ 1. Drag the {{ project.display_name }} application to your Applications folder (Or wherever you'd like to keep it).
+ 1. "Eject" the {{ project.display_name }} disk image, which has an icon of a drive
+ 1. The {{ project.display_name }} disk image will still be present in your download folder (probably on your desktop).  You can drag this file to the trash, as it is no longer needed.
+
+To load {{ project.display_name }}, locate it in the Applications folder (or whereever you dragged it) and double click.
+
+=== Upgrading? ===
+Upgrading from a previous version of {{ project.display_name }}?  Just follow the steps listed above for installation. Choose to {% templatetag openbrace %}{% templatetag openbrace %}{% templatetag openbrace %}Replace{% templatetag closebrace %}{% templatetag closebrace %}{% templatetag closebrace %} the existing copy of {{ project.display_name }}.app when prompted in step 3.  Your settings will not be affected.

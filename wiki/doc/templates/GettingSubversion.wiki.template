@@ -1,0 +1,27 @@
+= Getting Subversion =
+
+Before you begin, make sure you have the Xcode Developer Tools installed. If you don't, you can download them for free off of the [http://developer.apple.com/tools/download/ Apple Developer Connection] website.
+
+Also, please look at http://svnbook.red-bean.com/ for a Subversion reference. Read through this before you begin.
+
+There are multiple ways to get Subversion. Here are the 2 most popular on OS X:
+ * [http://fink.sourceforge.net Fink]
+ * A [http://homepage.mac.com/martinott/ prepackaged installer]
+
+The rest of this document will assume you chose the prepackaged installer. If you chose the other two options, please refer to the documentation for those projects.
+
+=== Putting SVN in your path ===
+_Note: These instructions are for `bash`, the default shell on Panther and Tiger._
+
+You will need to add {% templatetag openbrace %}{% templatetag openbrace %}{% templatetag openbrace %}/usr/local/bin{% templatetag closebrace %}{% templatetag closebrace %}{% templatetag closebrace %} to your path. To do this, run the following commands in a [Terminal Terminal] window:
+{% templatetag openbrace %}{% templatetag openbrace %}{% templatetag openbrace %}
+touch ~/.bash_profile
+open -e ~/.bash_profile
+{% templatetag closebrace %}{% templatetag closebrace %}{% templatetag closebrace %}
+
+This will open the ~/.bash_profile in !TextEdit. _Note that it's perfectly fine for this file to be empty._
+Now add the following line to the file:
+
+{% templatetag openbrace %}{% templatetag openbrace %}{% templatetag openbrace %}export PATH=$PATH:/usr/local/bin{% templatetag closebrace %}{% templatetag closebrace %}{% templatetag closebrace %}
+
+Save and close the file, then close your [Terminal Terminal] window and open a new one. SVN should now be installed and configured correctly. Please continue to the next section for more information on how to install Adium from source.

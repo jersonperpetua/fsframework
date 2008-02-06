@@ -1,0 +1,8 @@
+== Contact Info ==
+
+If you're trying to solve a problem and can't find an answer by [WikiStart browsing or searching the documentation], you can email us.  We ask some things of you before you take this step, however:
+
+ * First, make sure that you have searched the documentation. If your answer is in the documentation, you may get a short reply with a link to the relevant page.
+ * If you're reporting a bug (and can reproduce it and/or provide a crash log) or requesting a feature, you should file a ticket instead, if no previous ticket exists.  See ReportingBugs or RequestingFeatures.
+
+Our email address is [mailto:support@fadingred.org support@fadingred.org].

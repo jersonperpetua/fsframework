@@ -1,0 +1,16 @@
+= Requesting Features =
+The first step towards making a request is to [http://code.google.com/p/{{ project.name }}/issues/list search] the existing tickets.
+
+There's also chance that {{ project.display_name }} already supports what you're looking for, so make sure you've explored the documentation.  If you find through searching that somebody has already requested what you're looking for, feel free to add new information or ideas to their existing ticket.
+
+If you cannot find an existing ticket (it may take several searches) for your request you should create a new one. Please only put *one issue in each ticket*; it is OK (and preferred) to file multiple tickets if you have multiple issues.
+
+== Composing a new request ticket ==
+Creating request tickets is relatively straightforward.  However, it's a good idea to consider a few things before making a request
+ * How exactly will what you're requesting work?
+ * Are you requesting something needed by a large number of {{ project.display_name }} users?
+
+Unfortunately we don't have time to fulfill every request, so please don't take it personally if your request is declined or goes unanswered.  We try to prioritize requests such that those which influence a large number of users take top priority.  The amount of time and work required to implement a request is also factored into its priority.
+
+== Creating the ticket ==
+Once you have your request fleshed out, [http://code.google.com/p/{{ project.name }}/issues/entry create a ticket] for it.

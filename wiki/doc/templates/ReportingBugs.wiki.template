@@ -1,0 +1,24 @@
+= Reporting Bugs =
+The first step towards reporting a bug is to search the existing tickets.
+[[TracSearch(Search Tickets,ticket)]]
+
+Most likely, someone else has already done all the work of reporting your bug.  If this is the case, feel free to add any additional information you have about the bug to their existing ticket.
+
+If you cannot find an existing ticket (it may take several different searches) on your bug you should create a new one. Please only put *one issue in each ticket*; it is OK (and preferred) to file multiple tickets if you have multiple issues.
+
+== Composing a new Bug Report ticket ==
+Please include the following information in *every* bug report:
+
+ * *Steps to reproduce* the problem
+ * The *version* of {{ project.display_name }} and OS X  you are using
+ * If you are using {{ project.display_name }} in a non-English language, the *language* in which you use {{ project.display_name }}
+ * *Attach* any of the following applicable files
+    * Any *Console.app output* which occurs when your bug happens (Console.app may be found in /Applications/Utilities)
+    * For *Freezes or high CPU Usage* - A [Sampling sample of the behavior]
+    * For *High memory usage* - [LeakDetection Leaks] output
+
+== Creating the ticket ==
+Once you have the information ready, [http://code.google.com/p/{{ project.name }}/issues/entry create a ticket] for your bug.  
+
+=== Following up ===
+After you create the ticket, it is a good idea to bookmark it and check it periodically. We may require additional information. If we can't get this information, we may end up closing the ticket without actually fixing the problem simply because we don't know enough about the problem.
