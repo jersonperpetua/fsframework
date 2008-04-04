@@ -41,14 +41,11 @@
 
 - (void)dealloc {
 	FSDLog(@"");
-	
-	// notify subclassers of what's going on
-	[self viewWillClose];
-	
+		
 	// It is important to note that the when setting a viewController
 	// on a FSControlledView that it is not retained.  If it were,
 	// then neither the controller nor the view would ever be deallocated.
-	// It is therefor EXTREMELY important that when this object IS
+	// It is therefore EXTREMELY important that when this object IS
 	// deallocated, that the viewController on the FSControlledView is
 	// set to nil.  If it isn't, then the application WILL CRASH.
 
@@ -69,8 +66,6 @@
 
 - (FSControlledView *)view {
     if (!view) {
-		[self viewWillLoad];
-
 		NSDictionary *table = [NSDictionary dictionaryWithObjectsAndKeys:self, NSNibOwner,
 			topLevelObjects, NSNibTopLevelObjects, nil];
 		[[NSBundle bundleForClass:[self class]] loadNibFile:[[self class] nibName]
@@ -80,7 +75,6 @@
 		NSAssert(view && [view isKindOfClass:[FSControlledView class]],
 				 @"The nib file must load a view of type FSControlledView");
 		[view setViewController:self]; // make sure the view knows that we're the controller
-		[self viewDidLoad];
     }
     return view;
 }
@@ -91,9 +85,6 @@
 
 // these are for subclassers,
 // default implemenations do nothing
-- (void)viewWillLoad { }
-- (void)viewDidLoad { }
-- (void)viewWillClose { }
 - (void)viewWillActivate { }
 - (void)viewDidActivate { }
 - (void)viewWillInactivate { }

@@ -46,11 +46,6 @@
 // the following methods are for subclassers
 // none of them should be called directly
 
-- (void)viewWillLoad; // called before the view is loaded from the nib
-- (void)viewDidLoad; // called after the view is loaded from the nib
-
-- (void)viewWillClose;	// just before the view is released
-
 // the following methods are not invoked when
 // a view changes from one window to another
 - (void)viewWillActivate;	// called before a view is added to a window
