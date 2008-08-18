@@ -14,10 +14,11 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#import <FSFramework/FSButtonImageTextCell.h>
-
-@interface FSQuickChangeDateCell : FSButtonImageTextCell {
-
+@interface FSEventWindow : NSWindow {
+	NSMutableArray *mouseMovedResponders;
 }
+
+- (void)addMouseMovedResponder:(NSResponder *)responder;
+- (void)removeMouseMovedResponder:(NSResponder *)responder;
 
 @end

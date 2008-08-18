@@ -27,6 +27,12 @@
 		8B0A5FDE0B79ABA600ADE0FD /* FSAppleScriptAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */; };
 		8B29578C0AA9F77500D64443 /* FSTransparentBackgroundImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B29578D0AA9F77500D64443 /* FSTransparentBackgroundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */; };
+		8B2F81300E5906C100E64D49 /* FSButtonImageTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2F812E0E5906C100E64D49 /* FSButtonImageTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B2F81310E5906C100E64D49 /* FSButtonImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F812F0E5906C100E64D49 /* FSButtonImageTextCell.m */; };
+		8B2F815A0E59098500E64D49 /* FSEventWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2F814C0E59082400E64D49 /* FSEventWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B2F815B0E59098600E64D49 /* FSEventWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F814D0E59082400E64D49 /* FSEventWindow.m */; };
+		8B2F815C0E59099400E64D49 /* FSEventTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2F81440E59078900E64D49 /* FSEventTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B2F815D0E59099500E64D49 /* FSEventTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F81450E59078900E64D49 /* FSEventTableView.m */; };
 		8B42376008BA723500DC78F2 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42375F08BA723500DC78F2 /* FSTableView.m */; };
 		8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42376108BA723E00DC78F2 /* FSTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -188,6 +194,12 @@
 		8B0A5FDC0B79ABA600ADE0FD /* FSAppleScriptAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAppleScriptAdditions.m; path = Source/FSAppleScriptAdditions.m; sourceTree = "<group>"; };
 		8B29578A0AA9F77500D64443 /* FSTransparentBackgroundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSTransparentBackgroundImageView.h; path = Source/FSTransparentBackgroundImageView.h; sourceTree = "<group>"; };
 		8B29578B0AA9F77500D64443 /* FSTransparentBackgroundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSTransparentBackgroundImageView.m; path = Source/FSTransparentBackgroundImageView.m; sourceTree = "<group>"; };
+		8B2F812E0E5906C100E64D49 /* FSButtonImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSButtonImageTextCell.h; path = Source/FSButtonImageTextCell.h; sourceTree = "<group>"; };
+		8B2F812F0E5906C100E64D49 /* FSButtonImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSButtonImageTextCell.m; path = Source/FSButtonImageTextCell.m; sourceTree = "<group>"; };
+		8B2F81440E59078900E64D49 /* FSEventTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSEventTableView.h; path = Source/FSEventTableView.h; sourceTree = "<group>"; };
+		8B2F81450E59078900E64D49 /* FSEventTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSEventTableView.m; path = Source/FSEventTableView.m; sourceTree = "<group>"; };
+		8B2F814C0E59082400E64D49 /* FSEventWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSEventWindow.h; path = Source/FSEventWindow.h; sourceTree = "<group>"; };
+		8B2F814D0E59082400E64D49 /* FSEventWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSEventWindow.m; path = Source/FSEventWindow.m; sourceTree = "<group>"; };
 		8B42375F08BA723500DC78F2 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSTableView.m; path = Source/FSTableView.m; sourceTree = "<group>"; };
 		8B42376108BA723E00DC78F2 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSTableView.h; path = Source/FSTableView.h; sourceTree = "<group>"; };
 		8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutBoxController.h; path = Source/FSAboutBoxController.h; sourceTree = "<group>"; };
@@ -375,6 +387,7 @@
 				8BC8025B0C6E9FE900439BDA /* Additions - Custom */,
 				8B73DA560A49F11600484717 /* From Adium */,
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
+				8B2F81530E59088E00E64D49 /* Windows */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
 				8BB31E140C71251D002AE53C /* HUD */,
 				8BF74CF80C7BD59200C4D9B2 /* Dynamic Files */,
@@ -422,6 +435,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		8B2F81530E59088E00E64D49 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				8B2F814C0E59082400E64D49 /* FSEventWindow.h */,
+				8B2F814D0E59082400E64D49 /* FSEventWindow.m */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
 		8B5177B30A8CB18F00B9D305 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +477,8 @@
 				8BD6238008B96CB7002E8C79 /* Calendar View */,
 				8B42376108BA723E00DC78F2 /* FSTableView.h */,
 				8B42375F08BA723500DC78F2 /* FSTableView.m */,
+				8B2F81440E59078900E64D49 /* FSEventTableView.h */,
+				8B2F81450E59078900E64D49 /* FSEventTableView.m */,
 				8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */,
 				8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */,
 				8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */,
@@ -476,6 +500,8 @@
 				8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */,
 				8B4A18570B5B1D800036B8C9 /* FSQuickChangeDateCell.h */,
 				8B4A18580B5B1D800036B8C9 /* FSQuickChangeDateCell.m */,
+				8B2F812E0E5906C100E64D49 /* FSButtonImageTextCell.h */,
+				8B2F812F0E5906C100E64D49 /* FSButtonImageTextCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -711,6 +737,9 @@
 				8BFD368E0C81ADC9000E909A /* FSHUDSliderCell.h in Headers */,
 				8BFD37E80C82FFB7000E909A /* FSHUDBorderlessFrame.h in Headers */,
 				8BAEEEAD0CFDC427005677EE /* FSAppleScriptClient.h in Headers */,
+				8B2F81300E5906C100E64D49 /* FSButtonImageTextCell.h in Headers */,
+				8B2F815A0E59098500E64D49 /* FSEventWindow.h in Headers */,
+				8B2F815C0E59099400E64D49 /* FSEventTableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +926,9 @@
 				8BFD36920C81ADD6000E909A /* FSHUDSliderCell.m in Sources */,
 				8BFD37E90C82FFB7000E909A /* FSHUDBorderlessFrame.m in Sources */,
 				8BAEEEAE0CFDC427005677EE /* FSAppleScriptClient.m in Sources */,
+				8B2F81310E5906C100E64D49 /* FSButtonImageTextCell.m in Sources */,
+				8B2F815B0E59098600E64D49 /* FSEventWindow.m in Sources */,
+				8B2F815D0E59099500E64D49 /* FSEventTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
