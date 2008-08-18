@@ -14,10 +14,25 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#import <FSFramework/FSButtonImageTextCell.h>
+#import <FSFramework/AIImageTextCell.h>
 
-@interface FSQuickChangeDateCell : FSButtonImageTextCell {
-
+/* Must be used in an FSEventTableView with
+ * trackMouseEvents set to true. */
+@interface FSButtonImageTextCell : AIImageTextCell {
+	NSImage *buttonImage;
+	SEL action;
+	id target;
+	NSPoint mouseLocation;
+	short state;
 }
+
+- (NSImage *)buttonImage;
+- (void)setButtonImage:(NSImage *)image;
+
+- (id)target;
+- (void)setTarget:(id)target;
+
+- (SEL)action;
+- (void)setAction:(SEL)action;
 
 @end

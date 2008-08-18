@@ -41,6 +41,10 @@
 #import <FSFramework/FSColoredMenuItem.h>
 #import <FSFramework/FSTransparentBackgroundImageView.h>
 #import <FSFramework/FSSegmentedControl.h>
+#import <FSFramework/FSQuickChangeDateCell.h>
+#import <FSFramework/FSButtonImageTextCell.h>
+#import <FSFramework/FSEventWindow.h>
+#import <FSFramework/FSEventTableView.h>
 
 #import <FSFramework/FSHUDWindow.h>
 #import <FSFramework/FSHUDSliderCell.h>

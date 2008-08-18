@@ -14,10 +14,26 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#import <FSFramework/FSButtonImageTextCell.h>
+/* Must be used in an FSEventWindow */
 
-@interface FSQuickChangeDateCell : FSButtonImageTextCell {
-
+@interface FSEventTableView : NSTableView {
+	NSTrackingRectTag trackingTag;
+	BOOL previousState;
+	BOOL trackMouseEvents;
+	int lastMouseRow;
+	int lastMouseCol;
 }
 
+- (BOOL)trackMouseEvents;
+- (void)setTrackMouseEvents:(BOOL)flag;
+
+@end
+
+@interface NSCell (FSEventTable)
+- (BOOL)mouseEnteredInvalidatesForFrame:(NSRect)cellFrame;
+- (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame;
+- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame;
+- (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame;
+- (BOOL)trackMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw;
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw;
 @end
