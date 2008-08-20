@@ -16,6 +16,9 @@
 
 #import "FSButtonImageTextCell.h"
 
+#define MAX_IMAGE_WIDTH			24.0f
+#define IMAGE_TEXT_PADDING		6.0f
+
 typedef enum _FSButtonImageTextCellState {
 	FSButtonImageTextCellInactiveState,
 	FSButtonImageTextCellHoverState,
@@ -27,6 +30,23 @@ typedef enum _FSButtonImageTextCellState {
 @end
 
 @implementation FSButtonImageTextCell
+
+- (id)copyWithZone:(NSZone *)zone
+{
+	FSButtonImageTextCell *newCell = [super copyWithZone:zone];
+	
+	newCell->buttonImage = nil;
+	[newCell setButtonImage:buttonImage];
+	
+	newCell->target = nil;
+	[newCell setTarget:target];
+	
+	newCell->action = action;
+	newCell->mouseLocation = mouseLocation;
+	newCell->state = state;
+	
+	return newCell;
+}
 
 - (void)dealloc {
 	[buttonImage release];
@@ -137,7 +157,7 @@ typedef enum _FSButtonImageTextCellState {
 	NSRect dest;
 	dest.size = [buttonImage size];
 	dest.origin = cellFrame.origin;
-	
+		
 	// Center image vertically, or scale as needed
 	if (dest.size.height > cellFrame.size.height) {
 		float proportionChange = cellFrame.size.height / [buttonImage size].height;
@@ -145,9 +165,9 @@ typedef enum _FSButtonImageTextCellState {
 		dest.size.width = [buttonImage size].width * proportionChange;
 	}
 	
-	if (dest.size.width > maxImageWidth) {
-		float proportionChange = maxImageWidth / dest.size.width;
-		dest.size.width = maxImageWidth;
+	if (dest.size.width > MAX_IMAGE_WIDTH) {
+		float proportionChange = MAX_IMAGE_WIDTH / dest.size.width;
+		dest.size.width = MAX_IMAGE_WIDTH;
 		dest.size.height = dest.size.height * proportionChange;
 	}
 	
@@ -159,9 +179,10 @@ typedef enum _FSButtonImageTextCellState {
 	dest.origin.y += 1;
 	dest.origin.x += cellFrame.size.width;
 	dest.origin.x -= [buttonImage size].width;
-	dest.origin.x -= imageTextPadding;
+	dest.origin.x -= IMAGE_TEXT_PADDING;
 	return dest;
 }
+
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
 	
@@ -171,7 +192,7 @@ typedef enum _FSButtonImageTextCellState {
 		NSRect dest = [self buttonRectForFrame:cellFrame];
 		
 		// Decrease the cell width by the width of the image we drew and its left padding
-		cellFrame.size.width -= imageTextPadding + dest.size.width;
+		cellFrame.size.width -= IMAGE_TEXT_PADDING + dest.size.width;
 				
 		BOOL flippedIt = NO;
 		if (![buttonImage isFlipped]) {
