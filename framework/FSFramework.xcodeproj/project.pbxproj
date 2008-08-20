@@ -33,6 +33,7 @@
 		8B2F815B0E59098600E64D49 /* FSEventWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F814D0E59082400E64D49 /* FSEventWindow.m */; };
 		8B2F815C0E59099400E64D49 /* FSEventTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2F81440E59078900E64D49 /* FSEventTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B2F815D0E59099500E64D49 /* FSEventTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F81450E59078900E64D49 /* FSEventTableView.m */; };
+		8B2F833F0E5CDB0D00E64D49 /* quick_change.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2F833E0E5CDB0D00E64D49 /* quick_change.png */; };
 		8B42376008BA723500DC78F2 /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B42375F08BA723500DC78F2 /* FSTableView.m */; };
 		8B42376208BA723E00DC78F2 /* FSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42376108BA723E00DC78F2 /* FSTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B42404208BFD09C00DC78F2 /* FSAboutBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -200,6 +201,7 @@
 		8B2F81450E59078900E64D49 /* FSEventTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSEventTableView.m; path = Source/FSEventTableView.m; sourceTree = "<group>"; };
 		8B2F814C0E59082400E64D49 /* FSEventWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSEventWindow.h; path = Source/FSEventWindow.h; sourceTree = "<group>"; };
 		8B2F814D0E59082400E64D49 /* FSEventWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSEventWindow.m; path = Source/FSEventWindow.m; sourceTree = "<group>"; };
+		8B2F833E0E5CDB0D00E64D49 /* quick_change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quick_change.png; path = Resources/quick_change.png; sourceTree = "<group>"; };
 		8B42375F08BA723500DC78F2 /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSTableView.m; path = Source/FSTableView.m; sourceTree = "<group>"; };
 		8B42376108BA723E00DC78F2 /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSTableView.h; path = Source/FSTableView.h; sourceTree = "<group>"; };
 		8B42403F08BFD09C00DC78F2 /* FSAboutBoxController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSAboutBoxController.h; path = Source/FSAboutBoxController.h; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				8BBFBED20A92359E0038A6E3 /* PlasticButtonPressed_Caps.png */,
 				8BBFBED30A92359E0038A6E3 /* plus.png */,
 				8BBFBED40A92359E0038A6E3 /* minus.png */,
+				8B2F833E0E5CDB0D00E64D49 /* quick_change.png */,
 				8BD623D208B96CF4002E8C79 /* Info.plist */,
 				8BF367940C8644A200137F3C /* Localizable.strings */,
 				8BD623D908B96D26002E8C79 /* InfoPlist.strings */,
@@ -837,6 +840,7 @@
 				8BFD36AB0C81AE98000E909A /* HUDSliderTrackLeft.tiff in Resources */,
 				8BFD36AC0C81AE98000E909A /* HUDSliderTrackRight.tiff in Resources */,
 				8BF367950C8644A200137F3C /* Localizable.strings in Resources */,
+				8B2F833F0E5CDB0D00E64D49 /* quick_change.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

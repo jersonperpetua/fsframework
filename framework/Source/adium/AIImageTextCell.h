@@ -21,7 +21,7 @@
  *
  * This NSCell subclass displays in image on the left and one or two lines of text centered vertically in the space remaining for the cell
  */
-@interface AIImageTextCell : NSTextFieldCell {
+@interface AIImageTextCell : NSCell {
 	NSFont			*font;
     NSString		*subString;
 	NSColor			*color; 
