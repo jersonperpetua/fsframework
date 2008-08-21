@@ -18,24 +18,31 @@
 #import "AIImageAdditions.h"
 
 @interface FSQuickChangeDateCell (PRIVATE)
-- (void)_initialize;
+- (void)_quickChangeDateCellInitialize;
 @end
 
 @implementation FSQuickChangeDateCell
 
 - (id)init {
 	if ((self = [super init])) {
-		[self _initialize];
+		[self _quickChangeDateCellInitialize];
 	}
 	return self;
 }
 
 - (void)awakeFromNib {
-	[self _initialize];
+	[self _quickChangeDateCellInitialize];
 }
 
-- (void)_initialize {
+- (void)_quickChangeDateCellInitialize {
 	[self setButtonImage:[NSImage imageNamed:@"quick_change" forClass:[self class]]];
+	[self setInactiveOpacity:0.0];
+	[self setTarget:self];
+	[self setAction:@selector(showDatePanel:)];
+}
+
+- (void)showDatePanel:(id)sender {
+	NSLog(@"show");
 }
 
 @end

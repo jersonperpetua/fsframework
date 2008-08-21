@@ -24,6 +24,9 @@
 	id target;
 	NSPoint mouseLocation;
 	short state;
+	float inactiveOpacity;
+	float hoverOpacity;
+	float pressedOpacity;
 }
 
 - (NSImage *)buttonImage;
@@ -34,5 +37,14 @@
 
 - (SEL)action;
 - (void)setAction:(SEL)action;
+
+- (float)inactiveOpacity;
+- (void)setInactiveOpacity:(float)value;
+
+- (float)hoverOpacity;
+- (void)setHoverOpacity:(float)value;
+
+- (float)pressedOpacity;
+- (void)setPressedOpacity:(float)value;
 
 @end
