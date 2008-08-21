@@ -125,10 +125,9 @@
 		NSRect trackingRect = [self bounds];
 		NSPoint	mouseLocation = [self convertPoint:[[NSApp currentEvent] locationInWindow] fromView:nil];
 		BOOL mouseInside = [self mouse:mouseLocation inRect:trackingRect];
-
 		
 		trackingTag = [self addTrackingRect:trackingRect owner:self userData:nil assumeInside:mouseInside];
-		if (mouseInside) [self mouseEntered:nil];
+		if (mouseInside) { [self mouseEntered:nil]; }
 	}
 }
 

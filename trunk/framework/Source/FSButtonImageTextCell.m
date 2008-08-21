@@ -27,9 +27,41 @@ typedef enum _FSButtonImageTextCellState {
 
 @interface FSButtonImageTextCell (PRIVATE)
 - (NSRect)buttonRectForFrame:(NSRect)cellFrame;
+- (void)_buttonImageTextCellInitialize;
 @end
 
 @implementation FSButtonImageTextCell
+
+- (id)init {
+	if ((self = [super init])) {
+		[self _buttonImageTextCellInitialize];
+	}
+	return self;	
+}
+
+- (id)initTextCell:(NSString *)text {
+	if ((self = [super initTextCell:text])) {
+		[self _buttonImageTextCellInitialize];
+	}
+	return self;	
+}
+
+- (id)initImageCell:(NSImage *)image {
+	if ((self = [super initImageCell:image])) {
+		[self _buttonImageTextCellInitialize];
+	}
+	return self;
+}
+
+- (void)awakeFromNib {
+	[self _buttonImageTextCellInitialize];
+}
+
+- (void)_buttonImageTextCellInitialize {
+	inactiveOpacity = 0.5;
+	hoverOpacity = 0.75;
+	pressedOpacity = 1.0;
+}
 
 - (id)copyWithZone:(NSZone *)zone
 {
@@ -44,6 +76,9 @@ typedef enum _FSButtonImageTextCellState {
 	newCell->action = action;
 	newCell->mouseLocation = mouseLocation;
 	newCell->state = state;
+	newCell->inactiveOpacity = inactiveOpacity;
+	newCell->hoverOpacity = hoverOpacity;
+	newCell->pressedOpacity = pressedOpacity;
 	
 	return newCell;
 }
@@ -148,6 +183,16 @@ typedef enum _FSButtonImageTextCellState {
 }
 
 
+- (float)inactiveOpacity { return inactiveOpacity; }
+- (void)setInactiveOpacity:(float)value { inactiveOpacity = value; }
+
+- (float)hoverOpacity { return hoverOpacity; }
+- (void)setHoverOpacity:(float)value { hoverOpacity = value; }
+
+- (float)pressedOpacity { return pressedOpacity; }
+- (void)setPressedOpacity:(float)value { pressedOpacity = value; }
+
+
 #pragma mark drawing
 // ----------------------------------------------------------------------------------------------------
 // drawing
@@ -206,19 +251,21 @@ typedef enum _FSButtonImageTextCellState {
 		
 		float fraction = 1.0;
 		switch(state) {
-			case FSButtonImageTextCellInactiveState: fraction = 0.5; break;
-			case FSButtonImageTextCellHoverState: fraction = 0.75; break;
-			case FSButtonImageTextCellPressedState: fraction = 1.0; break;
+			case FSButtonImageTextCellInactiveState: fraction = inactiveOpacity; break;
+			case FSButtonImageTextCellHoverState: fraction = hoverOpacity; break;
+			case FSButtonImageTextCellPressedState: fraction = pressedOpacity; break;
 			default: break;
 		}
 		
-		[NSGraphicsContext saveGraphicsState];
-		[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-		[buttonImage drawInRect:NSMakeRect(dest.origin.x,dest.origin.y,dest.size.width,dest.size.height)
-				 fromRect:NSMakeRect(0,0,[buttonImage size].width,[buttonImage size].height)
-				operation:NSCompositeSourceOver
-				 fraction:fraction];
-		[NSGraphicsContext restoreGraphicsState];
+		if (fraction) {
+			[NSGraphicsContext saveGraphicsState];
+			[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+			[buttonImage drawInRect:NSMakeRect(dest.origin.x,dest.origin.y,dest.size.width,dest.size.height)
+						   fromRect:NSMakeRect(0,0,[buttonImage size].width,[buttonImage size].height)
+						  operation:NSCompositeSourceOver
+						   fraction:fraction];
+			[NSGraphicsContext restoreGraphicsState];
+		}
 		
 		if (flippedIt) {
 			[buttonImage setFlipped:NO];
