@@ -36,7 +36,7 @@
 
 - (void)_quickChangeDateCellInitialize {
 	[self setButtonImage:[NSImage imageNamed:@"quick_change" forClass:[self class]]];
-	[self setInactiveOpacity:0.0];
+	[self setInactiveOpacity:0.1];
 	[self setTarget:self];
 	[self setAction:@selector(showDatePanel:)];
 }

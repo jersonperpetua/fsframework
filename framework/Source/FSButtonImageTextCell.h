@@ -22,8 +22,6 @@
 	NSImage *buttonImage;
 	SEL action;
 	id target;
-	NSPoint mouseLocation;
-	short state;
 	float inactiveOpacity;
 	float hoverOpacity;
 	float pressedOpacity;
