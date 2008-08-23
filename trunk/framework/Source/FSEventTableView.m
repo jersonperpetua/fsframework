@@ -150,12 +150,9 @@
 	if (lastMouseRow != -1 && lastMouseCol != -1) {
 		NSTableColumn *column = [[self tableColumns] objectAtIndex:lastMouseCol];
 		NSCell *cell = [column dataCell];
-		[[self delegate] tableView:self willDisplayCell:cell
-					forTableColumn:column row:lastMouseRow];
 		// check for invalidity of cell
 		NSRect cellFrame = [self frameOfCellAtColumn:lastMouseCol row:lastMouseRow];
 		if ([cell mouseExitedInvalidatesForFrame:cellFrame]) {
-			[cell drawWithFrame:cellFrame inView:self];
 			[self setNeedsDisplayInRect:cellFrame];
 		}
 		lastMouseRow = -1;
@@ -166,42 +163,43 @@
 - (void)mouseDown:(NSEvent *)theEvent {
 	NSEvent *currentEvent = theEvent;
 	NSCell *cell;
-	NSRect cellFrame;
 
-	do {
-		NSEventType type = [currentEvent type];
-		NSPoint point = [self convertPoint:[currentEvent locationInWindow] fromView:[[self window] contentView]];		
-		int col = [self columnAtPoint:point];
-		int row = [self rowAtPoint:point];
-		BOOL redraw = FALSE;
-		BOOL finished = FALSE;
-		
-		if (row >= 0 && col >= 0) {
-			NSTableColumn *column = [[self tableColumns] objectAtIndex:col];
-			cell = [column dataCell];
-			// update the cell according to the delegate
-			[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:row];
-			cellFrame = [self frameOfCellAtColumn:col row:row];
-		} else { break; } // use standard table mouseDown
-		
-		if (type == NSLeftMouseDown) {
-			finished = ![cell trackMouseAtPoint:point invalidatesForFrame:cellFrame redraw:&redraw];
-		} else if (type == NSLeftMouseDragged) {
-			finished = ![cell continueTrackingMouseAtPoint:point invalidatesForFrame:cellFrame redraw:&redraw];
-		} else if (type == NSLeftMouseUp) {
-			redraw = [cell mouseUpAtPoint:point invalidatesForFrame:cellFrame];
-			finished = TRUE;
-		} else {
-			[NSException raise:@"Invalid Event" format:@"Next event not handled because an unexpected event type was retrieved."];
-		}
-		
-		if (redraw) {
-			[cell drawWithFrame:cellFrame inView:self];
-			[self setNeedsDisplayInRect:cellFrame];
-		}
-		
-		if (finished) { break; }
-	} while ((currentEvent = [[self window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask) untilDate:[NSDate distantFuture] inMode:NSEventTrackingRunLoopMode dequeue:YES]));
+	NSPoint point = [self convertPoint:[currentEvent locationInWindow] fromView:[[self window] contentView]];		
+	int col = [self columnAtPoint:point];
+	int row = [self rowAtPoint:point];
+	NSRect cellFrame = [self frameOfCellAtColumn:col row:row];
+
+	if (row >= 0 && col >= 0) {
+		NSTableColumn *column = [[self tableColumns] objectAtIndex:col];
+		cell = [column dataCell];
+		// update the cell according to the delegate
+	
+		do {
+			NSEventType type = [currentEvent type];
+			point = [self convertPoint:[currentEvent locationInWindow] fromView:[[self window] contentView]];		
+			BOOL redraw = FALSE;
+			BOOL finished = FALSE;
+			
+			if (type == NSLeftMouseDown) {
+				finished = ![cell trackMouseAtPoint:point cellFrame:cellFrame];
+				redraw = !finished;
+			} else if (type == NSLeftMouseDragged) {
+				finished = ![cell continueTrackingMouseAtPoint:point cellFrame:cellFrame];
+				redraw = !finished;
+			} else if (type == NSLeftMouseUp) {
+				redraw = [cell mouseUpAtPoint:point invalidatesForFrame:cellFrame];
+				finished = TRUE;
+			} else {
+				[NSException raise:@"Invalid Event" format:@"Next event not handled because an unexpected event type was retrieved."];
+			}
+			
+			if (redraw) {
+				[self setNeedsDisplayInRect:cellFrame];
+			}
+			
+			if (finished) { break; }
+		} while ((currentEvent = [[self window] nextEventMatchingMask:(NSLeftMouseDraggedMask | NSLeftMouseUpMask) untilDate:[NSDate distantFuture] inMode:NSEventTrackingRunLoopMode dequeue:YES]));
+	}
 
 	// if no events were processed, call the table view implemenation
 	if (currentEvent == theEvent) { [super mouseDown:theEvent]; }
@@ -221,23 +219,19 @@
 		NSCell *cell = [column dataCell];
 		NSRect cellFrame = [self frameOfCellAtColumn:col row:row];
 
-		// update the cell according to the delegate
-		[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:row];
-		
 		// process mouse entered if needed
 		if (cellChange) { redraw = [cell mouseEnteredInvalidatesForFrame:cellFrame] || redraw; }
 		
-		// adjusting because these numbers appear to be off slightly
+		// process mouse move
 		redraw = [cell mouseMoveToPoint:point invalidatesForFrame:cellFrame] || redraw;
 		
 		if (redraw) {
-			[cell drawWithFrame:cellFrame inView:self];
-			[self setNeedsDisplayInRect:cellFrame];
+			[self displayRect:cellFrame];
 		}
+		
+		lastMouseRow = row;
+		lastMouseCol = col;	
 	}
-	
-	lastMouseRow = row;
-	lastMouseCol = col;	
 	// since we're not registered as the first responder,
 	// calling super would cause an infinite loop to occur
 }
@@ -249,6 +243,6 @@
 - (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame { return NO; }
 - (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame { return NO; }
 - (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame { return NO; }
-- (BOOL)trackMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw { return NO; }
-- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw { return NO; }
+- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame { return NO; }
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame { return NO; }
 @end

@@ -34,6 +34,6 @@
 - (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame;
 - (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame;
 - (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame;
-- (BOOL)trackMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw;
-- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw;
+- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame; // invalidate implied when return value is true
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame;  // invalidate implied when return value is true
 @end

@@ -74,8 +74,6 @@ typedef enum _FSButtonImageTextCellState {
 	[newCell setTarget:target];
 	
 	newCell->action = action;
-	newCell->mouseLocation = mouseLocation;
-	newCell->state = state;
 	newCell->inactiveOpacity = inactiveOpacity;
 	newCell->hoverOpacity = hoverOpacity;
 	newCell->pressedOpacity = pressedOpacity;
@@ -95,57 +93,22 @@ typedef enum _FSButtonImageTextCellState {
 // responding to update messages from the table view
 // ----------------------------------------------------------------------------------------------------
 
-- (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame {
-	if (buttonImage && state != FSButtonImageTextCellInactiveState) {
-		state = FSButtonImageTextCellInactiveState;
-		return TRUE;
-	}
-	return FALSE;
-}
-
-- (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame {
-	if (buttonImage) {
-		FSButtonImageTextCellState origState = state;
-		if (NSPointInRect(point, [self buttonRectForFrame:cellFrame])) { state = FSButtonImageTextCellHoverState; }
-		else { state = FSButtonImageTextCellInactiveState; }
-		mouseLocation = point;
-		return state != origState;
-	}
-	return FALSE;
-}
+- (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame { return buttonImage != nil; }
+- (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame { return buttonImage != nil; }
 
 - (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame {
+	// if point inside, call the action
 	if (NSPointInRect(point, [self buttonRectForFrame:cellFrame])) {
-		state = FSButtonImageTextCellHoverState;
-		// if point inside, call the action
 		[target performSelector:action withObject:self];
-	} else {
-		state = FSButtonImageTextCellInactiveState;
 	}
-	mouseLocation = point;
 	return TRUE;
 }
 
-- (BOOL)trackMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw {
-	// if point inside, track
-	if (buttonImage && NSPointInRect(point, [self buttonRectForFrame:cellFrame])) {
-		state = FSButtonImageTextCellPressedState;
-		mouseLocation = point;
-		*redraw = TRUE;
-		return TRUE;
-	}
-	return FALSE;
+- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame {
+	return buttonImage && NSPointInRect(point, [self buttonRectForFrame:cellFrame]);
 }
 
-- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame redraw:(BOOL*)redraw {
-	FSButtonImageTextCellState origState = state;
-	if (NSPointInRect(point, [self buttonRectForFrame:cellFrame])) { state = FSButtonImageTextCellPressedState; }
-	else { state = FSButtonImageTextCellHoverState; }
-	mouseLocation = point;
-	*redraw = state != origState;
-	return TRUE;
-}
-
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame { return TRUE; }
 
 #pragma mark properties
 // ----------------------------------------------------------------------------------------------------
@@ -230,7 +193,7 @@ typedef enum _FSButtonImageTextCellState {
 
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
-	
+
 	// Draw the cell's button image
 	if (buttonImage != nil) {
 		
@@ -245,11 +208,15 @@ typedef enum _FSButtonImageTextCellState {
 			flippedIt = YES;
 		}
 		
-		// update just in case some change was made in the view
-		// that wasn't reflected via events
-		if (!NSPointInRect(mouseLocation, dest)) { state = FSButtonImageTextCellInactiveState; }
-		
 		float fraction = 1.0;
+		FSButtonImageTextCellState state;
+		NSEvent *event = [NSApp currentEvent];
+		NSPoint	mouseLocation = [controlView convertPoint:[event locationInWindow] fromView:[[controlView window] contentView]];
+		BOOL inRegion = NSPointInRect(mouseLocation, dest);
+		if (([event type] == NSLeftMouseDown || [event type] == NSLeftMouseDragged) &&
+			[event clickCount] && inRegion) { state = FSButtonImageTextCellPressedState; }
+		else if (inRegion) { state = FSButtonImageTextCellHoverState; }
+		else { state = FSButtonImageTextCellInactiveState; }
 		switch(state) {
 			case FSButtonImageTextCellInactiveState: fraction = inactiveOpacity; break;
 			case FSButtonImageTextCellHoverState: fraction = hoverOpacity; break;
