@@ -96,19 +96,23 @@ typedef enum _FSButtonImageTextCellState {
 - (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame { return buttonImage != nil; }
 - (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame { return buttonImage != nil; }
 
-- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame {
+- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame controlView:(NSControl *)controlView {
 	// if point inside, call the action
 	if (NSPointInRect(point, [self buttonRectForFrame:cellFrame])) {
-		[target performSelector:action withObject:self];
+		[self buttonClickAtPoint:point inFrame:cellFrame controlView:controlView];
 	}
 	return TRUE;
 }
 
-- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame {
+- (void)buttonClickAtPoint:(NSPoint)point inFrame:(NSRect)cellFrame controlView:(NSControl *)controlView {
+	[target performSelector:action withObject:self];
+}
+
+- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame controlView:(NSControl *)controlView {
 	return buttonImage && NSPointInRect(point, [self buttonRectForFrame:cellFrame]);
 }
 
-- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame { return TRUE; }
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame controlView:(NSControl *)controlView { return TRUE; }
 
 #pragma mark properties
 // ----------------------------------------------------------------------------------------------------

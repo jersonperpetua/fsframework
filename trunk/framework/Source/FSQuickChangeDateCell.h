@@ -17,7 +17,9 @@
 #import <FSFramework/FSButtonImageTextCell.h>
 
 @interface FSQuickChangeDateCell : FSButtonImageTextCell {
-
+	NSControl *controlView;
+	int row;
+	int col;
 }
 
 @end

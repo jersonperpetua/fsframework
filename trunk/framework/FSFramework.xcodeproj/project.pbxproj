@@ -99,6 +99,11 @@
 		8B7C38E80AA47C6200532495 /* FSImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C38E60AA47C6200532495 /* FSImageAdditions.m */; };
 		8B7C391D0AA47ED100532495 /* FSColoredMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B7C391E0AA47ED100532495 /* FSColoredMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */; };
+		8B817DDC0E6190AD00D11FEC /* CalendarWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8B817DDB0E6190AD00D11FEC /* CalendarWindow.nib */; };
+		8B817DDF0E6190D200D11FEC /* FSCalendarWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B817DDD0E6190D200D11FEC /* FSCalendarWindow.h */; };
+		8B817DE00E6190D200D11FEC /* FSCalendarWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B817DDE0E6190D200D11FEC /* FSCalendarWindow.m */; };
+		8B817DE90E61910300D11FEC /* FSCalendarWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B817DE70E61910300D11FEC /* FSCalendarWindowController.h */; };
+		8B817DEA0E61910300D11FEC /* FSCalendarWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B817DE80E61910300D11FEC /* FSCalendarWindowController.m */; };
 		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
 		8B9772140CFE24080044A626 /* FSAppleScriptServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5FC8ED0CFE21C60010B563 /* FSAppleScriptServer.m */; };
@@ -269,6 +274,11 @@
 		8B7C38E60AA47C6200532495 /* FSImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSImageAdditions.m; path = Source/FSImageAdditions.m; sourceTree = "<group>"; };
 		8B7C391B0AA47ED100532495 /* FSColoredMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSColoredMenuItem.h; path = Source/FSColoredMenuItem.h; sourceTree = "<group>"; };
 		8B7C391C0AA47ED100532495 /* FSColoredMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSColoredMenuItem.m; path = Source/FSColoredMenuItem.m; sourceTree = "<group>"; };
+		8B817DDB0E6190AD00D11FEC /* CalendarWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CalendarWindow.nib; path = Resources/CalendarWindow.nib; sourceTree = "<group>"; };
+		8B817DDD0E6190D200D11FEC /* FSCalendarWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWindow.h; path = Source/FSCalendarWindow.h; sourceTree = "<group>"; };
+		8B817DDE0E6190D200D11FEC /* FSCalendarWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWindow.m; path = Source/FSCalendarWindow.m; sourceTree = "<group>"; };
+		8B817DE70E61910300D11FEC /* FSCalendarWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWindowController.h; path = Source/FSCalendarWindowController.h; sourceTree = "<group>"; };
+		8B817DE80E61910300D11FEC /* FSCalendarWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWindowController.m; path = Source/FSCalendarWindowController.m; sourceTree = "<group>"; };
 		8B89B23B0AA8648600A87586 /* FSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSStringAdditions.h; path = Source/FSStringAdditions.h; sourceTree = "<group>"; };
 		8B89B23C0AA8648600A87586 /* FSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSStringAdditions.m; path = Source/FSStringAdditions.m; sourceTree = "<group>"; };
 		8B95F12C0CA3E78C00F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -316,10 +326,6 @@
 		8BD6237108B96CB7002E8C79 /* FSBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSBackgroundView.h; path = Source/FSBackgroundView.h; sourceTree = "<group>"; };
 		8BD6237E08B96CB7002E8C79 /* FSOvalActionCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalActionCell.h; path = Source/FSOvalActionCell.h; sourceTree = "<group>"; };
 		8BD6237F08B96CB7002E8C79 /* FSOvalTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = FSOvalTextFieldCell.h; path = Source/FSOvalTextFieldCell.h; sourceTree = "<group>"; };
-		8BD6238308B96CB7002E8C79 /* FSCalendarPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSCalendarPopUpButton.h; sourceTree = "<group>"; };
-		8BD6238408B96CB7002E8C79 /* FSCalendarPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FSCalendarPopUpButton.m; sourceTree = "<group>"; };
-		8BD6238508B96CB7002E8C79 /* FSCalendarPopupButtonWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FSCalendarPopupButtonWindow.h; sourceTree = "<group>"; };
-		8BD6238608B96CB7002E8C79 /* FSCalendarPopupButtonWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FSCalendarPopupButtonWindow.m; sourceTree = "<group>"; };
 		8BD6238B08B96CB7002E8C79 /* FSBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSBackgroundView.m; path = Source/FSBackgroundView.m; sourceTree = "<group>"; };
 		8BD6239808B96CB7002E8C79 /* FSOvalActionCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalActionCell.m; path = Source/FSOvalActionCell.m; sourceTree = "<group>"; };
 		8BD6239908B96CB7002E8C79 /* FSOvalTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = FSOvalTextFieldCell.m; path = Source/FSOvalTextFieldCell.m; sourceTree = "<group>"; };
@@ -443,6 +449,11 @@
 			children = (
 				8B2F814C0E59082400E64D49 /* FSEventWindow.h */,
 				8B2F814D0E59082400E64D49 /* FSEventWindow.m */,
+				8B817DDD0E6190D200D11FEC /* FSCalendarWindow.h */,
+				8B817DDE0E6190D200D11FEC /* FSCalendarWindow.m */,
+				8B817DE70E61910300D11FEC /* FSCalendarWindowController.h */,
+				8B817DE80E61910300D11FEC /* FSCalendarWindowController.m */,
+				8B817DDB0E6190AD00D11FEC /* CalendarWindow.nib */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -477,7 +488,6 @@
 			children = (
 				8B05AB150A43559400147648 /* FSSplitView.h */,
 				8B05AB160A43559400147648 /* FSSplitView.m */,
-				8BD6238008B96CB7002E8C79 /* Calendar View */,
 				8B42376108BA723E00DC78F2 /* FSTableView.h */,
 				8B42375F08BA723500DC78F2 /* FSTableView.m */,
 				8B2F81440E59078900E64D49 /* FSEventTableView.h */,
@@ -649,18 +659,6 @@
 			name = "Additions - Custom";
 			sourceTree = "<group>";
 		};
-		8BD6238008B96CB7002E8C79 /* Calendar View */ = {
-			isa = PBXGroup;
-			children = (
-				8BD6238308B96CB7002E8C79 /* FSCalendarPopUpButton.h */,
-				8BD6238408B96CB7002E8C79 /* FSCalendarPopUpButton.m */,
-				8BD6238508B96CB7002E8C79 /* FSCalendarPopupButtonWindow.h */,
-				8BD6238608B96CB7002E8C79 /* FSCalendarPopupButtonWindow.m */,
-			);
-			name = "Calendar View";
-			path = "Source/Calendar View";
-			sourceTree = "<group>";
-		};
 		8BF74CF80C7BD59200C4D9B2 /* Dynamic Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +741,8 @@
 				8B2F81300E5906C100E64D49 /* FSButtonImageTextCell.h in Headers */,
 				8B2F815A0E59098500E64D49 /* FSEventWindow.h in Headers */,
 				8B2F815C0E59099400E64D49 /* FSEventTableView.h in Headers */,
+				8B817DDF0E6190D200D11FEC /* FSCalendarWindow.h in Headers */,
+				8B817DE90E61910300D11FEC /* FSCalendarWindowController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,6 +841,7 @@
 				8BFD36AC0C81AE98000E909A /* HUDSliderTrackRight.tiff in Resources */,
 				8BF367950C8644A200137F3C /* Localizable.strings in Resources */,
 				8B2F833F0E5CDB0D00E64D49 /* quick_change.png in Resources */,
+				8B817DDC0E6190AD00D11FEC /* CalendarWindow.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,6 +934,8 @@
 				8B2F81310E5906C100E64D49 /* FSButtonImageTextCell.m in Sources */,
 				8B2F815B0E59098600E64D49 /* FSEventWindow.m in Sources */,
 				8B2F815D0E59099500E64D49 /* FSEventTableView.m in Sources */,
+				8B817DE00E6190D200D11FEC /* FSCalendarWindow.m in Sources */,
+				8B817DEA0E61910300D11FEC /* FSCalendarWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
