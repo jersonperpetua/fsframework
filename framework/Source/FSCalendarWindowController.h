@@ -14,38 +14,15 @@
  * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-#import <FSFramework/AIImageTextCell.h>
+#import <FSFramework/FSWindowController.h>
 
-/* Must be used in an FSEventTableView with
- * trackMouseEvents set to true. */
-@interface FSButtonImageTextCell : NSTextFieldCell {
-	NSImage *buttonImage;
-	SEL action;
+@interface FSCalendarWindowController : FSWindowController {
+	IBOutlet NSDatePicker *datePicker;
 	id target;
-	float inactiveOpacity;
-	float hoverOpacity;
-	float pressedOpacity;
+	SEL action;
 }
 
-- (NSImage *)buttonImage;
-- (void)setButtonImage:(NSImage *)image;
-
-- (id)target;
-- (void)setTarget:(id)target;
-
-- (SEL)action;
-- (void)setAction:(SEL)action;
-
-- (float)inactiveOpacity;
-- (void)setInactiveOpacity:(float)value;
-
-- (float)hoverOpacity;
-- (void)setHoverOpacity:(float)value;
-
-- (float)pressedOpacity;
-- (void)setPressedOpacity:(float)value;
-
-// subclasses can override (should call super)
-- (void)buttonClickAtPoint:(NSPoint)point inFrame:(NSRect)cellFrame controlView:(NSControl *)controlView;
-
+- (void)runForDate:(NSDate *)date
+			target:(id)target
+			action:(SEL)action;
 @end

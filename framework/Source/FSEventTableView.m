@@ -181,13 +181,13 @@
 			BOOL finished = FALSE;
 			
 			if (type == NSLeftMouseDown) {
-				finished = ![cell trackMouseAtPoint:point cellFrame:cellFrame];
+				finished = ![cell trackMouseAtPoint:point cellFrame:cellFrame controlView:self];
 				redraw = !finished;
 			} else if (type == NSLeftMouseDragged) {
-				finished = ![cell continueTrackingMouseAtPoint:point cellFrame:cellFrame];
+				finished = ![cell continueTrackingMouseAtPoint:point cellFrame:cellFrame controlView:self];
 				redraw = !finished;
 			} else if (type == NSLeftMouseUp) {
-				redraw = [cell mouseUpAtPoint:point invalidatesForFrame:cellFrame];
+				redraw = [cell mouseUpAtPoint:point invalidatesForFrame:cellFrame controlView:self];
 				finished = TRUE;
 			} else {
 				[NSException raise:@"Invalid Event" format:@"Next event not handled because an unexpected event type was retrieved."];
@@ -241,8 +241,8 @@
 @implementation NSCell (FSEventTable)
 - (BOOL)mouseEnteredInvalidatesForFrame:(NSRect)cellFrame { return NO; }
 - (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame { return NO; }
-- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame { return NO; }
 - (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame { return NO; }
-- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame { return NO; }
-- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame { return NO; }
+- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame controlView:(NSControl *)controlView { return NO; }
+- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame controlView:(NSControl *)controlView { return NO; }
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame controlView:(NSControl *)controlView { return NO; }
 @end

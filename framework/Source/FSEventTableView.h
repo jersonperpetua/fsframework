@@ -32,8 +32,8 @@
 @interface NSCell (FSEventTable)
 - (BOOL)mouseEnteredInvalidatesForFrame:(NSRect)cellFrame;
 - (BOOL)mouseExitedInvalidatesForFrame:(NSRect)cellFrame;
-- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame;
 - (BOOL)mouseMoveToPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame;
-- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame; // invalidate implied when return value is true
-- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame;  // invalidate implied when return value is true
+- (BOOL)mouseUpAtPoint:(NSPoint)point invalidatesForFrame:(NSRect)cellFrame controlView:(NSControl *)controlView;
+- (BOOL)trackMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame controlView:(NSControl *)controlView; // invalidate implied when return value is true
+- (BOOL)continueTrackingMouseAtPoint:(NSPoint)point cellFrame:(NSRect)cellFrame controlView:(NSControl *)controlView;  // invalidate implied when return value is true
 @end
