@@ -104,6 +104,8 @@
 		8B817DE00E6190D200D11FEC /* FSCalendarWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B817DDE0E6190D200D11FEC /* FSCalendarWindow.m */; };
 		8B817DE90E61910300D11FEC /* FSCalendarWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B817DE70E61910300D11FEC /* FSCalendarWindowController.h */; };
 		8B817DEA0E61910300D11FEC /* FSCalendarWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B817DE80E61910300D11FEC /* FSCalendarWindowController.m */; };
+		8B81802A0E6F48D200D11FEC /* FSAutocompleteFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B8180280E6F48D200D11FEC /* FSAutocompleteFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B81802B0E6F48D200D11FEC /* FSAutocompleteFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8180290E6F48D200D11FEC /* FSAutocompleteFormatter.m */; };
 		8B89B23D0AA8648600A87586 /* FSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B89B23B0AA8648600A87586 /* FSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B89B23E0AA8648600A87586 /* FSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B89B23C0AA8648600A87586 /* FSStringAdditions.m */; };
 		8B9772140CFE24080044A626 /* FSAppleScriptServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5FC8ED0CFE21C60010B563 /* FSAppleScriptServer.m */; };
@@ -279,6 +281,8 @@
 		8B817DDE0E6190D200D11FEC /* FSCalendarWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWindow.m; path = Source/FSCalendarWindow.m; sourceTree = "<group>"; };
 		8B817DE70E61910300D11FEC /* FSCalendarWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWindowController.h; path = Source/FSCalendarWindowController.h; sourceTree = "<group>"; };
 		8B817DE80E61910300D11FEC /* FSCalendarWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWindowController.m; path = Source/FSCalendarWindowController.m; sourceTree = "<group>"; };
+		8B8180280E6F48D200D11FEC /* FSAutocompleteFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAutocompleteFormatter.h; path = Source/FSAutocompleteFormatter.h; sourceTree = "<group>"; };
+		8B8180290E6F48D200D11FEC /* FSAutocompleteFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAutocompleteFormatter.m; path = Source/FSAutocompleteFormatter.m; sourceTree = "<group>"; };
 		8B89B23B0AA8648600A87586 /* FSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSStringAdditions.h; path = Source/FSStringAdditions.h; sourceTree = "<group>"; };
 		8B89B23C0AA8648600A87586 /* FSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSStringAdditions.m; path = Source/FSStringAdditions.m; sourceTree = "<group>"; };
 		8B95F12C0CA3E78C00F7861B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 				8B5177B50A8CB1CE00B9D305 /* Cells */,
 				8B2F81530E59088E00E64D49 /* Windows */,
 				8B5177B40A8CB1AD00B9D305 /* Views */,
+				8B8180270E6F48AC00D11FEC /* Formatters */,
 				8BB31E140C71251D002AE53C /* HUD */,
 				8BF74CF80C7BD59200C4D9B2 /* Dynamic Files */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -606,6 +611,15 @@
 			name = "From Adium";
 			sourceTree = "<group>";
 		};
+		8B8180270E6F48AC00D11FEC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				8B8180280E6F48D200D11FEC /* FSAutocompleteFormatter.h */,
+				8B8180290E6F48D200D11FEC /* FSAutocompleteFormatter.m */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
 		8BAEEE8C0CFDC1C5005677EE /* AppleScriptRunner */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +757,7 @@
 				8B2F815C0E59099400E64D49 /* FSEventTableView.h in Headers */,
 				8B817DDF0E6190D200D11FEC /* FSCalendarWindow.h in Headers */,
 				8B817DE90E61910300D11FEC /* FSCalendarWindowController.h in Headers */,
+				8B81802A0E6F48D200D11FEC /* FSAutocompleteFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +951,7 @@
 				8B2F815D0E59099500E64D49 /* FSEventTableView.m in Sources */,
 				8B817DE00E6190D200D11FEC /* FSCalendarWindow.m in Sources */,
 				8B817DEA0E61910300D11FEC /* FSCalendarWindowController.m in Sources */,
+				8B81802B0E6F48D200D11FEC /* FSAutocompleteFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

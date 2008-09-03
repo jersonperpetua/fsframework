@@ -46,6 +46,8 @@
 #import <FSFramework/FSEventWindow.h>
 #import <FSFramework/FSEventTableView.h>
 
+#import <FSFramework/FSAutocompleteFormatter.h>
+
 #import <FSFramework/FSHUDWindow.h>
 #import <FSFramework/FSHUDSliderCell.h>
 #import <FSFramework/FSHUDSlider.h>
