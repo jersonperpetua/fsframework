@@ -27,11 +27,9 @@
 		</dict>
 		<dict>
 			<key>CLASS</key>
-			<string>FSCalendarWindow</string>
+			<string>NSObject</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
-			<key>SUPERCLASS</key>
-			<string>NSWindow</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>
@@ -40,12 +38,6 @@
 			<string>ObjC</string>
 			<key>SUPERCLASS</key>
 			<string>NSObject</string>
-		</dict>
-		<dict>
-			<key>CLASS</key>
-			<string>NSObject</string>
-			<key>LANGUAGE</key>
-			<string>ObjC</string>
 		</dict>
 		<dict>
 			<key>CLASS</key>
@@ -64,6 +56,8 @@
 			<dict>
 				<key>datePicker</key>
 				<string>NSDatePicker</string>
+				<key>target</key>
+				<string>id</string>
 			</dict>
 			<key>SUPERCLASS</key>
 			<string>FSWindowController</string>
