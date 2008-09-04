@@ -27,7 +27,6 @@
 }
 
 - (void)awakeFromNib {
-	[[self window] setBackgroundColor:[NSColor whiteColor]];
 	[[self window] setAlphaValue:.90];
 	[datePicker setTarget:self];
 	[datePicker setAction:@selector(updateValue:)];
@@ -40,7 +39,7 @@
 	action = a;
 	[datePicker setDateValue:date];
 	[self showWindow:nil];
-	[self checkEvent:[[self window] nextEventMatchingMask:NSLeftMouseDownMask | NSRightMouseDownMask]];
+	[self checkEvent:[[self window] nextEventMatchingMask:NSAnyEventMask]];
 }
 
 - (void)updateValue:(id)sender {
