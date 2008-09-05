@@ -18,7 +18,7 @@
 
 /* Must be used in an FSEventTableView with
  * trackMouseEvents set to true. */
-@interface FSButtonImageTextCell : NSTextFieldCell {
+@interface FSButtonImageTextCell : AIImageTextCell {
 	NSImage *buttonImage;
 	SEL action;
 	id target;
