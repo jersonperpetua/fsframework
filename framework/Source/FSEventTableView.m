@@ -150,6 +150,7 @@
 	if (lastMouseRow != -1 && lastMouseCol != -1) {
 		NSTableColumn *column = [[self tableColumns] objectAtIndex:lastMouseCol];
 		NSCell *cell = [column dataCell];
+		[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:lastMouseRow];
 		// check for invalidity of cell
 		NSRect cellFrame = [self frameOfCellAtColumn:lastMouseCol row:lastMouseRow];
 		if ([cell mouseExitedInvalidatesForFrame:cellFrame]) {
@@ -173,7 +174,8 @@
 		NSTableColumn *column = [[self tableColumns] objectAtIndex:col];
 		cell = [column dataCell];
 		// update the cell according to the delegate
-	
+		[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:row];
+
 		do {
 			NSEventType type = [currentEvent type];
 			point = [self convertPoint:[currentEvent locationInWindow] fromView:[[self window] contentView]];		
@@ -219,6 +221,9 @@
 		NSCell *cell = [column dataCell];
 		NSRect cellFrame = [self frameOfCellAtColumn:col row:row];
 
+		// update the cell according to the delegate
+		[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:row];
+		
 		// process mouse entered if needed
 		if (cellChange) { redraw = [cell mouseEnteredInvalidatesForFrame:cellFrame] || redraw; }
 		
