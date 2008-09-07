@@ -166,9 +166,9 @@
 }
 
 - (BOOL)reportCrashForLogInDir:(NSString *)inPath withPrefix:(NSString *)prefix {
-	static int count = 0;
+	logDirectoryFileCount = 0;
 	NSArray *contents = [[NSFileManager defaultManager] directoryContentsAtPath:inPath];
-	if (count != [contents count]) {
+	if (logDirectoryFileCount != [contents count]) {
 		NSString *file;
 		NSEnumerator *enumerator = [contents objectEnumerator];
 		while (file = [enumerator nextObject]) {
@@ -176,7 +176,7 @@
 				return YES;
 			}
 		}
-		count = [contents count];
+		logDirectoryFileCount = [contents count];
 	}
 	return NO;
 }

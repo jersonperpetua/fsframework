@@ -51,6 +51,7 @@
 	NSBundle								*crashedApplicationBundle;
 	
 	BOOL									transitioning;
+	int										logDirectoryFileCount;
 	SUExternalStatusChecker					*statusChecker;
 	NSString								*newVersionString;
 }
