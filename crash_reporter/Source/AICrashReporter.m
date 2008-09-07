@@ -209,8 +209,10 @@
 			[grep setStandardError:pipe];
 			[grep launch];
 			[grep waitUntilExit];
-			NSString *fullLog = [crashLog stringByAppendingString:[[[NSString alloc] initWithData:[[pipe fileHandleForReading] readDataToEndOfFile]
-																						 encoding:NSUTF8StringEncoding] autorelease]];
+			NSString *fullLog = [crashLog stringByAppendingFormat:
+								 @"----------------------------------------------------------------------\nSystem Log:\n%@",
+								 [[[NSString alloc] initWithData:[[pipe fileHandleForReading] readDataToEndOfFile]
+														encoding:NSUTF8StringEncoding] autorelease]];
 			[crashLog release]; crashLog = [fullLog retain];
 						
 			//Highlight the existing details text
