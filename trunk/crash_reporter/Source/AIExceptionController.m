@@ -20,6 +20,7 @@
 #import "AIStringAdditions.h"
 #import <ExceptionHandling/NSExceptionHandler.h>
 #include <unistd.h>
+#include <execinfo.h>
 
 #define EXCEPTIONS_PATH				[[NSString stringWithFormat:@"~/Library/Logs/CrashReporter/%@.exception.log", \
 	[[NSProcessInfo processInfo] processName]] stringByExpandingTildeInPath]
@@ -53,7 +54,7 @@ static BOOL catchExceptions = NO;
 												NSHandleUncaughtSystemExceptionMask | 
 												NSHandleUncaughtRuntimeErrorMask)];
 	NSSetUncaughtExceptionHandler(AIExceptionHandler);
-
+	
 	catchExceptions = YES;
 
 	//Remove any existing exception logs
@@ -83,7 +84,7 @@ void AIExceptionHandler(NSException *exception) {
 			NSLog(@"Launching the Crash Reporter because an exception of type %@ occurred:\n%@", theName,theReason);
 
 			//Pass the exception to the crash reporter and close this application
-			[[NSString stringWithFormat:@"OS Version:\t%@\nLanguage:\t%@\nException:\t%@\nReason:\t%@\nStack trace:\n%@",
+			[[NSString stringWithFormat:@"OS Version:\t%@\nLanguage:\t%@\nException:\t%@\nReason:\t%@\nStack trace:\n%@\n",
 				versionString,preferredLocalization,theName,theReason,(backtrace ? backtrace : @"(Unavailable)")] writeToFile:EXCEPTIONS_PATH atomically:YES];
 
 			[[NSWorkspace sharedWorkspace] launchApplication:crashReporterPath];
@@ -98,10 +99,57 @@ void AIExceptionHandler(NSException *exception) {
 	}
 }
 
+@interface NSException (AIExceptionControllerAdditionsPrivate)
+- (NSString *)decodedStackTraceFromReturnAddresses;
+- (NSString *)decodedStackTraceFromUserInfo;
+@end
+
 @implementation NSException (AIExceptionControllerAdditions)
-//Decode the stack trace within [self userInfo] and return it
-- (NSString *)decodedExceptionStackTrace
-{
+
+- (NSString *)decodedExceptionStackTrace {
+	NSString *trace = nil;
+	if (!trace) { trace = [self decodedStackTraceFromReturnAddresses]; }
+	if (!trace) { trace = [self decodedStackTraceFromUserInfo]; }
+	return trace;
+}
+
+- (NSString *)decodedStackTraceFromReturnAddresses {
+
+	// if using 10.5
+	if (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_4) {
+		int i = 0;
+		int count = [[self callStackReturnAddresses] count];
+		void *frames[count];
+		
+		// build frame pointers
+		NSEnumerator *addresses = [[self callStackReturnAddresses] objectEnumerator];
+		NSNumber *address;
+		while (address = [addresses nextObject]) {
+			frames[i++] = (void *)[address unsignedIntegerValue];
+		}
+		
+		// Get symbols for the backtrace addresses
+		char **frameStrings = backtrace_symbols(frames, count);
+		
+		NSMutableString *backtrace = [NSMutableString string];
+		
+		if (frameStrings) {
+			for(i = 0; i < count; i++) {
+				if(frameStrings[i]) {
+					[backtrace appendFormat:@"%s\n", frameStrings[i]];
+				}
+			}
+		}
+		
+		return backtrace;
+	} else {
+		return nil;
+	}
+}
+
+// decode the stack trace within [self userInfo] and return it
+- (NSString *)decodedStackTraceFromUserInfo {
+	
 	NSDictionary    *dict = [self userInfo];
 	NSString        *stackTrace = nil;
 
@@ -110,16 +158,11 @@ void AIExceptionHandler(NSException *exception) {
 		NSMutableString		*processedStackTrace;
 		NSString			*str;
 		
-		/*We use several command line apps to decode our exception:
-		 *	* atos -p PID addresses...: converts addresses (hex numbers) to symbol names that we can read.
-		 *	* tail -n +3: strip the first three lines.
-		 *	* head -n +NUM: reduces to the first NUM lines. we pass NUM as the number of addresses minus 4.
-		 *	* c++filt: de-mangles C++ names.
-		 *		example, before:
-		 *			__ZNK12CApplication23CreateClipboardTextViewERsR12CViewManager (in TextWrangler)
-		 *		example, after:
-		 *			CApplication::CreateClipboardTextView(short&, CViewManager&) const (in TextWrangler)
-		 *	* cat -n: adds line numbers. fairly meaningless, but fun.
+		/* We use several command line apps to decode our exception:
+		 * atos -p PID addresses...: converts addresses (hex numbers) to symbol names that we can read.
+		 * tail -n +3: strip the first three lines.
+		 * head -n +NUM: reduces to the first NUM lines. we pass NUM as the number of addresses minus 4.
+		 * cat -n: adds line numbers. fairly meaningless, but fun.
 		 */
 		
 		str = [NSString stringWithFormat:@"%s -p %d %@ | tail -n +3 | head -n +%d | cat -n",
@@ -128,7 +171,7 @@ void AIExceptionHandler(NSException *exception) {
 			stackTrace, //atos arg 3..inf
 			([[stackTrace componentsSeparatedByString:@"  "] count] - 4)]; //head arg 3
 
-		FILE *file = popen( [str UTF8String], "r" );
+		FILE *file = popen([str UTF8String], "r");
 		NSMutableData *data = [[NSMutableData alloc] init];
 
 		if (file) {
@@ -152,13 +195,13 @@ void AIExceptionHandler(NSException *exception) {
 			pclose(file);
 		}
 
-		//we use ISO 8859-1 because it preserves all bytes. UTF-8 doesn't (beacuse
-		//	certain sequences of bytes may get added together or cause the string to be rejected).
-		//and it shouldn't matter; we shouldn't be getting high-ASCII in the backtrace anyway. :)
+		// we use ISO 8859-1 because it preserves all bytes. UTF-8 doesn't (beacuse
+		// certain sequences of bytes may get added together or cause the string to be rejected).
+		// and it shouldn't matter; we shouldn't be getting high-ASCII in the backtrace anyway. :)
 		processedStackTrace = [[[NSMutableString alloc] initWithData:data encoding:NSISOLatin1StringEncoding] autorelease];
 		[data release];
 		
-		//Clear out a useless string inserted into some stack traces as of 10.4 to improve crashlog readability
+		// clear out a useless string inserted into some stack traces as of 10.4 to improve crashlog readability
 		[processedStackTrace replaceOccurrencesOfString:@"task_start_peeking: can't suspend failed  (ipc/send) invalid destination port"
 											 withString:@""
 												options:NSLiteralSearch
