@@ -222,6 +222,7 @@ void AIExceptionHandler(NSException *exception) {
 	if ([AIExceptionController exceptionCatchingEnabled]) {
 		(*NSGetUncaughtExceptionHandler())(exception);
 	}
+	NSLog(@"%@", exception);
 }
 
 @end
