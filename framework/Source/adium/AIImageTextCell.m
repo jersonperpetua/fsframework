@@ -142,7 +142,7 @@
 
 - (NSSize)cellSizeForBounds:(NSRect)cellFrame
 {
-	NSString	*title = [self objectValue];
+	NSString	*title = [self stringValue];
 	NSImage		*image = [self image];
 	NSSize		cellSize = NSZeroSize;
 	
