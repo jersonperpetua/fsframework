@@ -195,6 +195,11 @@ typedef enum _FSButtonImageTextCellState {
 	return dest;
 }
 
+- (NSSize)cellSizeForBounds:(NSRect)cellFrame {
+	NSSize s = [super cellSizeForBounds:cellFrame];
+	s.width += [self buttonRectForFrame:cellFrame].size.width;
+	return s;
+}
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
 
