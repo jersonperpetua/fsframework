@@ -124,6 +124,8 @@
 		8BB324630C71D932002AE53C /* HUDCloseButton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8BB324620C71D932002AE53C /* HUDCloseButton.tiff */; };
 		8BB324660C71D94E002AE53C /* NSImage+FrameworkImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB324640C71D94E002AE53C /* NSImage+FrameworkImage.h */; };
 		8BB324670C71D94E002AE53C /* NSImage+FrameworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB324650C71D94E002AE53C /* NSImage+FrameworkImage.m */; };
+		8BBC75AC0E77EB4400521C74 /* FSCalendarPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBC75AA0E77EB4400521C74 /* FSCalendarPanel.h */; };
+		8BBC75AD0E77EB4400521C74 /* FSCalendarPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC75AB0E77EB4400521C74 /* FSCalendarPanel.m */; };
 		8BBFB9500A9231400038A6E3 /* AIPlasticButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */; };
 		8BBFB9510A9231400038A6E3 /* AIPlasticButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB94D0A9231400038A6E3 /* AIPlasticButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BBFB9520A9231400038A6E3 /* AIPlasticButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBFB94E0A9231400038A6E3 /* AIPlasticButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -301,6 +303,8 @@
 		8BB324620C71D932002AE53C /* HUDCloseButton.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = HUDCloseButton.tiff; path = Resources/HUDCloseButton.tiff; sourceTree = "<group>"; };
 		8BB324640C71D94E002AE53C /* NSImage+FrameworkImage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "NSImage+FrameworkImage.h"; path = "Source/NSImage+FrameworkImage.h"; sourceTree = "<group>"; };
 		8BB324650C71D94E002AE53C /* NSImage+FrameworkImage.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = "NSImage+FrameworkImage.m"; path = "Source/NSImage+FrameworkImage.m"; sourceTree = "<group>"; };
+		8BBC75AA0E77EB4400521C74 /* FSCalendarPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarPanel.h; path = Source/FSCalendarPanel.h; sourceTree = "<group>"; };
+		8BBC75AB0E77EB4400521C74 /* FSCalendarPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarPanel.m; path = Source/FSCalendarPanel.m; sourceTree = "<group>"; };
 		8BBFB94C0A9231400038A6E3 /* AIPlasticButton.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIPlasticButton.m; path = Source/adium/AIPlasticButton.m; sourceTree = "<group>"; };
 		8BBFB94D0A9231400038A6E3 /* AIPlasticButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticButton.h; path = Source/adium/AIPlasticButton.h; sourceTree = "<group>"; };
 		8BBFB94E0A9231400038A6E3 /* AIPlasticButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIPlasticButtonCell.h; path = Source/adium/AIPlasticButtonCell.h; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 			children = (
 				8B2F814C0E59082400E64D49 /* FSEventWindow.h */,
 				8B2F814D0E59082400E64D49 /* FSEventWindow.m */,
+				8BBC75AA0E77EB4400521C74 /* FSCalendarPanel.h */,
+				8BBC75AB0E77EB4400521C74 /* FSCalendarPanel.m */,
 				8B817DE70E61910300D11FEC /* FSCalendarWindowController.h */,
 				8B817DE80E61910300D11FEC /* FSCalendarWindowController.m */,
 				8B817DDB0E6190AD00D11FEC /* CalendarWindow.nib */,
@@ -751,6 +757,7 @@
 				8B2F815C0E59099400E64D49 /* FSEventTableView.h in Headers */,
 				8B817DE90E61910300D11FEC /* FSCalendarWindowController.h in Headers */,
 				8B81802A0E6F48D200D11FEC /* FSAutocompleteFormatter.h in Headers */,
+				8BBC75AC0E77EB4400521C74 /* FSCalendarPanel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,6 +951,7 @@
 				8B2F815D0E59099500E64D49 /* FSEventTableView.m in Sources */,
 				8B817DEA0E61910300D11FEC /* FSCalendarWindowController.m in Sources */,
 				8B81802B0E6F48D200D11FEC /* FSAutocompleteFormatter.m in Sources */,
+				8BBC75AD0E77EB4400521C74 /* FSCalendarPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
