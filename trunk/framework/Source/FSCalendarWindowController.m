@@ -53,7 +53,6 @@
 	NSEventType type = [event type];
 	if ((type == NSLeftMouseDown || type == NSRightMouseDown) && [event window] != [self window]) {
 		[self closeWindow:nil];
-		[NSApp sendEvent:event];
 	} else {
 		[NSApp sendEvent:event];
 		[self checkEvent:[[self window] nextEventMatchingMask:NSAnyEventMask]];
