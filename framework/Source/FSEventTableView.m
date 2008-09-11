@@ -173,15 +173,16 @@
 	if (row >= 0 && col >= 0) {
 		NSTableColumn *column = [[self tableColumns] objectAtIndex:col];
 		cell = [column dataCell];
-		// update the cell according to the delegate
-		[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:row];
-
+		
 		do {
 			NSEventType type = [currentEvent type];
 			point = [self convertPoint:[currentEvent locationInWindow] fromView:[[self window] contentView]];		
 			BOOL redraw = FALSE;
 			BOOL finished = FALSE;
 			
+			// update the cell according to the delegate
+			[[self delegate] tableView:self willDisplayCell:cell forTableColumn:column row:row];
+
 			if (type == NSLeftMouseDown) {
 				finished = ![cell trackMouseAtPoint:point cellFrame:cellFrame controlView:self];
 				redraw = !finished;
