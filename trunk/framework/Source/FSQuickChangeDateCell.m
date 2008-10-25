@@ -45,12 +45,14 @@ static FSCalendarWindowController *singleController = nil;
 }
 
 - (void)buttonClickAtPoint:(NSPoint)point inFrame:(NSRect)cellFrame controlView:(NSControl *)cv {
-	controlView = cv;
-	if ([cv isKindOfClass:[NSTableView class]]) {
-		col = [(NSTableView *)cv columnAtPoint:point];
-		row = [(NSTableView *)cv rowAtPoint:point];
+	if ([self isEnabled]) {
+		controlView = cv;
+		if ([cv isKindOfClass:[NSTableView class]]) {
+			col = [(NSTableView *)cv columnAtPoint:point];
+			row = [(NSTableView *)cv rowAtPoint:point];
+		}
+		[self showDatePanel:nil];
 	}
-	[self showDatePanel:nil];
 	[super buttonClickAtPoint:point inFrame:cellFrame controlView:controlView];
 }
 

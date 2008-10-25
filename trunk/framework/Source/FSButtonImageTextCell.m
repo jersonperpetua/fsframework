@@ -221,7 +221,7 @@ typedef enum _FSButtonImageTextCellState {
 		FSButtonImageTextCellState state;
 		NSEvent *event = [NSApp currentEvent];
 		NSPoint	mouseLocation = [controlView convertPoint:[event locationInWindow] fromView:[[controlView window] contentView]];
-		BOOL inRegion = NSPointInRect(mouseLocation, dest);
+		BOOL inRegion = [self isEnabled] && NSPointInRect(mouseLocation, dest);
 		if (([event type] == NSLeftMouseDown || [event type] == NSLeftMouseDragged) &&
 			[event clickCount] && inRegion) { state = FSButtonImageTextCellPressedState; }
 		else if (inRegion) { state = FSButtonImageTextCellHoverState; }
