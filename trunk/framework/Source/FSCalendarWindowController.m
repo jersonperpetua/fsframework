@@ -50,12 +50,16 @@
 }
 
 - (void)checkEvent:(NSEvent *)event {
-	NSEventType type = [event type];
-	if ((type == NSLeftMouseDown || type == NSRightMouseDown) && [event window] != [self window]) {
-		[self closeWindow:nil];
+	if ([[self window] isVisible]) {
+		NSEventType type = [event type];
+		if ((type == NSLeftMouseDown || type == NSRightMouseDown) && [event window] != [self window]) {
+			[self closeWindow:nil];
+		} else {
+			[NSApp sendEvent:event];
+			[self checkEvent:[[self window] nextEventMatchingMask:NSAnyEventMask]];
+		}
 	} else {
 		[NSApp sendEvent:event];
-		[self checkEvent:[[self window] nextEventMatchingMask:NSAnyEventMask]];
 	}
 }
 
