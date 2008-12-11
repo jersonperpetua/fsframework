@@ -70,8 +70,8 @@
 		8B36C68C0A87CC45002AA9F5 /* AIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIViewAdditions.h; path = Source/AIViewAdditions.h; sourceTree = "<group>"; };
 		8B36C68D0A87CC45002AA9F5 /* AIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIViewAdditions.m; path = Source/AIViewAdditions.m; sourceTree = "<group>"; };
 		8B36C7A00A87D08B002AA9F5 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Resources/MainMenu.nib; sourceTree = "<group>"; };
-		8B36C7A60A87D099002AA9F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = Other/Info.plist; sourceTree = "<group>"; };
-		8B36C7AE0A87D0A2002AA9F5 /* Reporter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = "Reporter-Info.plist"; path = "Other/Reporter-Info.plist"; sourceTree = "<group>"; };
+		8B36C7A60A87D099002AA9F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = Info.plist; path = Other/Info.plist; sourceTree = "<group>"; };
+		8B36C7AE0A87D0A2002AA9F5 /* Reporter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = "Reporter-Info.plist"; path = "Other/Reporter-Info.plist"; sourceTree = "<group>"; };
 		8B36C7B70A87D0D2002AA9F5 /* CrashReporter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CrashReporter_Prefix.pch; path = Other/CrashReporter_Prefix.pch; sourceTree = "<group>"; };
 		8B36C7D00A87D160002AA9F5 /* atos */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = atos; path = Resources/atos; sourceTree = "<group>"; };
 		8B36D0F10A896532002AA9F5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -486,6 +486,7 @@
 				ARCHS = "$(NATIVE_ARCH)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
@@ -498,6 +499,7 @@
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
