@@ -1,0 +1,1 @@
+This project hosts code shared between the projects of [FadingRed](http://www.fadingred.org/).  Visit [FadingRed](http://www.fadingred.org/) for more information.
